@@ -140,7 +140,7 @@
                                     <div class="domestic-process__list">
 
                                         <div class="domestic-process__item">
-                                            <img src="/assets/site/hoeamsaji/img/ico_list_01.svg" alt="">
+                                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_01.svg" alt="">
                                             <p>Tentative<br>List</p>
                                         </div>
 

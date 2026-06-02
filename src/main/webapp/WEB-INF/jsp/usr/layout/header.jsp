@@ -188,48 +188,54 @@ function openLoginPopup() {
             </div>
 
             <ul class="mobile-menu">
-                <li>
-                <button type="button">Hoeamsaji</button>
-                <ul>
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">Current Status of National Heritage</a></li>
-                    <li><a href="#">Excavation and restoration</a></li>
-                    <li><a href="#">Yangju Hoeamsa Temple Site Layout</a></li>
-                </ul>
-                </li>
-
-                <li>
-                <button type="button">World Heritage</button>
-                <ul>
-                    <li><a href="#">UNESCO and World Heritage</a></li>
-                    <li><a href="#">World heritage system</a></li>
-                    <li><a href="#">Korea's World Cultural Heritage</a></li>
-                    <li><a href="#">Promotion of World Cultural Heritage listing</a></li>
-                </ul>
-                </li>
-
-                <li>
-                <button type="button">Programs</button>
-                <ul>
-                    <li><a href="#">Hoeamsaji Royal Festival</a></li>
-                    <li><a href="#">World heritage education</a></li>
-                </ul>
-                </li>
-
-                <li>
-                <button type="button">Announcements</button>
-                <ul>
-                    <li><a href="#">Notices</a></li>
-                </ul>
-                </li>
-
-                <li>
-                <button type="button">Archives</button>
-                <ul>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="#">Photos and video</a></li>
-                </ul>
-                </li>
+                <c:forEach var="m1" items="${menuList[key1]}" varStatus="st1">
+		            <c:set var="key2" value="${m1.menuId}_${m1.menuDepth + 1}" />
+		            
+		            <li>
+		                <%-- 1Depth: 모바일 UI 샘플에 맞춰 button 태그로 메뉴명 출력 --%>
+		                <button type="button">${m1.menuTitle}</button>
+		                
+		                <%-- 2Depth가 존재하는 경우에만 하위 ul 출력 --%>
+		                <c:if test="${not empty menuList[key2]}">
+		                    <ul>
+		                        <c:forEach var="m2" items="${menuList[key2]}">
+		                            <c:set var="key3" value="${m2.menuId}_${m2.menuDepth + 1}" />
+		        
+		                            <%-- 2depth URL 정규화 및 파라미터 처리 --%>
+		                            <c:set var="raw2" value="${m2.menuUrl}" />
+		                            <c:set var="path2" value="${fn:startsWith(raw2, ctx) ? fn:substring(raw2, fn:length(ctx), fn:length(raw2)) : raw2}" />
+		                            <c:if test="${not fn:startsWith(path2,'/')}">
+		                              <c:set var="path2" value='/${path2}'/>
+		                            </c:if>
+		                            <c:set var="separator2" value="${fn:endsWith(path2, '.do') ? '?' : '&'}" />
+		                            
+		                            <li>
+		                                <a href="<c:url value='${path2}'/>${separator2}menuId=${m2.menuId}">${m2.menuTitle}</a>
+		        
+		                                <%-- 혹시 모를 3Depth 대응 (기존 PC 로직 유지) --%>
+		                                <c:if test="${not empty menuList[key3]}">
+		                                    <ul>
+		                                        <c:forEach var="m3" items="${menuList[key3]}">
+		                                            <%-- 3depth URL 정규화 및 파라미터 처리 --%>
+		                                            <c:set var="raw3" value="${m3.menuUrl}" />
+		                                            <c:set var="path3" value="${fn:startsWith(raw3, ctx) ? fn:substring(raw3, fn:length(ctx), fn:length(raw3)) : raw3}" />
+		                                            <c:if test="${not fn:startsWith(path3,'/')}">
+		                                                <c:set var="path3" value='/${path3}'/>
+		                                            </c:if>
+		                                            <c:set var="separator3" value="${fn:endsWith(path3, '.do') ? '?' : '&'}" />
+		                                            
+		                                            <li>
+		                                                <a href="<c:url value='${path3}'/>${separator3}menuId=${m3.menuId}">${m3.menuTitle}</a>
+		                                            </li>
+		                                        </c:forEach>
+		                                    </ul>
+		                                </c:if>
+		                            </li>
+		                        </c:forEach>
+		                    </ul>
+		                </c:if>
+		            </li>
+		        </c:forEach>
             </ul>
         </div>
 
