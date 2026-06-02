@@ -21,7 +21,7 @@
 	</head>
 
 	<body class="login-area">
-		<h1 class="login_tit"><img src="${contextRoot}/assets/css/adm/img/logo_admin_login.png" alt="Yangju 양주시"></h1>
+		<h1 class="login_tit"><img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_logo_b.png" alt="Yangju 양주시"></h1>
 		<div>
 			<fieldset>
 					<legend>ADMIN LOGIN</legend>
