@@ -142,7 +142,7 @@ function openLoginPopup() {
                     </button>
 
                     <ul class="lang-list">
-                        <li><a href="#">KOR</a></li>
+                        <!-- <li><a href="#">KOR</a></li> -->
                         <li><a href="#">ENG</a></li>
                     </ul>
                 </div>
@@ -176,7 +176,7 @@ function openLoginPopup() {
                         </span>
                         </button>
                         <ul class="lang-list">
-                            <li><a href="#">KOR</a></li>
+                            <!-- <li><a href="#">KOR</a></li> -->
                             <li><a href="#">ENG</a></li>
                         </ul>
                     </div>
