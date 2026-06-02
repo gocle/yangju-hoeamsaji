@@ -4,8 +4,8 @@
 <footer class="footer">
             <div class="footer__inner">
 
-                <a href="/usr/main.do" class="footer__logo">
-                    <img src="/assets/site/hoeamsaji/img/common/footer-logo.png" alt="Yangju City">
+                <a href="/hoeamsaji/usr/main.do" class="footer__logo">
+                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/footer-logo.png" alt="Yangju City">
                 </a>
 
                 <div class="footer__info">

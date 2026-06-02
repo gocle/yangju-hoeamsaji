@@ -29,15 +29,15 @@
     <link rel="icon" href="img/common/favicon.ico">
 
     <!-- css -->
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/common.css">
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/contents.css">
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/responsive.css">
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/slick.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/common.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/contents.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/responsive.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/slick.css">
 
     <!-- js -->
-    <script src="/assets/site/hoeamsaji/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/site/hoeamsaji/js/slick.min.js"></script>
-    <script src="/assets/site/hoeamsaji/js/ui-script.js"></script>
+    <script src="/hoeamsaji/assets/site/hoeamsaji/js/jquery-3.7.1.min.js"></script>
+    <script src="/hoeamsaji/assets/site/hoeamsaji/js/slick.min.js"></script>
+    <script src="/hoeamsaji/assets/site/hoeamsaji/js/ui-script.js"></script>
 </head>
 <body>
 
@@ -50,7 +50,7 @@
 
                 <div class="visual-slide">
                     <div class="visual-bg"
-                        style="background-image:url('/assets/site/hoeamsaji/img/main_01.jpg')">
+                        style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/main_01.jpg')">
                     </div>
 
                     <div class="visual-content">
@@ -66,11 +66,11 @@
                             <span>Detail</span>
 
                             <span class="btn-arrow">
-                                <img src="/assets/site/hoeamsaji/img/ico_next_s.png"
+                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_next_s.png"
                                     alt=""
                                     class="arrow-white">
 
-                                <img src="/assets/site/hoeamsaji/img/ico_next_b.png"
+                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_next_b.png"
                                     alt=""
                                     class="arrow-black">
                             </span>
@@ -80,7 +80,7 @@
 
                 <div class="visual-slide">
                     <div class="visual-bg"
-                        style="background-image:url('/assets/site/hoeamsaji/img/main_02.jpg')">
+                        style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/main_02.jpg')">
                     </div>
 
                     <div class="visual-content">
@@ -135,8 +135,8 @@
                     View more
 
                     <span class="btn-arrow">
-                        <img src="/assets/site/hoeamsaji/img/ico_next_b.png" alt="" class="arrow-black">
-                        <img src="/assets/site/hoeamsaji/img/ico_next_s.png" alt="" class="arrow-white">
+                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_next_b.png" alt="" class="arrow-black">
+                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_next_s.png" alt="" class="arrow-white">
                     </span>
                     </a>
                 </div>
@@ -174,20 +174,20 @@
             <div class="marquee-row left">
                 <div class="marquee-track">
 
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-01.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-02.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-04.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-05.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-06.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-01.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-02.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-04.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-05.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-06.jpg')"></div>
 
                 <!-- 반복 -->
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-01.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-02.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-04.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-05.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-06.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-01.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-02.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-04.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-05.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-06.jpg')"></div>
 
                 </div>
             </div>
@@ -195,20 +195,20 @@
             <div class="marquee-row right">
                 <div class="marquee-track">
 
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-07.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-08.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-09.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-10.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-11.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-07.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-08.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-09.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-10.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-11.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
 
                 <!-- 반복 -->
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-07.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-08.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-09.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-10.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-11.jpg')"></div>
-                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-07.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-08.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-09.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-10.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-11.jpg')"></div>
+                <div class="thumb" style="background-image:url('/hoeamsaji/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
 
                 </div>
             </div>
@@ -223,7 +223,7 @@
             <article>
                 <div class="value-card__top">
                 <strong>01</strong>
-                <img src="/assets/site/hoeamsaji/img/icon-value-01.svg" alt="">
+                <img src="/hoeamsaji/assets/site/hoeamsaji/img/icon-value-01.svg" alt="">
                 </div>
                 <h4>Royal Buddhist Culture</h4>
                 <p>A sacred site shaped by royal patronage and early Joseon Buddhist culture.</p>
@@ -232,7 +232,7 @@
             <article>
                 <div class="value-card__top">
                 <strong>02</strong>
-                <img src="/assets/site/hoeamsaji/img/icon-value-02.svg" alt="">
+                <img src="/hoeamsaji/assets/site/hoeamsaji/img/icon-value-02.svg" alt="">
                 </div>
                 <h4>Seon Monastery Architecture</h4>
                 <p>A rare layout showing the spatial system of a large-scale Seon monastery.</p>
@@ -241,7 +241,7 @@
             <article>
                 <div class="value-card__top">
                 <strong>03</strong>
-                <img src="/assets/site/hoeamsaji/img/icon-value-03.svg" alt="">
+                <img src="/hoeamsaji/assets/site/hoeamsaji/img/icon-value-03.svg" alt="">
                 </div>
                 <h4>Archaeological Evidence</h4>
                 <p>Excavated remains and artifacts revealing the temple’s scale and status.</p>
@@ -281,7 +281,7 @@
                     <article class="visit-info__item">
 
                         <div class="visit-info__head">
-                            <img src="/assets/site/hoeamsaji/img/ico_map.png" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_map.png" alt="">
                             <strong>Location</strong>
                         </div>
 
@@ -296,7 +296,7 @@
                     <article class="visit-info__item">
 
                         <div class="visit-info__head">
-                            <img src="/assets/site/hoeamsaji/img/icon-clock.png" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/icon-clock.png" alt="">
                             <strong>Opening Hours</strong>
                         </div>
 
@@ -313,7 +313,7 @@
                     <article class="visit-info__item">
 
                         <div class="visit-info__head">
-                            <img src="/assets/site/hoeamsaji/img/icon-phone.png" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/icon-phone.png" alt="">
                             <strong>Contact</strong>
                         </div>
 
@@ -325,7 +325,7 @@
                     <article class="visit-info__item">
 
                         <div class="visit-info__head">
-                            <img src="/assets/site/hoeamsaji/img/icon-calendar.png" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/icon-calendar.png" alt="">
                             <strong>Closed</strong>
                         </div>
 

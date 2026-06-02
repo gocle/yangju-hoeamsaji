@@ -20,7 +20,7 @@
                     </h2>
 
                     <div class="sub-location"> 
-                        <a href="#"><img src="/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
+                        <a href="/hoeamsaji/usr/main.do"><img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
                         <span>World Heritage</span>
                         <span>Promotion of World Cultural Heritage listing</span>
                     </div>

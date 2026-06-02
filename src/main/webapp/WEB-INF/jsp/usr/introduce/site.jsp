@@ -21,7 +21,7 @@
                     </h2>
 
                     <div class="sub-location"> 
-                        <a href="/usr/main.do"><img src="/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
+                        <a href="/hoeamsaji/usr/main.do"><img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
                         <span>Hoeamsaji</span>
                         <span>Yangju Hoeamsa Temple Site Layout</span>
                     </div>
@@ -85,10 +85,10 @@
 
                             <div class="sub-desc-img">
                                 <h4>Estimated layout of Hoeamsa Temple during the late Goryeo period</h4>
-                                <img src="/assets/site/hoeamsaji/img/sub1-2-01.png">
+                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/sub1-2-01.png">
                                 <div class="sub-img-flex">
-                                    <img src="/assets/site/hoeamsaji/img/sub1-2-02.png">
-                                    <img src="/assets/site/hoeamsaji/img/sub1-2-03.png">
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/sub1-2-02.png">
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/sub1-2-03.png">
                                 </div>
                             </div>
 

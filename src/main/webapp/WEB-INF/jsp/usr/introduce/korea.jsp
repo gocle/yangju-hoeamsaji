@@ -20,7 +20,7 @@
                     </h2>
 
                     <div class="sub-location"> 
-                        <a href="/usr/main.do"><img src="/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
+                        <a href="/hoeamsaji/usr/main.do"><img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
                         <span>World Heritage</span>
                         <span>Korea's World Cultural Heritage</span>
                     </div>
@@ -35,7 +35,7 @@
                     <div class="heritage-map-wrap">
 
                         <div class="heritage-map-box">
-                            <img src="/assets/site/hoeamsaji/img/img_heritage_map.png" alt="World Heritage and Tentative List Map of Korea">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/img_heritage_map.png" alt="World Heritage and Tentative List Map of Korea">
                         </div>
 
                         <div class="heritage-tab-box">

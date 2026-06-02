@@ -20,7 +20,7 @@
                     </h2>
 
                     <div class="sub-location"> 
-                        <a href="/usr/main.do"><img src="/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
+                        <a href="/hoeamsaji/usr/main.do"><img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
                         <span>World Heritage</span>
                         <span>World heritage system</span>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="listing-title js-rise">
                         <h3>Outstanding Universal Value</h3>
                         <div class="title-divider">
-                            <img src="/assets/site/hoeamsaji/img/title-divider.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/title-divider.svg" alt="">
                         </div>
                         <p>OUV(Outstanding Universal Value)</p>
                         <strong>Must satisfy one or more of 10 criteria</strong>
@@ -45,7 +45,7 @@
                     <div class="ouv-card-list js-rise">
                         <article>
                             <strong>01</strong>
-                            <img src="/assets/site/hoeamsaji/img/ico_ouv_01.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_ouv_01.svg" alt="">
                             <h4>Authenticity</h4>
                             <em>Heritage Value Expression</em>
                             <p>
@@ -58,7 +58,7 @@
 
                         <article>
                             <strong>02</strong>
-                            <img src="/assets/site/hoeamsaji/img/ico_ouv_02.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_ouv_02.svg" alt="">
                             <h4>Completeness</h4>
                             <em>Integrity</em>
                             <p>
@@ -71,7 +71,7 @@
 
                         <article>
                             <strong>03</strong>
-                            <img src="/assets/site/hoeamsaji/img/ico_ouv_03.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_ouv_03.svg" alt="">
                             <h4>Protection ·<br>Management System</h4>
                             <p>
                                 Legal, administrative protection systems,
@@ -178,28 +178,28 @@
                     </div>
 
                     <div class="effects-visual js-rise">
-                        <img src="/assets/site/hoeamsaji/img/thumb-11.jpg" alt="">
+                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/thumb-11.jpg" alt="">
                         <h3>Effects of World Heritage listing</h3>
                     </div>
 
                     <div class="effects-list js-rise">
                         <article>
-                            <img src="/assets/site/hoeamsaji/img/ico_effect_01.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_effect_01.svg" alt="">
                             <p>Sustainable Conservation &<br>Management of Heritage</p>
                         </article>
 
                         <article>
-                            <img src="/assets/site/hoeamsaji/img/ico_effect_02.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_effect_02.svg" alt="">
                             <p>Enhancement of Cultural Pride &<br>Elevating Cultural Status</p>
                         </article>
 
                         <article>
-                            <img src="/assets/site/hoeamsaji/img/ico_effect_03.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_effect_03.svg" alt="">
                             <p>Revitalization of Local Economy<br>through Increased Tourists</p>
                         </article>
 
                         <article>
-                            <img src="/assets/site/hoeamsaji/img/ico_effect_04.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_effect_04.svg" alt="">
                             <p>International Cooperation and<br>Government Interest and Support</p>
                         </article>
                     </div>

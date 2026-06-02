@@ -47,13 +47,13 @@ function openLoginPopup() {
 		<header class="site-header">
         <div class="header-inner">
             <h1 class="logo">
-                <a href="/usr/main.do">
+                <a href="/hoeamsaji/usr/main.do">
 
-                    <img src="/assets/site/hoeamsaji/img/common/ico_logo.png"
+                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_logo.png"
                         alt="Hoeamsaji Temple Site Logo"
                         class="logo-white">
 
-                    <img src="/assets/site/hoeamsaji/img/common/ico_logo_b.png"
+                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_logo_b.png"
                         alt=""
                         class="logo-black">
 
@@ -66,99 +66,61 @@ function openLoginPopup() {
 			
             <nav class="gnb">
             <ul>
-                <!-- <li>
-                <a href="/usr/main.do">Hoeamsaji</a>
-                <ul>
-                    <li><a href="sub1-1.html">Overview</a></li>
-                    <li><a href="sub1-1.html">Current Status of National Heritage</a></li>
-                    <li><a href="sub1-2.html">Excavation and restoration</a></li>
-                    <li><a href="sub1-3.html">Yangju Hoeamsa Temple Site Layout</a></li>
-                </ul>
-                </li>
-                <li>
-                <a href="#">World Heritage</a>
-                <ul>
-                    <li><a href="sub2-1.html">UNESCO and World Heritage</a></li>
-                    <li><a href="sub2-2.html">World heritage system</a></li>
-                    <li><a href="sub2-3.html">Korea's World Cultural Heritage</a></li>
-                    <li><a href="sub2-4.html">Promotion of World Cultural Heritage listing</a></li>
-                </ul>
-                </li>
-                <li>
-                <a href="#">Programs</a>
-                <ul>
-                    <li><a href="#">Hoeamsaji Royal Festival</a></li>
-                    <li><a href="#">World heritage education</a></li>
-                </ul>
-                </li>
-                <li>
-                <a href="#">Announcements</a>
-                <ul>
-                    <li><a href="#">Notices</a></li>
-                </ul>
-                </li>
-                <li>
-                <a href="#">Archives</a>
-                <ul>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="#">Photos and video</a></li>
-                </ul>
-                </li> -->
-                
+
                 <c:forEach var="m1" items="${menuList[key1]}" varStatus="st1">
-    <%-- 1depth URL 정규화 --%>
-    <c:set var="raw1" value="${m1.menuUrl}" />
-    <c:set var="path1" value="${fn:startsWith(raw1, ctx) ? fn:substring(raw1, fn:length(ctx), fn:length(raw1)) : raw1}" />
-    <c:if test="${not fn:startsWith(path1,'/')}">
-        <c:set var="path1" value='/${path1}'/>
-    </c:if>
-    
-    <c:set var="key2" value="${m1.menuId}_${m1.menuDepth + 1}" />
-    <c:set var="separator1" value="${fn:endsWith(path1, '.do') ? '?' : '&'}" />
-    
-    <li>
-        <a href="<c:url value='${path1}'/>${separator1}menuId=${m1.menuId}">${m1.menuTitle}</a>
-        
-        <%-- 2뎁스가 있으면 샘플의 <ul> 구조대로 출력 --%>
-        <c:if test="${not empty menuList[key2]}">
-            <ul>
-                <c:forEach var="m2" items="${menuList[key2]}">
-                    <c:set var="key3" value="${m2.menuId}_${m2.menuDepth + 1}" />
-
-                    <%-- 2depth URL 정규화 --%>
-                    <c:set var="raw2" value="${m2.menuUrl}" />
-                    <c:set var="path2" value="${fn:startsWith(raw2, ctx) ? fn:substring(raw2, fn:length(ctx), fn:length(raw2)) : raw2}" />
-                    <c:if test="${not fn:startsWith(path2,'/')}">
-                      <c:set var="path2" value='/${path2}'/>
-                    </c:if>
-                    <c:set var="separator2" value="${fn:endsWith(path2, '.do') ? '?' : '&'}" />
-                    
-                    <li>
-                        <a href="<c:url value='${path2}'/>${separator2}menuId=${m2.menuId}">${m2.menuTitle}</a>
-
-                        <%-- 만약 샘플에 없던 3뎁스가 데이터로 들어온다면 하위에 ul로 출력 --%>
-                        <c:if test="${not empty menuList[key3]}">
-                            <ul>
-                                <c:forEach var="m3" items="${menuList[key3]}">
-                                    <%-- 3depth URL 정규화 --%>
-                                    <c:set var="raw3" value="${m3.menuUrl}" />
-                                    <c:set var="path3" value="${fn:startsWith(raw3, ctx) ? fn:substring(raw3, fn:length(ctx), fn:length(raw3)) : raw3}" />
-                                    <c:if test="${not fn:startsWith(path3,'/')}">
-                                        <c:set var="path3" value='/${path3}'/>
-                                    </c:if>
-                                    <c:set var="separator3" value="${fn:endsWith(path3, '.do') ? '?' : '&'}" />
-                                    <li>
-                                        <a href="<c:url value='${path3}'/>${separator3}menuId=${m3.menuId}">${m3.menuTitle}</a>
-                                    </li>
-                                </c:forEach>
-                            </ul>
-                        </c:if>
-                    </li>
-                </c:forEach>
-            </ul>
-        </c:if>
-    </li>
-</c:forEach>
+				    <%-- 1depth URL 정규화 --%>
+				    <c:set var="raw1" value="${m1.menuUrl}" />
+				    <c:set var="path1" value="${fn:startsWith(raw1, ctx) ? fn:substring(raw1, fn:length(ctx), fn:length(raw1)) : raw1}" />
+				    <c:if test="${not fn:startsWith(path1,'/')}">
+				        <c:set var="path1" value='/${path1}'/>
+				    </c:if>
+				    
+				    <c:set var="key2" value="${m1.menuId}_${m1.menuDepth + 1}" />
+				    <c:set var="separator1" value="${fn:endsWith(path1, '.do') ? '?' : '&'}" />
+				    
+				    <li>
+				        <a href="<c:url value='${path1}'/>${separator1}menuId=${m1.menuId}">${m1.menuTitle}</a>
+				        
+				        <%-- 2뎁스가 있으면 샘플의 <ul> 구조대로 출력 --%>
+				        <c:if test="${not empty menuList[key2]}">
+				            <ul>
+				                <c:forEach var="m2" items="${menuList[key2]}">
+				                    <c:set var="key3" value="${m2.menuId}_${m2.menuDepth + 1}" />
+				
+				                    <%-- 2depth URL 정규화 --%>
+				                    <c:set var="raw2" value="${m2.menuUrl}" />
+				                    <c:set var="path2" value="${fn:startsWith(raw2, ctx) ? fn:substring(raw2, fn:length(ctx), fn:length(raw2)) : raw2}" />
+				                    <c:if test="${not fn:startsWith(path2,'/')}">
+				                      <c:set var="path2" value='/${path2}'/>
+				                    </c:if>
+				                    <c:set var="separator2" value="${fn:endsWith(path2, '.do') ? '?' : '&'}" />
+				                    
+				                    <li>
+				                        <a href="<c:url value='${path2}'/>${separator2}menuId=${m2.menuId}">${m2.menuTitle}</a>
+				
+				                        <%-- 만약 샘플에 없던 3뎁스가 데이터로 들어온다면 하위에 ul로 출력 --%>
+				                        <c:if test="${not empty menuList[key3]}">
+				                            <ul>
+				                                <c:forEach var="m3" items="${menuList[key3]}">
+				                                    <%-- 3depth URL 정규화 --%>
+				                                    <c:set var="raw3" value="${m3.menuUrl}" />
+				                                    <c:set var="path3" value="${fn:startsWith(raw3, ctx) ? fn:substring(raw3, fn:length(ctx), fn:length(raw3)) : raw3}" />
+				                                    <c:if test="${not fn:startsWith(path3,'/')}">
+				                                        <c:set var="path3" value='/${path3}'/>
+				                                    </c:if>
+				                                    <c:set var="separator3" value="${fn:endsWith(path3, '.do') ? '?' : '&'}" />
+				                                    <li>
+				                                        <a href="<c:url value='${path3}'/>${separator3}menuId=${m3.menuId}">${m3.menuTitle}</a>
+				                                    </li>
+				                                </c:forEach>
+				                            </ul>
+				                        </c:if>
+				                    </li>
+				                </c:forEach>
+				            </ul>
+				        </c:if>
+				    </li>
+				</c:forEach>
             </ul>
             </nav>
 
@@ -166,15 +128,15 @@ function openLoginPopup() {
                 <div class="lang-box">
                     <button type="button" class="lang-btn">
                     <span class="lang-ico">
-                        <img src="/assets/site/hoeamsaji/img/common/ico_language.png" alt="" class="lang-ico-white">
-                        <img src="/assets/site/hoeamsaji/img/common/ico_language_b.png" alt="" class="lang-ico-black">
+                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_language.png" alt="" class="lang-ico-white">
+                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_language_b.png" alt="" class="lang-ico-black">
                     </span>
 
                     <span>English</span>
 
                     <span class="lang-arrow-wrap">
-                        <img src="/assets/site/hoeamsaji/img/common/ico_down.svg" alt="" class="lang-arrow-white">
-                        <img src="/assets/site/hoeamsaji/img/common/ico_down_b.svg" alt="" class="lang-arrow-black">
+                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_down.svg" alt="" class="lang-arrow-white">
+                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_down_b.svg" alt="" class="lang-arrow-black">
                     </span>
                     
                     </button>
@@ -204,13 +166,13 @@ function openLoginPopup() {
                     <div class="lang-box">
                         <button type="button" class="lang-btn">
                         <span class="lang-ico">
-                            <img src="/assets/site/hoeamsaji/img/common/ico_language.png" alt="" >
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_language.png" alt="" >
                         </span>
 
                         <span>English</span>
 
                         <span class="lang-arrow-wrap">
-                            <img src="/assets/site/hoeamsaji/img/common/ico_down.svg" alt="">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_down.svg" alt="">
                         </span>
                         </button>
                         <ul class="lang-list">
@@ -221,7 +183,7 @@ function openLoginPopup() {
 
                     <button type="button" class="mobile-close">닫기</button>
                 </div>
-                <img src="/assets/site/hoeamsaji/img/common/ico_logo_m.png" alt="" >
+                <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_logo_m.png" alt="" >
 
             </div>
 

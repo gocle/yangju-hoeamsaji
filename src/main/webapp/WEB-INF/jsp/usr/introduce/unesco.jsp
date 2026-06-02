@@ -20,7 +20,7 @@
                     </h2>
 
                     <div class="sub-location"> 
-                        <a href="index.html"><img src="/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
+                        <a href="/hoeamsaji/usr/main.do"><img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
                         <span>World Heritage</span>
                         <span>UNESCO and World Heritage</span>
                     </div>
@@ -45,21 +45,21 @@
                         <div class="heritage-org-wrap">
 
                         <a href="#" class="heritage-org">
-                            <img src="/assets/site/hoeamsaji/img/logo-unesco.png" alt="UNESCO">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-unesco.png" alt="UNESCO">
                         </a>
                         
                         <span class="heritage-org-line" aria-hidden="true"></span>
 
                         <a href="#" class="heritage-org">
-                            <img src="/assets/site/hoeamsaji/img/logo-world-heritage.png" alt="World Heritage Convention">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-world-heritage.png" alt="World Heritage Convention">
                         </a>
 
                         <a href="#" class="heritage-org">
-                            <img src="/assets/site/hoeamsaji/img/logo-intangible.png" alt="Intangible Cultural Heritage">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-intangible.png" alt="Intangible Cultural Heritage">
                         </a>
 
                         <a href="#" class="heritage-org">
-                            <img src="img/logo-memory.png" alt="Memory of the World">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-memory.png" alt="Memory of the World">
                         </a>
 
                         </div>
@@ -147,21 +147,21 @@
                                         <span class="domestic-process__arrow"></span>
 
                                         <div class="domestic-process__item">
-                                            <img src="/assets/site/hoeamsaji/img/ico_list_02.svg" alt="">
+                                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_02.svg" alt="">
                                             <p>Priority<br>Registration<br>List</p>
                                         </div>
 
                                         <span class="domestic-process__arrow"></span>
 
                                         <div class="domestic-process__item">
-                                            <img src="img/ico_list_03.svg" alt="">
+                                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_03.svg" alt="">
                                             <p>Nomination<br>Application<br>Candidate</p>
                                         </div>
 
                                         <span class="domestic-process__arrow"></span>
 
                                         <div class="domestic-process__item">
-                                            <img src="img/ico_list_04.svg" alt="">
+                                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_04.svg" alt="">
                                             <p>Nomination<br>Application<br>Target</p>
                                         </div>
 
@@ -180,35 +180,35 @@
                                 <div class="domestic-process__list">
 
                                     <div class="domestic-process__item">
-                                        <img src="/assets/site/hoeamsaji/img/ico_list_01.svg" alt="">
+                                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_01.svg" alt="">
                                         <p>Tentative<br>List</p>
                                     </div>
 
                                     <span class="domestic-process__arrow"></span>
 
                                     <div class="domestic-process__item">
-                                        <img src="/assets/site/hoeamsaji/img/ico_list_05.svg" alt="">
+                                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_05.svg" alt="">
                                         <p>Preliminary<br>Assessment</p>
                                     </div>
 
                                     <span class="domestic-process__arrow"></span>
 
                                     <div class="domestic-process__item">
-                                        <img src="/assets/site/hoeamsaji/img/ico_list_03.svg" alt="">
+                                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_03.svg" alt="">
                                         <p>Nomination<br>Dossier<br>Submission</p>
                                     </div>
 
                                     <span class="domestic-process__arrow"></span>
 
                                     <div class="domestic-process__item">
-                                        <img src="img/ico_list_06.svg" alt="">
+                                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_06.svg" alt="">
                                         <p>Advisory<br>Body<br>Evaluation</p>
                                     </div>
 
                                     <span class="domestic-process__arrow"></span>
 
                                     <div class="domestic-process__item">
-                                        <img src="/assets/site/hoeamsaji/img/ico_list_07.svg" alt="">
+                                        <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_07.svg" alt="">
                                         <p>World Heritage<br>Committee<br>Deliberation /<br>Decision</p>
                                     </div>
 

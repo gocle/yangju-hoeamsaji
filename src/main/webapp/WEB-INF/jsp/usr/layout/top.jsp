@@ -27,15 +27,15 @@
     <link rel="icon" href="img/common/favicon.ico">
 
     <!-- css -->
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/common.css">
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/contents.css">
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/responsive.css">
-    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/slick.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/common.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/contents.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/responsive.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/slick.css">
 
     <!-- js -->
-    <script src="/assets/site/hoeamsaji/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/site/hoeamsaji/js/slick.min.js"></script>
-    <script src="/assets/site/hoeamsaji/js/ui-script.js"></script>
+    <script src="/hoeamsaji/assets/site/hoeamsaji/js/jquery-3.7.1.min.js"></script>
+    <script src="/hoeamsaji/assets/site/hoeamsaji/js/slick.min.js"></script>
+    <script src="/hoeamsaji/assets/site/hoeamsaji/js/ui-script.js"></script>
 </head>
 
 <body>
