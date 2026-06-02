@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gocle.hoeamsaji.adm.company.service.impl.CompanyManageMapper">
+
+	<select id="listBoardArticle" resultType="CompanyManageVo" parameterType="CompanyManageVo">
+		<include refid="kr.co.gocle.include.paging-start" />
+		SELECT  COM_ID                 
+                ,COM_TITLE               
+                ,COM_INTRO               
+                ,NOTE       
+                ,address
+	            ,zip_code
+	            ,address_dtl
+                ,REG_DT      
+        FROM    COM_COMPANY sc
+        WHERE   1 = 1
+        
+        <if test="searchCondition != null and searchCondition != ''">
+	        <if test="searchKeyword != null and searchKeyword != ''">
+	        	<choose>
+	        		<when test="searchCondition == 'ALL'">
+			   			<![CDATA[ AND (REGEXP_REPLACE(COM_TITLE, '<[^>]*>', '') LIKE CONCAT('%', #{searchKeyword}, '%') OR REGEXP_REPLACE(COM_INTRO, '<[^>]*>', '') LIKE CONCAT('%', #{searchKeyword}, '%')) ]]> 
+			    	</when>
+			   		<when test="searchCondition == 'COM_TITLE'">
+			   			<![CDATA[ AND REGEXP_REPLACE(COM_TITLE, '<[^>]*>', '') LIKE CONCAT('%', #{searchKeyword}, '%') ]]>
+			    	</when>
+			    	<when test="searchCondition == 'COM_INTRO'">
+			   			<![CDATA[ AND REGEXP_REPLACE(COM_INTRO, '<[^>]*>', '') LIKE CONCAT('%', #{searchKeyword}, '%') ]]>
+			    	</when>
+				    <otherwise>
+				      	AND ${searchCondition} LIKE CONCAT('%', #{searchKeyword}, '%')
+				    </otherwise>
+			  </choose>
+	        </if>
+	    </if>
+	    
+		<if test="searchCondition == null or searchCondition == ''">
+		    <if test="searchKeyword != null and searchKeyword != ''">
+		        AND (
+		            CA.BA_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+		            <![CDATA[ OR REGEXP_REPLACE(CA.BA_CONTENT_HTML, '<[^>]*>', '') LIKE CONCAT('%', #{searchKeyword}, '%') ]]>
+		        )
+		    </if>
+	    </if>
+        <include refid="kr.co.gocle.include.paging-end" />
+	</select>
+	
+	<!-- 기관 보기 -->
+    <select id="getBoardArticle" resultType="CompanyManageVo" parameterType="CompanyManageVo">
+		SELECT  COM_ID                 
+                ,COM_TITLE               
+                ,COM_INTRO               
+                ,NOTE       
+                ,address
+	            ,zip_code
+	            ,address_dtl
+	            ,USE_YN
+                ,REG_DT            
+        FROM    COM_COMPANY sc
+        WHERE   COM_ID     = #{comId}
+    </select>
+    
+    <!-- 기관 입력 -->
+    <insert id="insertBoardArticle">
+        INSERT INTO COM_COMPANY (
+             com_id                 
+            ,com_title              
+            ,com_intro
+            ,use_yn
+            ,note 
+            ,address
+            ,zip_code
+            ,address_dtl                
+            ,reg_id                 
+            ,reg_dt                 
+        ) VALUES (
+             #{comId}
+            ,#{comTitle}
+            ,#{comIntro}
+            ,#{useYn}
+            ,#{note}
+            ,#{address}
+            ,#{zipCode}
+            ,#{addressDtl}
+            ,#{regId}
+            ,NOW()
+        )
+    </insert>
+    
+    <!-- 기관 수정 -->
+    <update id="updateBoardArticle">
+        UPDATE  COM_COMPANY
+        SET      com_title        = #{comTitle}           
+        		,com_intro        = #{comIntro}           
+        		,note 			  = #{note} 
+        		,address          = #{address}        
+        		,zip_code         = #{zipCode}        
+                ,address_dtl      = #{addressDtl}        
+                ,use_yn           = #{useYn}           
+                ,upd_id           = #{regId}            
+                ,upd_dt           = NOW()             
+        WHERE   com_id            = #{comId}
+    </update>
+    
+    <!-- 기관 삭제 -->
+	<delete id="deleteBoardArticle">
+	    DELETE
+	    FROM COM_COMPANY
+	    WHERE com_id = #{comId}
+	</delete>
+	
+	<!-- 교육 장소 등록 -->
+    <insert id="insertCompanyLocation">
+        INSERT INTO COMPANY_LOCATION (
+             com_id                 
+            ,seq_no              
+            ,location
+        ) VALUES (
+             #{comId}
+            ,#{seqNo}
+            ,#{location}
+        )
+    </insert>
+    
+    <!-- 교육 장소 삭제 -->
+	<delete id="deleteCompanyLocation">
+	    DELETE
+	    FROM COMPANY_LOCATION
+	    WHERE com_id = #{comId}
+	    AND loc_id = #{locId}
+	</delete>
+	
+	<select id="getLocation" resultType="CompanyManageVo" parameterType="CompanyManageVo">
+		SELECT  COM_ID             
+                ,SEQ_NO             
+                ,LOCATION
+                ,LOC_ID
+        FROM    COMPANY_LOCATION
+        WHERE   1 = 1
+        AND     com_id = #{comId}
+        ORDER BY SEQ_NO
+	</select>
+    
+    <!-- 교육 장소 수정 -->
+	<update id="updateCompanyLocation">
+	    UPDATE COMPANY_LOCATION
+	    SET LOCATION = #{location}
+	      , SEQ_NO = #{seqNo}
+	    WHERE com_id = #{comId}
+	    AND loc_id = #{locId}
+	</update>
+	
+	<select id="selectLocIdsCompany" resultType="String" parameterType="CompanyManageVo">
+		SELECT loc_id
+		FROM COMPANY_LOCATION
+		WHERE COM_ID = #{comId}
+	</select>
+</mapper>

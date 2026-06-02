@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    
+    <typeAliases>
+	    <typeAlias alias="MenuVO" type="com.gocle.hoeamsaji.adm.menu.vo.MenuVO" />
+	    <typeAlias alias="MemberVO" type="com.gocle.hoeamsaji.adm.member.vo.MemberVO" />
+	    <typeAlias alias="BoardConfigVO" type="com.gocle.hoeamsaji.adm.board.vo.BoardConfigVO" />
+	    <typeAlias alias="BoardArticleVO" type="com.gocle.hoeamsaji.adm.board.vo.BoardArticleVO" />
+	    <typeAlias alias="BoardReplyVO" type="com.gocle.hoeamsaji.adm.board.vo.BoardReplyVO" />
+	    <typeAlias alias="CodeVO" type="com.gocle.hoeamsaji.adm.code.vo.CodeVO" />
+	    <typeAlias alias="FileVO" type="com.gocle.hoeamsaji.comm.file.vo.FileVO" />
+	    <typeAlias alias="LoginVO" type="com.gocle.hoeamsaji.adm.login.vo.LoginVO" />
+	    <typeAlias alias="BannerVO" type="com.gocle.hoeamsaji.adm.banner.vo.BannerVO" />
+	    <typeAlias alias="StatsVO" type="com.gocle.hoeamsaji.adm.stats.vo.StatsVO" />
+	    <typeAlias alias="IpVO" type="com.gocle.hoeamsaji.adm.ip.vo.IpVO" />
+	    <typeAlias alias="UserCodeVO" type="com.gocle.hoeamsaji.usr.code.vo.CodeVO" />
+	    <typeAlias alias="UserBoardConfigVO" type="com.gocle.hoeamsaji.usr.board.vo.BoardConfigVO" />
+	    <typeAlias alias="UserBoardArticleVO" type="com.gocle.hoeamsaji.usr.board.vo.BoardArticleVO" />
+	    <typeAlias alias="UserBoardReplyVO" type="com.gocle.hoeamsaji.usr.board.vo.BoardReplyVO" />
+	    <typeAlias alias="UserBannerVO" type="com.gocle.hoeamsaji.usr.banner.vo.BannerVO" />
+	    <typeAlias alias="CompanyManageVo" type="com.gocle.hoeamsaji.adm.company.vo.CompanyManageVo" />
+	</typeAliases>
+	
+</configuration>

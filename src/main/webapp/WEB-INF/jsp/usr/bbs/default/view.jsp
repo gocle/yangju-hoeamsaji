@@ -1,0 +1,272 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<c:import url="/usr/layout/top.do" />
+
+  <c:import url="/usr/menu/header.do" />
+  
+     <script type="text/javascript">
+     
+     //파일 다운로드
+     function fn_egov_downFile(atchFileIdx){
+
+    		window.open("${contextRoot}/board/FileDown.do?atchFileIdx="+atchFileIdx);
+    	}
+     
+     //이전 글
+     function fn_prev( preNo , menuId ){
+     	
+    		 window.location.href='/hoeamsaji/usr/bbs/${bcId}/detail.do?baId='+preNo+'&menuId='+menuId;
+
+    	 
+     }
+     
+     
+     //다음 글
+     function fn_next( nextNo , menuId ){
+    	 
+
+    	 window.location.href='/hoeamsaji/usr/bbs/${bcId}/detail.do?baId='+nextNo+'&menuId='+menuId;
+    	 
+    	 
+     }
+     
+     $( document ).ready(function() {
+         $('img[style*="heigth"]').each(function () {
+        	  var style = $(this).attr('style');
+        	  $(this).attr('style', style.replace(/heigth/gi, 'height'));
+        	}); 
+     })
+
+     
+     </script>
+  
+    <div id="container">
+        <div class="wrap clearfix">
+            <main class="colgroup">
+                <article>
+    
+                    <header class="sub_head">
+    
+                        <div class="sub_title">
+                            <!-- 현재 메뉴명의 1차 메뉴명넣어주세요-->
+                            <p class="first_title">알림마당</p>
+                            
+                            <!-- 현재메뉴명 입력해주세요 -->
+                            <h2>${bcName}</h2>
+                        </div>
+                        
+                        <div class="sub_head_wrap">
+                            
+							<c:import url="/usr/menu/sub.do" />
+            
+                            <div class="addons">
+                                <ul class="addons_list">
+                                    <li class="addons_item print">
+                                        <button type="button" onclick="window.print();" class="addons_button">인쇄</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    
+                    <div id="contents" class="cts4145">
+						<script>
+//20220804 열린시장실 포토게시판 우클릭방지
+
+
+//<![CDATA[
+	function fn_deleteBbsNtt( url ) {
+		
+
+		if( confirm("삭제하시겠습니까?") ) {
+			window.location = url;
+		}
+	}
+
+	function fn_recovryBbsNtt( url ) {
+		if( confirm("복원하시겠습니까?") ) {
+			window.location = url;
+		}
+	}
+
+	function fn_mvmnBbsNtt( frm ) {
+		if( frm.mvmnBbsNo.value == 530 ) {
+			alert('같은 게시판내에서는 이동이 안됩니다.\n다른 게시판을 선택해주세요.');
+			return false;
+		}
+
+		return true;
+	}
+//]]>
+
+
+	function fn_deletePost() {
+
+	    if (!confirm("정말 삭제하시겠습니까?")) {
+	        return;
+	    }
+	    
+	  	$("#delForm").attr("action", "/hoeamsaji/usr/bbs/${bcId}/delete.do");
+	  	$("#delForm").submit();
+
+	}
+</script>
+
+	
+
+	<div class="bbs_info clearfix">
+        <div class="bbs_left bbs_count">
+        </div>
+        <div class="bbs_right">
+        </div>
+    </div>
+
+	<table class="bbs_default view">
+        <caption>공지사항 상세보기 - 제목, 작성자, 내용, 파일 제공</caption>
+        <tbody>
+            <tr class="subject">		
+                <th scope="row">제목</th>
+				<td>${result.baTitle}</td>
+            </tr>
+
+            <tr>		
+                <th scope="row">작성자</th>
+				<td>
+					<c:choose>
+						<c:when test="${result.bcId == 'notice'}">${result.memName }</c:when>
+						<c:otherwise>
+							${fn:substring(result.memName, 0, 1)}
+							<c:forEach begin="1" end="${fn:length(result.memName) - 1}">*</c:forEach>
+						</c:otherwise>
+					</c:choose>
+				</td>
+            </tr>
+
+            <tr>		
+                <th scope="row">내용</th>
+				<td title="내용" class="bbs_content" style="line-height: 2;">
+				${result.baContentHtml}
+					<div class="photo_area clearfix">
+						<c:forEach var="fileVO" items="${fileList}" varStatus="status">
+							<c:if test="${fileVO.fileExtn eq 'mp4' and result.bcId ne 'review'}">
+								<br>
+								<video controls preload="auto" width="800">
+								  <source src="${contextRoot }/board/getAtchMovie.do?fileSn=${fileVO.atchFileIdx}" type="video/mp4" />
+								  이 브라우저는 video 태그를 지원하지 않습니다.
+								</video>
+							</c:if>
+							<c:if test="${fileVO.fileExtn ne 'mp4' and result.bcId eq 'review' }">
+								<div class="photo_view">
+									<span class="photo_wrap">
+										<img src="${contextRoot }/board/getAtchImage.do?fileSn=${fileVO.atchFileIdx}" alt="${fileVO.orgFileName}">
+									</span>
+								</div>
+							</c:if>
+						</c:forEach>
+					</div>
+				</td>
+            </tr>
+            <tr>		
+                <th scope="row">파일</th>
+					<td>
+						<ul class="view_attach">
+						
+						<c:forEach var="fileVO" items="${fileList}" varStatus="status">
+							<c:if test="${fileVO.fileExtn ne 'mp4'}">
+								<li>
+									<div class="down_view">
+										<span><img src="/hoeamsaji/assets/common/images/board/file/ico_jpg.gif" alt="jpg파일첨부" /><c:out value="${fileVO.orgFileName}" /></span>
+									
+										<a href="javascript:fn_egov_downFile('${fileVO.atchFileIdx}');" title="파일 다운로드" class="file_down">다운로드</a>
+									
+									</div>
+								</li>
+							</c:if>
+						</c:forEach>
+					
+						</ul>
+					</td>					
+            </tr>
+
+			
+        </tbody>
+    </table>
+
+	<div class="bbs_btn_wrap clearfix">
+        <div class="bbs_left">
+            <a href="/hoeamsaji/usr/bbs/${bcId }/list.do?menuId=${menuId}" class="bbs_btn list"><i class="icon"></i><span>목록</span></a>
+        </div>
+        <c:if test="${memSeq.toString() eq result.regId.toString() and bcId eq 'review'}">
+        <div class="bbs_right">
+			<a href="/hoeamsaji/usr/bbs/${bcId }/updateForm.do?menuId=${menuId }&baId=${result.baId}" class="bbs_btn modify"><i class="icon"></i><span>수정</span></a>
+        	<a href="#" onclick="fn_deletePost()" class="bbs_btn delete"><i class="icon"></i><span>삭제</span></a>
+        </div>
+        </c:if>
+    </div>
+    
+    <form id="delForm" method="post">
+	  <input type="hidden" name="menuId" value="${menuId}" />
+	  <input type="hidden" name="baId" value="${result.baId}" />
+	</form>
+
+	<c:if test="${fn:length(boardReplyList) > 0}">
+		<h3>답변</h3>
+		<c:forEach var="boardReplyList" items="${boardReplyList}" varStatus="status">
+			<div class="bbs_info clearfix">
+				<div class="bbs_left bbs_count">
+					<span>작성일 <b>${boardReplyList.insertDate}</b></span>
+				</div>
+			</div>
+			<table class="bbs_default view">
+				<tbody>
+					<tr>
+						<th scope="row">답변내용</th>
+						<td>${boardReplyList.brContent}</td>
+					</tr>
+					<c:if test="${not empty boardReplyList.atchFileIdx and boardReplyList.rDeleteYn ne 'Y'}">
+						<tr>
+							<th scope="row">첨부파일</th>
+							<td>
+								<ul class="view_attach">
+									<li>
+										<div class="down_view">
+											<span><img src="/hoeamsaji/assets/common/images/board/file/ico_jpg.gif" alt="jpg파일첨부" /><c:out value="${boardReplyList.orgFileName}" /></span>
+											<a href="javascript:fn_egov_downFile('${boardReplyList.atchFileIdx}');" title="파일 다운로드" class="file_down">다운로드</a>
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</c:if>
+				</tbody>
+			</table>
+		</c:forEach>
+	</c:if>
+	<div class="bbs_btn_wrap clearfix">
+		<div class="bbs_right">
+		</div>
+	</div>
+		
+	<ul class="bbs_view_move">
+		<c:if test="${not empty prevNext.preNo and prevNext.preNo ne 0 and not empty prevNext.preTitle}">
+        <li class="prev"><strong>이전글</strong> <a href="javascript:fn_prev('${prevNext.preNo}', '${menuId}', '${result.baNotice}');">${prevNext.preTitle}</a></li>
+        </c:if>
+        <c:if test="${not empty prevNext.nextNo and prevNext.nextNo ne 0 and not empty prevNext.nextTitle}">
+        <li class="next"><strong>다음글</strong> <a href="javascript:fn_next('${prevNext.nextNo}', '${menuId}', '${result.baNotice}');">${prevNext.nextTitle}</a></li>
+        </c:if>
+    </ul>
+    
+                    </div>
+                </article>
+            </main>
+        
+        </div>
+    </div>
+
+	<c:import url="/usr/layout/footer.do" />
+	
+</body>
+</html>
