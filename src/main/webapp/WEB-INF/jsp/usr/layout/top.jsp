@@ -3,27 +3,42 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
-	<meta name="keywords" content="Hoeamsaji Temple Site in Yangju" />
-	<meta name="description" content="Welcome to the official website of the Hoeamsaji Temple Site in Yangju" />
-	<link rel="stylesheet" type="text/css" href="/hoeamsaji/assets/site/hoeamsaji/css/font.css" />
-	<link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/sub.css">
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/jquery-1.12.4.min.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/plugins.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/common.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/main.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/sub.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/board.js"></script>
-	<script src="${contextRoot}/dmaps/map_js_init/postcode.v2.js"></script>
-	<title>Hoeamsaji Temple Site in Yangju</title>
+    <meta charset="UTF-8">
+
+    <!-- IE 호환 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 모바일 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 기본 SEO -->
+    <title>Hoeamsaji Museum</title>
+    <meta name="description" content="Official website of Hoeamsaji Museum in Yangju, Korea.">
+    <meta name="keywords" content="Hoeamsaji, Yangju Museum, Korean Buddhist Heritage">
+
+    <!-- OG -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hoeamsaji Museum">
+    <meta property="og:description" content="Discover the history and heritage of Hoeamsaji Temple Site.">
+
+    <!-- favicon -->
+    <link rel="icon" href="img/common/favicon.ico">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/common.css">
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/contents.css">
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/responsive.css">
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/slick.css">
+
+    <!-- js -->
+    <script src="/assets/site/hoeamsaji/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/site/hoeamsaji/js/slick.min.js"></script>
+    <script src="/assets/site/hoeamsaji/js/ui-script.js"></script>
 </head>
 
-<body id="yjcareer">
+<body>
 	<script type="text/JavaScript">
 		$(document).ready(function () {
 

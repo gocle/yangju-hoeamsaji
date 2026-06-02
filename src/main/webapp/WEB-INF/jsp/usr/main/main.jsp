@@ -5,892 +5,343 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
-	<meta name="keywords" content="Hoeamsa Temple Site in Yangju" />
-	<meta name="description" content="Welcome to the official website of the Hoeamsa Temple Site in Yangju" />
-	<link rel="stylesheet" type="text/css" href="/hoeamsaji/assets/site/hoeamsaji/css/font.css" />
-	<link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/main.css">
-	<link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/sub.css">
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/jquery-1.12.4.min.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/plugins.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/common.js"></script>
-	<script src="/hoeamsaji/assets/site/hoeamsaji/js/main.js"></script>
-	<title>양주진로진학교육플랫폼</title>
+    <meta charset="UTF-8">
+
+    <!-- IE 호환 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 모바일 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 기본 SEO -->
+    <title>Hoeamsaji Museum</title>
+    <meta name="description" content="Official website of Hoeamsaji Museum in Yangju, Korea.">
+    <meta name="keywords" content="Hoeamsaji, Yangju Museum, Korean Buddhist Heritage">
+
+    <!-- OG -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hoeamsaji Museum">
+    <meta property="og:description" content="Discover the history and heritage of Hoeamsaji Temple Site.">
+
+    <!-- favicon -->
+    <link rel="icon" href="img/common/favicon.ico">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/common.css">
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/contents.css">
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/responsive.css">
+    <link rel="stylesheet" href="/assets/site/hoeamsaji/css/slick.css">
+
+    <!-- js -->
+    <script src="/assets/site/hoeamsaji/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/site/hoeamsaji/js/slick.min.js"></script>
+    <script src="/assets/site/hoeamsaji/js/ui-script.js"></script>
 </head>
+<body>
 
-<body id="yjcareer">
-	<script type="text/JavaScript">
-		document.addEventListener("DOMContentLoaded", () => {
-
-			/* ========= 신청하기 탭 ========= */
-			var tabs = [
-			  document.querySelector(".tab1"),
-			  document.querySelector(".tab2"),
-			  document.querySelector(".tab3")
-			];
-
-			var tabBtns = [
-			  document.getElementById("tabmenu1"),
-			  document.getElementById("tabmenu2"),
-			  document.getElementById("tabmenu3")
-			];
-
-			var labels = [];
-			for (var i = 0; i < tabBtns.length; i++) {
-			  labels.push(document.querySelector("label[for='" + tabBtns[i].id + "']"));
-			}
-
-			function updateMainTab() {
-			  for (var i = 0; i < tabBtns.length; i++) {
-			    var isActive = tabBtns[i].checked;
-
-			    if (isActive) {
-			      tabs[i].classList.add("active");
-			      labels[i].classList.add("active");
-			    } else {
-			      tabs[i].classList.remove("active");
-			      labels[i].classList.remove("active");
-			    }
-			  }
-			}
-
-			updateMainTab();
-
-			for (var i = 0; i < tabBtns.length; i++) {
-			  tabBtns[i].addEventListener("change", updateMainTab);
-			}
-
-
-			/* ========= 공지사항 / 자료실 탭 ========= */
-			const noticeCon1 = document.querySelector(".notice_contents");
-			const noticeCon2 = document.querySelector(".data_contents");
-
-			const noticeBtn1 = document.getElementById("notice_tab1");
-			const noticeBtn2 = document.getElementById("notice_tab2");
-
-			const label3 = document.querySelector("label[for='notice_tab1']");
-			const label4 = document.querySelector("label[for='notice_tab2']");
-			
-			const moreLink = document.querySelector(".notice_more_btn");
-			
-			const NOTICE_URL = "/hoeamsaji/usr/bbs/notice/list.do?menuId=2025MENU0000262";
-			const DATA_URL   = "/hoeamsaji/usr/bbs/photo/list.do?menuId=2025MENU0000263";
-
-			function updateNoticeTab() {
-				if (noticeBtn1.checked) {
-					noticeCon1.style.display = "block";
-					noticeCon2.style.display = "none";
-
-					label3.classList.add("active");
-					label4.classList.remove("active");
-					
-					moreLink.setAttribute("href", NOTICE_URL);
-					
-				} else {
-					noticeCon1.style.display = "none";
-					noticeCon2.style.display = "block";
-
-					label3.classList.remove("active");
-					label4.classList.add("active");
-					
-					moreLink.setAttribute("href", DATA_URL);
-				}
-			}
-
-			updateNoticeTab();
-			noticeBtn1.addEventListener("change", updateNoticeTab);
-			noticeBtn2.addEventListener("change", updateNoticeTab);
-
-			$(document).on('click', 'label[for^="counsel_"]', function () {
-				  filterSlickList({
-				    id: $(this).attr('for'),
-				    allId: 'counsel_all',
-				    itemSelector: '.counsel_item',
-				    typePrefix: 'type_',
-				    sliderSelector: '.counsel_list',
-				    prevBtnSelector: '.counsel_prev',
-				    nextBtnSelector: '.counsel_next'
-				  });
-				});
-			
-			$(document).on('click', 'label[for^="program_"]', function () {
-				  filterSlickList({
-				    id: $(this).attr('for'),
-				    allId: 'program_all',
-				    itemSelector: '.program_item',
-				    typePrefix: 'p_type_',
-				    sliderSelector: '.program_list',
-				    prevBtnSelector: '.program_prev',
-				    nextBtnSelector: '.program_next'
-				  });
-				});
-			
-			$(document).on('click', 'label[for^="event_"]', function () {
-				  filterSlickList({
-				    id: $(this).attr('for'),
-				    allId: 'event_all',
-				    itemSelector: '.event_item',
-				    typePrefix: 'e_type_',
-				    sliderSelector: '.event_list',
-				    prevBtnSelector: '.event_prev',
-				    nextBtnSelector: '.event_next'
-				  });
-				});
-
-			
-			// 신청가기 탭 변경 url
-			const $moreBtn = $('.program_more_btn');
-
-			function updateMoreLink() {
-			    if ($('#tabmenu1').is(':checked')) {
-			        $moreBtn.attr('href', '/hoeamsaji/usr/reservation/consulting/addCalendarView.do?menuId=2025MENU0000143&searchCateCd=AA'); // 1:1 상시상담
-			    } else if ($('#tabmenu2').is(':checked')) {
-			        $moreBtn.attr('href', '/hoeamsaji/usr/reservation/program/eduLctreNewList.do?menuId=2025MENU0000142&searchCateCd=BA'); // 꿈자람센터 프로그램
-			    } else {
-			    	$moreBtn.attr('href', '/hoeamsaji/usr/reservation/event/list.do?menuId=2025MENU0000144&searchCateCd=CD'); // 행사 및 강좌
-			    }
-			}
-
-			updateMoreLink();
-			$('#tabmenu1, #tabmenu2 , #tabmenu3').on('change', function () {
-			    updateMoreLink();
-			});
-
-
-		});
+		<c:import url="/usr/menu/header.do" />
 		
-		function filterSlickList(option) {
-			  const {
-			    id,
-			    allId,
-			    itemSelector,
-			    typePrefix,
-			    sliderSelector,
-			    prevBtnSelector,
-			    nextBtnSelector
-			  } = option;
-			  
-			  
+        <main>
+        <section class="main-visual">
 
-			  const $slider = $(sliderSelector);
-			  const $items = $(itemSelector);
-			  const $empty = $('#common_empty');
-			  const $prevBtn = $(prevBtnSelector);
-			  const $nextBtn = $(nextBtnSelector);
+            <div class="visual-slider">
 
-			  if (id === allId) {
-			    $items.show();
-			  } else {
-			    const typeNum = id.split('_')[1];
-			    $items.hide();
-			    $items.filter('.' + typePrefix + typeNum).show();
-			  }
+                <div class="visual-slide">
+                    <div class="visual-bg"
+                        style="background-image:url('/assets/site/hoeamsaji/img/main_01.jpg')">
+                    </div>
 
-			  const visibleCount = $items.filter(':visible').length;
+                    <div class="visual-content">
+                        <span>The Royal Seon Heritage of Yangju</span>
+                        <h2>Hoeamsaji Temple Site</h2>
+                        <p>
+                            <span>Once the largest royal Buddhist temple of early Joseon,</span>
+                            <span>Hoeamsaji preserves the traces of Korea’s Seon tradition,</span>
+                            <span>royal patronage, and centuries of spiritual legacy.</span>
+                        </p>
 
-			  if (visibleCount === 0) {
-			    if (!$slider.find('#common_empty').length) {
-			      $slider.append($empty);
-			    }
+                        <a href="#" class="fill-btn">
+                            <span>Detail</span>
 
-			    $empty.show();
+                            <span class="btn-arrow">
+                                <img src="/assets/site/hoeamsaji/img/ico_next_s.png"
+                                    alt=""
+                                    class="arrow-white">
 
-			    $prevBtn.addClass('is-disabled').prop('disabled', true);
-			    $nextBtn.addClass('is-disabled').prop('disabled', true);
+                                <img src="/assets/site/hoeamsaji/img/ico_next_b.png"
+                                    alt=""
+                                    class="arrow-black">
+                            </span>
+                        </a>
+                    </div>
+                </div>
 
-			  } else {
-			    $empty.hide();
+                <div class="visual-slide">
+                    <div class="visual-bg"
+                        style="background-image:url('/assets/site/hoeamsaji/img/main_02.jpg')">
+                    </div>
 
-			    $prevBtn.removeClass('is-disabled').prop('disabled', false);
-			    $nextBtn.removeClass('is-disabled').prop('disabled', false);
-			  }
+                    <div class="visual-content">
+                        <span>The Royal Seon Heritage of Yangju</span>
+                        <h2>Hoeamsaji Temple Site</h2>
+                        <p>
+                            <span>Once the largest royal Buddhist temple of early Joseon,</span>
+                            <span>Hoeamsaji preserves the traces of Korea’s Seon tradition,</span>
+                            <span>royal patronage, and centuries of spiritual legacy.</span>
+                        </p>
 
-			  if ($slider.hasClass('slick-initialized')) {
-				  $slider.slick('slickGoTo', 0);
-				  $slider.slick('setPosition');
-				}
-			}
-		
-		$(function () {
-			  $('.counsel_list').slick({
-			    slidesToShow: 3,
-			    slidesToScroll: 1,
-			    infinite: false,
-			    prevArrow: $('.counsel_prev'),
-			    nextArrow: $('.counsel_next')
-			  });
+                        <a href="#" class="fill-btn">
+                            <span>Discover</span>
+                        </a>
+                    </div>
+                </div>
 
-			  filterSlickList({
-			    id: 'counsel_all',
-			    allId: 'counsel_all',
-			    itemSelector: '.counsel_item',
-			    typePrefix: 'type_',
-			    sliderSelector: '.counsel_list',
-			    prevBtnSelector: '.counsel_prev',
-			    nextBtnSelector: '.counsel_next'
-			  });
-			 
-			});
-		
-				
-		function reInitSlick($slider, initFn) {
-		  if ($slider.hasClass('slick-initialized')) {
-			$slider.slick('unslick');
-		  }
-		  initFn();
+            </div>
+            
+            <div class="scroll-down">SCROLL DOWN</div> 
 
-		}
-		
-		//관련일정 js
-		let currentMonth = new Date().toISOString().slice(0, 7);
+        </section>
 
-		function loadSchedule(month) {
-			  $.ajax({
-			    url: "/hoeamsaji/usr/loadSchedule.do",
-			    type: "get",
-			    data: { searchScheduleDt: month },
-			    success: function (list) {
-			      renderSchedule(list, month);
-			    },
-			    error: function () {
-			      alert("일정을 불러오지 못했습니다.");
-			    }
-			  });
-			}
+        <section class="intro section-rise">
+            <div class="intro__inner">
+                <div class="intro__headline">
+                <h3>
+                    A Royal Temple<br>
+                    Remembered in Stone
+                </h3>
+                </div>
 
-		function renderSchedule(list, month) {
-			  const wrap = $("#scheduleTimeline");
-			  wrap.empty();
+                <div class="intro__content">
+                <div class="intro-images">
+                    <div class="circle-img small"></div>
+                    <div class="circle-img large"></div>
+                </div>
 
-			  if (!list || list.length === 0) {
-			    wrap.append(
-			    		'<div class="day-block">' +
-				          '<div class="events">' +
-				            '<div class="event">' +
-				              '<span class="event-title">등록된 일정이 없습니다.</span>' +
-				            '</div>' +
-				          '</div>' +
-				        '</div>'
-			    		);
-			  } else {
-			    $.each(list, function (i, item) {
-			      wrap.append(
-			        '<div class="day-block">' +
-			          '<div class="events">' +
-			            '<div class="event">' +
-			              '<span class="event-title">' + item.SUBJ_NM + '</span>' +
-			            '</div>' +
-			          '</div>' +
-			        '</div>'
-			      );
-			    });
-			  }
+                <div class="intro-text">
+                    <p>
+                    Once a vast temple complex supported by kings and royal patrons,
+                    Hoeamsaji now remains as foundations, stone terraces, monuments,
+                    and excavated artifacts.
+                    </p>
 
-			  $(".month-title").text(month.replace("-", "."));
-			}
-		
-		function moveMonth(diff) {
-		  const arr = currentMonth.split("-");
-		  const d = new Date(arr[0], arr[1] - 1 + diff, 1);
+                    <p>
+                    Each trace reveals how royal Buddhist culture, Seon practice,
+                    and monastic life once came together at the foot of Mt. Cheonbo.
+                    </p>
 
-		  currentMonth =
-		    d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+                    <a href="#" class="fill-btn black">
+                    View more
 
-		  loadSchedule(currentMonth);
-		}
-		
-		
-		$(function () {
-		  loadSchedule(currentMonth);
+                    <span class="btn-arrow">
+                        <img src="/assets/site/hoeamsaji/img/ico_next_b.png" alt="" class="arrow-black">
+                        <img src="/assets/site/hoeamsaji/img/ico_next_s.png" alt="" class="arrow-white">
+                    </span>
+                    </a>
+                </div>
+                </div>
+                <div class="intro-info">
+                    <div class="intro-info__item">
+                        <i class="intro-info__icon icon-temple"></i>
+                        <strong>Late Goryeo － Early Joseon</strong>
+                        <p>A royal Buddhist temple with<br>deep historical roots</p>
+                    </div>
 
-		  $(".notice_prev").on("click", function () {
-		    moveMonth(-1);
-		  });
+                    <div class="intro-info__item">
+                        <i class="intro-info__icon icon-sites"></i>
+                        <strong>Approx. 70 Building Sites</strong>
+                        <p>Revealed through<br>archaeological excavations</p>
+                    </div>
 
-		  $(".notice_next").on("click", function () {
-		    moveMonth(1);
-		  });
-		});
-		
-		// 관련일정 clik
-		$(document).on("click", ".events", function () {
-		  location.href = "/hoeamsaji/usr/bbs/schedule/list.do?menuId=2025MENU0000341";
-		});
+                    <div class="intro-info__item">
+                        <i class="intro-info__icon icon-stupa"></i>
+                        <strong>Royal Seon Monastery</strong>
+                        <p>A rare site showing<br>Korea’s Seon Buddhist tradition</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	</script>
+        <section class="heritage section-rise">
+            <span class="heritage-circle"></span>
+            <div class="section-title">
+            <h3>Heritage Highlights</h3>
+            <p>A journey through royal legacy, Seon practice, and archaeological discovery.</p>
+            </div>
 
-	<script type="text/JavaScript">
-		function setCookie( name, value, expiredays ) {
-			var todayDate = new Date();
-			todayDate.setDate( todayDate.getDate() + expiredays );
-			document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";";
-		}
-		
-		function fnDetailView(seqCd) {
-			$("#detailForm input[name=seqCd]").val(seqCd);
-			let reqUrl = "${contextRoot}/usr/reservation/eduLctreWebView.do";
-			$("#detailForm").attr("action", reqUrl);
-			$("#detailForm").submit();
-		}
-		
-		function fnDetailViewA(subjCd) {
-			//$("#detailForm input[name=seqCd]").val('');
-			$("#detailForm input[name=subjCd]").val(subjCd);
-			let reqUrl = "${contextRoot}/usr/reservation/eduLctreWebViewA.do";
-			$("#detailForm").attr("action", reqUrl);
-			$("#detailForm").submit();
-		}
-	</script>
-	
-	<style>
-		.layer_cont p > br {
-		  display: none;
-		}
-		.layer_cont {
-			background: #fff;
-    		box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
-    		overflow-y : auto
-		}
-	</style>
+            <div class="marquee-wrap">
+            <div class="marquee-row left">
+                <div class="marquee-track">
 
-	<!-- 레이어 팝업 시작 -->
-	<c:forEach var="bn" items="${popupList}" varStatus="status">
-	    <div id="divpopup${status.index}"
-	         class="main_popup"
-	         style="
-	            position:absolute;
-	            left:${bn.bnLeft}px;
-	            top:${bn.bnTop}px;
-	            z-index:1001;
-	            visibility:hidden;
-	         ">
-	         
-	        <c:if test="${empty bn.bnLink}">
-	        	<div class="layer_cont" style="width:${bn.bnWidth}px; height:${bn.bnHeight}px">
-	        		${bn.bnDescription}
-	        	</div>
-	        </c:if>
-	        
-	        <c:if test="${not empty bn.bnLink}">
-		        <div class="layer_cont" style="width:${bn.bnWidth}px; height:${bn.bnHeight}px">
-		            <a href="${bn.bnLink}" style="display: block; width: 100%; text-decoration: none;"
-		               <c:if test="${bn.bnNewWin eq '1'}">target="_blank"</c:if>
-		               title="새창">
-		                ${bn.bnDescription}
-		            </a>
-		        </div>
-	        </c:if>
-	        
-	        <form name="notice_form${status.index}">
-	            <div class="layer_put">
-	                <div>
-	                    <input type="checkbox"
-	                           id="chkbox${status.index}" />
-	                    <label for="chkbox${status.index}">
-	                        오늘하루동안보지않기
-	                    </label>
-	                </div>
-	                <div class="pop-btn">
-	                    <a href="javascript:closeWind${status.index}();">닫기</a>
-	                </div>
-	            </div>
-	        </form>
-	    </div>
-	
-	    <script>
-	        function closeWind${status.index}() {
-	            if (document.getElementById("chkbox${status.index}").checked) {
-	                setCookie("popup_${bn.bnId}", "done", 1);
-	            }
-	            document.getElementById("divpopup${status.index}").style.visibility = "hidden";
-	        }
-	
-	        (function () {
-	            if (document.cookie.indexOf("popup_${bn.bnId}=done") < 0) {
-	                document.getElementById("divpopup${status.index}").style.visibility = "visible";
-	            }
-	        })();
-	    </script>
-	</c:forEach>
-	<!-- 레이어 팝업 종료 -->
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-01.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-02.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-04.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-05.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-06.jpg')"></div>
 
-  <c:import url="/usr/menu/header.do" />
+                <!-- 반복 -->
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-01.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-02.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-04.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-05.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-06.jpg')"></div>
 
-			<div id="container">
-			<main>
+                </div>
+            </div>
 
-				<div class="rowgroup visual-wrap">
-					<div class="wrap">
-						<section class="visual">
-							<h2 class="skip">비주얼 영역</h2>
-							<div class="visual-left">
-								<p class="visual_title">
-									<!-- <span class="sub_title">
-										<span class="n01">양주시 진로진학교육플랫폼</span>
-									</span> -->
-									<span class="n02">
-										<span>미래로 도약하는</span><span>&nbsp;Jump–Up&nbsp;양주 아이(I)</span>
-									</span>
-									<!-- <span class="n03">
-										<span>양주 청소년진로진학</span>
-									</span> -->
-								</p>
-								<div class="visual_more">
-									<a href="/hoeamsaji/usr/introduce/business.do?menuId=2025MENU0000251" class="visual_more_btn">주요사업 보러가기</a>
-								</div>
-							</div>
-							<div class="visual-right">
-								<div class="top">
-									<div class="visual-btn">
-										<span class="tit">진로진학지원센터</span>
-										<a href="${contextRoot}/usr/introduce/map.do?menuId=2025MENU0000252#loc-1" target="_self" title="이동"><span><img src="/hoeamsaji/assets/site/hoeamsaji/images/main/phone_w.png"/></span></a>
-									</div>
-									<div class="visual-btn">
-										<span class="tit">동부권 AI디지털교실</span>
-										<a href="${contextRoot}/usr/introduce/map.do?menuId=2025MENU0000252#loc-1" target="_self" title="이동"><span><img src="/hoeamsaji/assets/site/hoeamsaji/images/main/phone_w.png"/></span></a>
-									</div>
-								</div>
-								<div class="middle">
-									<div class="visual-btn">
-										<span class="tit">동부권 거점돌봄교실</span>
-										<a href="${contextRoot}/usr/introduce/map.do?menuId=2025MENU0000252#loc-3" target="_self" title="이동"><span><img src="/hoeamsaji/assets/site/hoeamsaji/images/main/phone_w.png"/></span></a>
-									</div>
-									<div class="visual-btn">
-										<span class="tit">서부권 AI디지털교실</span>
-										<a href="${contextRoot}/usr/introduce/map.do?menuId=2025MENU0000252#loc-2" target="_self" title="이동"><span><img src="/hoeamsaji/assets/site/hoeamsaji/images/main/phone_w.png"/></span></a>
-									</div>
-								</div>
-								<div class="bottom">
-									<div class="visual-btn">
-										<span class="tit">서부권 거점돌봄교실</span>
-										<a href="${contextRoot}/usr/introduce/map.do?menuId=2025MENU0000252#loc-2" target="_self" title="이동"><span><img src="/hoeamsaji/assets/site/hoeamsaji/images/main/phone_w.png"/></span></a>
-									</div>
-									<div class="visual-btn dubble-btn">
-										<span class="tit dubble">양주고읍 LH14단지<br>자기주도학습센터</span>
-										<a href="${contextRoot}/usr/introduce/map.do?menuId=2025MENU0000252#loc-4" target="_self" title="이동"><span><img src="/hoeamsaji/assets/site/hoeamsaji/images/main/phone_w.png"/></span></a>
-									</div>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-				
-				<form id="detailForm" name="detailForm">
-					<input type="hidden" name="seqCd" id="seqCd" value="">
-					<input type="hidden" name="subjCd" id="subjCd" value="">
-				</form>
-				
-				<div class="rowgroup3">                
-                   <div class="wrap">
-						<section class="program">
-							<h2 class="program_top_title">
-								<span class="title">신청</span>
-								<div class="tabmenu">
-									<input type="radio" checked name="tabmenu" id="tabmenu1">
-									<label for="tabmenu1">1:1 맞춤형 상담</label>
-									<input type="radio" name="tabmenu" id="tabmenu2">
-									<label for="tabmenu2">꿈자람센터 프로그램</label>
-									<input type="radio" name="tabmenu" id="tabmenu3">
-									<label for="tabmenu3">행사 및 강좌</label>
-								</div>
-								<div class="program_more">
-									<a href="#" class="program_more_btn"><span class="ico-plus"></span></a>
-								</div>
-							</h2>
-							
-							<div class="program-area">
+            <div class="marquee-row right">
+                <div class="marquee-track">
 
-								<div class="tab_contents">
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-07.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-08.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-09.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-10.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-11.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
 
-									<!--tab1-->
-									<div class="tab1">
-										<div class="tabCon1">
-											<div class="program-control">
-												<div class="radio-group">
-													<input type="radio" id="counsel_all" name="counsel" checked>
-													<label for="counsel_all">전체</label>
+                <!-- 반복 -->
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-07.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-08.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-09.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-10.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-11.jpg')"></div>
+                <div class="thumb" style="background-image:url('/assets/site/hoeamsaji/img/thumb-03.jpg')"></div>
 
-													<input type="radio" id="counsel_AA" name="counsel">
-													<label for="counsel_AA">맞춤컨설팅</label>
+                </div>
+            </div>
+            </div>
 
-													<input type="radio" id="counsel_AB" name="counsel">
-													<label for="counsel_AB">학습심리상담</label>
+            <div class="value-box section-rise">
+            <h3>World Heritage Value</h3>
+            <p>Hoeamsaji Temple Site reveals the exceptional value of Korea’s royal Buddhist culture,</p>
+            <p>Seon monastic architecture, and archaeological heritage from the late Goryeo to early Joseon period.</p>
 
-													<input type="radio" id="counsel_AC" name="counsel">
-													<label for="counsel_AC">수시·정시상담</label>
+            <div class="value-list">
+            <article>
+                <div class="value-card__top">
+                <strong>01</strong>
+                <img src="/assets/site/hoeamsaji/img/icon-value-01.svg" alt="">
+                </div>
+                <h4>Royal Buddhist Culture</h4>
+                <p>A sacred site shaped by royal patronage and early Joseon Buddhist culture.</p>
+            </article>
 
-													<input type="radio" id="counsel_AD" name="counsel">
-													<label for="counsel_AD">면접컨설팅</label>
-												</div>
-											</div>
-											
-											<div class="program-item-area">
-											
-											<div class="counsel_control program-control-btn-area">
-												<button class="counsel_prev btn_prev">이전</button>
-											</div>
-											
-											<div class="counsel_list slider-list">
-												<c:forEach var="row" items="${subjManageListA}" varStatus="i">
-													<c:if test="${i.index > 0 && (i.index % 4) == 0}">
-														<c:set var="pageCnt" value="${pageCnt + 1}" />
-													</c:if>
-												
-													<div class="counsel_item item type_${row.cateCd}">
-														<a href="javascript:;" onclick="fnDetailViewA('${row.subjCd}');" class="program_anchor">
-														<div class="item_img">
-															<c:if test="${empty row.thumbpath}">
-																<img src="/hoeamsaji/assets/DATA/popupZone/no-img.png" />
-															</c:if>
-															<c:if test="${not empty row.thumbpath}">
-																<img src="${contextRoot}/thumbnail/${row.thumbpath}" />
-															</c:if>
-														</div>
-															<div class="item_txt">
-																<p class="staus ${row.status}">
-																	<c:if test="${row.status eq 'ing'}">접수진행중</c:if>
-																	<c:if test="${row.status eq 'be'}">접수예정</c:if>
-																	<c:if test="${row.status eq 'end'}">접수마감</c:if>
-																</p>
-																<p class="program_title">${row.subjNm }</p>
-																<p class="program_date">
-																	<span>접수기간</span>${row.enrollStartDt }~${row.enrollEndDt }
-																</p>
-															</div>
-														</a>
-													</div>
-												</c:forEach>
-											</div>
-											
-											<div class="counsel_control program-control-btn-area">
-												<button class="counsel_next btn-next">다음</button>
-											</div>
-											
-											</div>
-										</div>
-									</div>
-									<!-- /tab1-->
-									<!--tab2-->
-									<div class="tab2">
-										<div class="tabCon2">
-											<div class="program-control">
-												<div class="radio-group">
-													<input type="radio" id="program_all" name="program" checked>
-													<label for="program_all">전체</label>
+            <article>
+                <div class="value-card__top">
+                <strong>02</strong>
+                <img src="/assets/site/hoeamsaji/img/icon-value-02.svg" alt="">
+                </div>
+                <h4>Seon Monastery Architecture</h4>
+                <p>A rare layout showing the spatial system of a large-scale Seon monastery.</p>
+            </article>
 
-													<input type="radio" id="program_BA" name="program">
-													<label for="program_BA">진로진학</label>
+            <article>
+                <div class="value-card__top">
+                <strong>03</strong>
+                <img src="/assets/site/hoeamsaji/img/icon-value-03.svg" alt="">
+                </div>
+                <h4>Archaeological Evidence</h4>
+                <p>Excavated remains and artifacts revealing the temple’s scale and status.</p>
+            </article>
+            </div>
+            <a href="#" class="fill-btn gold">Discover Its Value</a>
+            </div>
+        </section>
 
-													<input type="radio" id="program_BB" name="program">
-													<label for="program_BB">동부 AI디지털</label>
-													
-													<input type="radio" id="program_BD" name="program">
-													<label for="program_BD">동부 돌봄</label>
-													
-													<input type="radio" id="program_BC" name="program">
-													<label for="program_BC">서부 AI디지털</label>
-													
-													<input type="radio" id="program_BE" name="program">
-													<label for="program_BE">서부 돌봄</label>
-													
-													<input type="radio" id="program_BF" name="program">
-													<label for="program_BF">자기주도학습</label>
-												</div>	
-											</div>
-											
-											<div class="program-item-area">
-											
-												<div class="program_control program-control-btn-area">
-													<button class="program_prev btn_prev">이전</button>
-												</div>
-												
-												<div class="program_list slider-list">
-													<c:forEach var="row" items="${subjManageListB}" varStatus="i">
-														<c:if test="${i.index > 0 && (i.index % 4) == 0}">
-															<c:set var="pageCnt" value="${pageCnt + 1}" />
-														</c:if>
-												
-														<div class="program_item item p_type_${row.cateCd}">
-															<a href="javascript:;" onclick="fnDetailView('${row.seqCd}');" class="program_anchor">
-																<div class="item_img">
-																	<c:if test="${empty row.thumbpath}">
-																		<img src="/hoeamsaji/assets/DATA/popupZone/no-img.png" />
-																	</c:if>
-																	<c:if test="${not empty row.thumbpath}">
-																		<img src="${contextRoot}/thumbnail/${row.thumbpath}" />
-																	</c:if>
-																</div>
-																<div class="item_txt">
-																	<p class="staus ${row.status}">
-																		<c:if test="${row.status eq 'ing'}">접수진행중</c:if>
-																		<c:if test="${row.status eq 'be'}">접수예정</c:if>
-																		<c:if test="${row.status eq 'end'}">접수마감</c:if>
-																	</p>
-																	<p class="program_title">${row.subjNm }</p>
-																	<p class="program_date">
-																		<span>접수기간</span>${row.enrollStartDt }~${row.enrollEndDt }
-																	</p>
-																</div>
-															</a>
-														</div>
-													</c:forEach>
-												</div>
-												
-												<div class="program_control program-control-btn-area">
-													<button class="program_next btn-next">다음</button>
-												</div>
-											
-											</div>
-										</div>
-									</div>
-									<!-- /tab2-->
-									<!--tab3-->
-									<div class="tab3">
-										<div class="tabCon3">
-											<div class="program-control">
-												<div class="radio-group">
-													<input type="radio" id="event_all" name="event" checked>
-													<label for="event_all">전체</label>
+        <section class="visit section-rise">
+            <div class="inner">
 
-													<input  type="radio" id="event_CD" name="event">
-													<label for="event_CD">특강</label>
-													
-													<input  type="radio" id="event_CC" name="event">
-													<label for="event_CC">학부모아카데미</label>
+                <div class="section-title dark-title">
+                    <h3>Plan Your Visit</h3>
+                    <p>
+                        <span>Begin your journey through</span>
+                        <span>Hoeamsaji Temple Site.</span>
+                    </p>
+                </div>
 
-													<input type="radio" id="event_CB" name="event">
-													<label for="event_CB">입시설명회</label>
-													
-													<input type="radio" id="event_CA" name="event">
-													<label for="event_CA">진로교육박람회</label>
-												</div>	
-											</div>
-											
-											<div class="program-item-area">
-											
-												<div class="event_control program-control-btn-area">
-													<button class="event_prev btn_prev">이전</button>
-												</div>
-												
-												<div class="event_list slider-list">
-													<c:forEach var="row" items="${subjManageListC}" varStatus="i">
-														<c:if test="${i.index > 0 && (i.index % 4) == 0}">
-															<c:set var="pageCnt" value="${pageCnt + 1}" />
-														</c:if>
-												
-														<div class="event_item item e_type_${row.cateCd}">
-															<a href="javascript:;" onclick="fnDetailView('${row.seqCd}');" class="program_anchor">
-																<div class="item_img">
-																	<c:if test="${empty row.thumbpath}">
-																		<img src="/hoeamsaji/assets/DATA/popupZone/no-img.png" />
-																	</c:if>
-																	<c:if test="${not empty row.thumbpath}">
-																		<img src="${contextRoot}/thumbnail/${row.thumbpath}" />
-																	</c:if>
-																</div>
-																<div class="item_txt">
-																	<p class="staus ${row.status}">
-																		<c:if test="${row.status eq 'ing'}">접수진행중</c:if>
-																		<c:if test="${row.status eq 'be'}">접수예정</c:if>
-																		<c:if test="${row.status eq 'end'}">접수마감</c:if>
-																	</p>
-																	<p class="program_title">${row.subjNm }</p>
-																	<p class="program_date">
-																		<span>접수기간</span>${row.enrollStartDt }~${row.enrollEndDt }
-																	</p>
-																</div>
-															</a>
-														</div>
-													</c:forEach>
-												</div>
-												
-												<div class="event_control program-control-btn-area">
-													<button class="event_next btn-next">다음</button>
-												</div>
-											
-											</div>
-										</div>
-									</div>
-									<!-- /tab3-->
-							
-							</div>
-							</div>
-							<div id="common_empty" style="display:none;">
-							  <div class="empty_inner">
-							  	<img src="${contextRoot}/assets/site/hoeamsaji/images/main/no-pro.png" alt="신청 가능 항목 없음">
-							    <p class="empty_title">현재 신청 가능한 항목이 없습니다.</p>
-							    <p class="empty_desc">선택한 조건에 해당하는 프로그램이 없습니다.</p>
-							  </div>
-							</div>
-							
-							
-						</section>
+                <div class="map-box">
 
-					</div>
-				</div>
-				
-				
-				<div class="rowgroup3">
-					<div class="wrap">
-						<section class="notice">
-							<div class="notice_list">
-								<span class="bookmark"></span>
-								<div class="notice-top-area">
-									<div class="tabmenu">
-										<input type="radio" checked name="noticeTab" id="notice_tab1">
-										<label for="notice_tab1">공지사항</label>
-										<input type="radio" name="noticeTab" id="notice_tab2">
-										<label for="notice_tab2">교육자료</label>
-									</div>
-									<div class="notice_more">
-										<a href="/hoeamsaji/usr/bbs/notice/list.do?menuId=2025MENU0000262" class="notice_more_btn"><span class="ico-plus"></span></a>
-									</div>
-								</div>
-								<div class="notice_contents">
-									<c:set var="totalCount" value="0" />
-									<c:set var="maxCount" value="5" />
-									
-									<c:forEach var="row" items="${topNoticeList}" varStatus="i" begin="0" end="4">
-										<c:if test="${totalCount < maxCount}">
-											<div class="notice_item top_item">
-												<a href="/hoeamsaji/usr/bbs/notice/detail.do?menuId=2025MENU0000262&baId=${row.baId }&baNotice=0" class="notice_anchor">
-													<p class="notice_title">${row.baTitle }</p>
-													<p class="notice_date">
-														<fmt:parseDate value="${row.baRegdate}" var="parsedDate" pattern="yyyy.MM.dd" />
-														<fmt:formatDate value="${parsedDate}" pattern="yyyy-MM-dd" />
-													</p>
-												</a>
-											</div>
-											<c:set var="totalCount" value="${totalCount + 1}" />
-									    </c:if>
-									</c:forEach>
-									<c:forEach var="row" items="${noticList}" varStatus="i">
-										<c:if test="${totalCount < maxCount}">
-									        <div class="notice_item">
-									            <a href="/hoeamsaji/usr/bbs/notice/detail.do?menuId=2025MENU0000262&baId=${row.baId}&baNotice=0" class="notice_anchor">
-									                <p class="notice_title">${row.baTitle}</p>
-									                <p class="notice_date">${row.regDate}</p>
-									            </a>
-									        </div>
-									        <c:set var="totalCount" value="${totalCount + 1}" />
-									    </c:if>
-									</c:forEach>
-									
-									<c:if test="${empty topNoticeList and empty noticList}">
-										<div class="notice_item">
-								            <div class="notice_anchor">
-								                <p class="notice_title">등록된 게시물이 없습니다.</p>
-								            </div>
-								        </div>
-							        </c:if>
-								</div>
-								<div class="data_contents">
-									<c:forEach var="row" items="${photoList}" varStatus="i" begin="0" end="4">
-										<div class="notice_item">
-											<a href="/hoeamsaji/usr/bbs/photo/detail.do?menuId=2025MENU0000263&baId=${row.baId }&baNotice=0" class="notice_anchor">
-												<p class="notice_title">${row.baTitle }</p>
-												<p class="notice_date">${row.regDate }</p>
-											</a>
-										</div>
-									</c:forEach>
-									<c:if test="${empty photoList}">
-										<div class="notice_item">
-								            <div class="notice_anchor">
-								                <p class="notice_title">등록된 게시물이 없습니다.</p>
-								            </div>
-								        </div>
-							        </c:if>
-								</div>
-							</div>
-							<div class="schedule-list">
-								<div class="schedule_contents">
-									<div class="timeline">
-										<div class="time-top">
-											<img src="/hoeamsaji/assets/site/hoeamsaji/images/main/calc.png" alt="달력 아이콘">
-											<div class="notice_control">
-												<button class="notice_prev slick-arrow" style="">이전</button>	
-												<h2 class="month-title">2025.12</h2>
-												<button class="notice_next slick-arrow" style="">다음</button>
-											</div>
-											<div class="notice_more">
-												<a href="/hoeamsaji/usr/bbs/schedule/list.do?menuId=2025MENU0000341" class="notice_more_btn"><span class="ico-plus"></span></a>
-											</div>
-										</div>
-										
-										<div class="timeline-inner" id="scheduleTimeline"></div>
-									</div>
-								</div>
-							</div>
+                    <div class="map-box__content">
+                        <h4>Hoeamsaji Temple Site</h4>
 
-							
-						</section>
-					</div>
-				</div>
+                        <p>
+                            <span>Explore the museum, walk through the ancient temple grounds,</span>
+                            <span></span>and discover the monuments that preserve the legacy of Hoeamsaji.</span>
+                        </p>
 
-			</main>
-		</div>
+                    </div>
 
-		<div class="footer-banner">
-		  <div class="f-b-inner wrap">
-		
-		    <div class="fBanner_control">
-		      <button class="fBanner_prev">이전</button>
-		    </div>
-		
-		    <div class="fBanner-list">
-		      <div class="fBanner-item">
-		        <a href="https://satp.goe.go.kr/intro.do" target="_blank" rel="noopener">
-		          <img src="/hoeamsaji/assets/site/hoeamsaji/images/common/satp.jpg" alt="고입정보포털" />
-		        </a>
-		      </div>
-		
-		      <div class="fBanner-item">
-		        <a href="https://www.adiga.kr" target="_blank" rel="noopener">
-		          <img src="/hoeamsaji/assets/site/hoeamsaji/images/common/adiga.jpg" alt="대입정보포털 어디가" />
-		        </a>
-		      </div>
-		
-		      <div class="fBanner-item">
-		        <a href="https://www.career.go.kr/cloud/w/main/home" target="_blank" rel="noopener">
-		          <img src="/hoeamsaji/assets/site/hoeamsaji/images/common/career.jpg" alt="커리어넷" />
-		        </a>
-		      </div>
-		
-		      <div class="fBanner-item">
-		        <a href="https://www.schoolinfo.go.kr/Main.do" target="_blank" rel="noopener">
-		          <img src="/hoeamsaji/assets/site/hoeamsaji/images/common/schoolinfo.jpg" alt="학교알리미" />
-		        </a>
-		      </div>
-		
-		      <div class="fBanner-item">
-		        <a href="https://online.goe.go.kr/main/index.jsp" target="_blank" rel="noopener">
-		          <img src="/hoeamsaji/assets/site/hoeamsaji/images/common/online.jpg" alt="경기온라인학교" />
-		        </a>
-		      </div>
-		      
-		      <div class="fBanner-item">
-		        <a href="https://www.hischool.go.kr" target="_blank" rel="noopener">
-		          <img src="/hoeamsaji/assets/site/hoeamsaji/images/common/hischool.png" alt="고입정보포털" />
-		        </a>
-		      </div>
-		      
-		      <div class="fBanner-item">
-		        <a href="https://star.moe.go.kr/web/main/index.do" target="_blank" rel="noopener">
-		          <img src="/hoeamsaji/assets/site/hoeamsaji/images/common/star_moe.png" alt="학교생활기록부 종합지원포털" />
-		        </a>
-		      </div>
-		    </div>
-		
-		    <div class="fBanner_control">
-		      <button class="fBanner_next">다음</button>
-		    </div>
-		
-		  </div>
-		</div>
+                </div>
+
+                <div class="visit-info">
+
+                    <article class="visit-info__item">
+
+                        <div class="visit-info__head">
+                            <img src="/assets/site/hoeamsaji/img/ico_map.png" alt="">
+                            <strong>Location</strong>
+                        </div>
+
+                        <p>
+                            11, Hoeamsa-gil, Yangju-si, Gyeonggi-do,
+                            Republic of Korea
+                        </p>
+
+                    </article>
+
+
+                    <article class="visit-info__item">
+
+                        <div class="visit-info__head">
+                            <img src="/assets/site/hoeamsaji/img/icon-clock.png" alt="">
+                            <strong>Opening Hours</strong>
+                        </div>
+
+                        <div class="visit-time">
+                            <span>09:00 – 18:00 <em>(March – October)</em></span>
+                            <span>09:00 – 17:00 <em>(November – February)</em></span>
+                        </div>
+
+                        <small>* Last Admission 17:00</small>
+
+                    </article>
+
+
+                    <article class="visit-info__item">
+
+                        <div class="visit-info__head">
+                            <img src="/assets/site/hoeamsaji/img/icon-phone.png" alt="">
+                            <strong>Contact</strong>
+                        </div>
+
+                        <p>+82-31-8082-4187</p>
+
+                    </article>
+
+
+                    <article class="visit-info__item">
+
+                        <div class="visit-info__head">
+                            <img src="/assets/site/hoeamsaji/img/icon-calendar.png" alt="">
+                            <strong>Closed</strong>
+                        </div>
+
+                        <p>
+                            Mondays, Jan. 1, Lunar New Year’s Day,
+                            Chuseok
+                        </p>
+
+                    </article>
+
+                </div>
+
+               
+
+            </div>
+        </section>
+        </main>
 		
 	<c:import url="/usr/layout/footer.do" />
