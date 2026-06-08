@@ -837,14 +837,6 @@ a {
 }
 
 /* popup */
-/* =========================
-   Popup
-========================= */
-
-body.popup-open {
-    overflow: hidden;
-}
-
 .popup-overlay {
     position: fixed;
     inset: 0;

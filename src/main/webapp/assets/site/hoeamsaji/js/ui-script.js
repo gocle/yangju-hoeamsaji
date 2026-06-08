@@ -125,7 +125,6 @@ $(window).on('load', function () {
     if ($('.popup-overlay').length === 0) return;
 
     $('.popup-overlay').addClass('is-active');
-    $('body').addClass('popup-open');
 
     $('.popup-slider').slick({
         slidesToShow: 1,
@@ -133,7 +132,6 @@ $(window).on('load', function () {
         arrows: true,
         dots: false,
         infinite: true,
-        adaptiveHeight: true,
         speed: 500
     });
 
@@ -141,8 +139,6 @@ $(window).on('load', function () {
 
 $(document).on('click', '.popup-close', function () {
     $('.popup-overlay').removeClass('is-active').fadeOut(200);
-    $('body').removeClass('popup-open');
 });
-
 
 

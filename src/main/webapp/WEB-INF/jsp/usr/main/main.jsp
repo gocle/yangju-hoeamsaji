@@ -26,7 +26,7 @@
     <meta property="og:description" content="Discover the history and heritage of Hoeamsaji Temple Site.">
 
     <!-- favicon -->
-    <link rel="icon" href="img/common/favicon.ico">
+    <link rel="icon" href="/hoeamsaji/assets/site/hoeamsaji/img/common/favicon.ico">
 
     <!-- css -->
     <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/common.css">
