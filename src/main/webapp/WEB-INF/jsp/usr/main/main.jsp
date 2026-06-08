@@ -40,6 +40,15 @@
     <script src="/hoeamsaji/assets/site/hoeamsaji/js/ui-script.js"></script>
   	
 </head>
+
+<style>
+.popup-slide p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+</style>
+
 <body>
 
 		<c:import url="/usr/menu/header.do" />
