@@ -102,9 +102,9 @@
                             <span>royal patronage, and centuries of spiritual legacy.</span>
                         </p>
 
-                        <a href="#" class="fill-btn">
+                        <!-- <a href="#" class="fill-btn">
                             <span>Discover</span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
