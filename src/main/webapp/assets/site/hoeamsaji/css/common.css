@@ -837,48 +837,30 @@ a {
 }
 
 /* popup */
+/* =========================
+   Popup
+========================= */
+
 body.popup-open {
     overflow: hidden;
-}
-
-.popup-overlay {
-    display: none;
-}
-
-.popup-overlay.is-active {
-    display: flex;
-}
-
-.popup-slider {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.popup-slider.slick-initialized {
-    opacity: 1;
-    visibility: visible;
-}
-
-.popup-slider {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.popup-slider.slick-initialized {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity .2s ease;
 }
 
 .popup-overlay {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    display: flex;
+
+    display: none;
     align-items: center;
     justify-content: center;
+
     padding: 40px 20px;
+
     background: rgba(0,0,0,.5);
+}
+
+.popup-overlay.is-active {
+    display: flex;
 }
 
 .popup-wrap {
@@ -887,72 +869,67 @@ body.popup-open {
     max-width: 520px;
 }
 
-.popup-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+/* =========================
+   Slider
+========================= */
 
-    z-index: 100;
-
-    width: 44px;
-    height: 44px;
-
-    border: 0;
-    border-radius: 50%;
-
-    background: rgba(0,0,0,.65);
-
-    color: #fff;
-    font-size: 24px;
-    line-height: 44px;
-
-    cursor: pointer;
-}
-
-/* 핵심: 밖으로 막 튀어나오지 않게 */
 .popup-slider {
     position: relative;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup-slider.slick-initialized {
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity .2s ease;
 }
 
 .popup-slider .slick-list {
     overflow: hidden;
-    border-radius: 22px;
-}
-
-.popup-slide {
-    padding: 0;
-    opacity: 1;
-    transform: none;
+    border-radius: 22px 22px 0 0;
 }
 
 .popup-slide img {
     display: block;
     width: 100%;
-    border-radius: 22px;
 }
 
-/* slick 기본 글자 버튼 제거 */
+/* =========================
+   Arrow
+========================= */
+
 .popup-slider .slick-prev,
 .popup-slider .slick-next {
     position: absolute;
-    top: 50%;
+    top: 55%;
+
     z-index: 10;
-    width: 48px;
-    height: 48px;
-    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
     border: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.85);
+
+    background: rgba(255,255,255,.85);
+
+    transform: translateY(-50%);
+
     font-size: 0;
     cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
 }
 
 .popup-slider .slick-prev {
-    left: -64px;
+    left: -54px;
 }
 
 .popup-slider .slick-next {
-    right: -64px;
+    right: -54px;
 }
 
 .popup-slider .slick-prev:before,
@@ -963,94 +940,174 @@ body.popup-open {
 .popup-slider .slick-prev:after,
 .popup-slider .slick-next:after {
     content: "";
+
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 11px;
-    height: 11px;
-    border-top: 2px solid #000;
-    border-right: 2px solid #000;
+
+    width: 10px;
+    height: 10px;
+
+    border-top: 2px solid #111;
+    border-right: 2px solid #111;
 }
 
 .popup-slider .slick-prev:after {
-    transform: translate(-35%, -50%) rotate(-135deg);
+    transform: translate(-30%, -50%) rotate(-135deg);
 }
 
 .popup-slider .slick-next:after {
-    transform: translate(-65%, -50%) rotate(45deg);
+    transform: translate(-70%, -50%) rotate(45deg);
 }
 
+/* =========================
+   Dots
+========================= */
+
 .popup-slider .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+
     display: flex !important;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 
-    margin-top: 18px;
+    transform: translateX(-50%);
+
+    margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
 .popup-slider .slick-dots li {
-    width: 48px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
 
     margin: 0;
+
+    transition: all 0.4s ease-in-out;
 }
 
 .popup-slider .slick-dots li button {
-    position: relative;
-
     width: 100%;
     height: 100%;
 
     padding: 0;
+
     border: 0;
     border-radius: 999px;
 
-    background: rgba(255,255,255,.25);
+    background: rgba(255,255,255,.55);
 
     font-size: 0;
-    overflow: hidden;
 
     cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
 }
 
-.popup-slider .slick-dots li button:before {
-    content: "";
+.popup-slider .slick-dots li.slick-active {
+    width: 32px;
+}
 
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 0;
-    height: 100%;
-
+.popup-slider .slick-dots li.slick-active button {
     background: #fff;
 }
 
-.popup-slider .slick-dots li.slick-active button:before {
-    animation: popupProgress 5s linear forwards;
-}
-
-@keyframes popupProgress {
-
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-
-}
-
 .popup-bottom {
-    margin-top: 24px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 24px;
+    background: #fff;
+    border-top: 1px solid #ece7e0;
+    border-radius: 0 0 22px 22px;
 }
 
-.popup-check {
-    color: #fff;
+.popup-switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.popup-switch input {
+    display: none;
+}
+
+.switch-slider {
+    position: relative;
+    width: 42px;
+    height: 24px;
+    border-radius: 999px;
+    background: #d8d4cf;
+    transition: all 0.4s ease-in-out;
+}
+
+.switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup-switch input:checked ~ .switch-slider {
+    background: #8d6e52;
+}
+
+.popup-switch input:checked ~ .switch-slider::before {
+    transform: translateX(18px);
+}
+
+.switch-text {
     font-size: 15px;
+    color: #555;
+    font-weight: 500;
+}
+
+.popup-close {
+    border: 0;
+    background: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #3a2a1d;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup-close:hover {
+    opacity: .7;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .popup-wrap {
+        max-width: 92vw;
+    }
+
+    .popup-overlay {
+        padding: 20px;
+    }
+
+    .popup-footer {
+        padding: 12px 14px;
+    }
+
+    .popup-check,
+    .popup-close-btn {
+        font-size: 13px;
+    }
+
 }

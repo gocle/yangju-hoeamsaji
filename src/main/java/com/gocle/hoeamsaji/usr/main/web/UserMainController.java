@@ -70,9 +70,13 @@ public class UserMainController{
 		model.put("topNoticeList", boardService.topNoticeList(boardArticleVO));
 		model.put("noticList", boardService.listBoardArticle(boardArticleVO));
 		
-		// 자료싫
+		// 자료실
 		boardArticleVO.setBcId("photo");
 		model.put("photoList", boardService.listBoardArticle(boardArticleVO));
+		
+		// 팝업
+		BannerVO bannerVO = new BannerVO();
+		model.put("popupList", bannerService.selectPopupList(bannerVO));
 		
 		return "usr/main/main";
 	}

@@ -98,7 +98,7 @@
 						</c:forEach>
 						
 						<c:if test="${fn:length(articleList) == 0 && fn:length(topNoticeList) == 0}">
-							 <span>There are no posts.</span>
+							 <span style="grid-column: 1 / -1;text-align:center;">There are no posts.</span>
 						</c:if>
                     </div>
 

@@ -1640,6 +1640,7 @@ ul.heritage-list {
 
 .excavation-section {
     margin-top: -80px;
+    padding-bottom: 145px;
 }
 
 .excavation-panel {
@@ -1648,10 +1649,8 @@ ul.heritage-list {
 
 .excavation-map {
     position: relative;
-    border-radius: 34px;
     background: #fff;
     overflow: hidden;
-    border: 1px solid #ddd;
 }
 
 .excavation-card em {
@@ -1667,7 +1666,8 @@ ul.heritage-list {
     display: block;
     object-fit: contain;
     margin: 0 auto;
-    max-height: 860px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
 }
 
 .excavation-floating {
@@ -1677,41 +1677,90 @@ ul.heritage-list {
     display: flex;
     flex-direction: column;
     transform: translateY(-50%);
+    gap: 20px;
 }
 
 .excavation-floating--left {
-    left: 50px;
+    left: 20px
 }
 
 .excavation-floating--right {
-    right: 28px;
+    right: 20px
 }
 
 .excavation-card {
-    width: 270px;
+    width: 250px;
     padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow:0 12px 30px rgba(0,0,0,.03);
 }
+
+.excavation-card .excavation-card-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.excavation-card .excavation-card-title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.js-rise-card {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+.section-rise.is-show .js-rise-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-rise.is-show .delay-1 { transition-delay: 0.1s; }
+.section-rise.is-show .delay-2 { transition-delay: 0.35s; }
+.section-rise.is-show .delay-3 { transition-delay: 0.6s; }
+.section-rise.is-show .delay-4 { transition-delay: 0.85s; }
+.section-rise.is-show .delay-5 { transition-delay: 1.1s; }
+.section-rise.is-show .delay-6 { transition-delay: 1.35s; }
 
 .excavation-card .num {
     display: block;
-    color: #9b4a1c;
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 34px;
-    font-weight: 800;
+    color: #fff;
+    
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 70%;
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #9b4a1c;
+}
+
+.excavation-card-05, .excavation-card-01, .excavation-card-03 {
+    margin-left:35px;
 }
 
 .excavation-card strong {
     display: block;
-    margin-bottom: 12px;
     color: #000;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .excavation-card img {
     display: block;
     object-fit: cover;
     border-radius: 14px;
-    width: 90%;
+    width: 100%;
+    border: 1px solid #ddd;
 }
 
 .top-notice {

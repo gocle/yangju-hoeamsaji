@@ -8,4 +8,5 @@ public interface UserBannerService {
 
 	List<BannerVO> bannerList(BannerVO bannerVO)throws Exception; 
 
+	List<BannerVO> selectPopupList(BannerVO bannerVO)throws Exception; 
 }

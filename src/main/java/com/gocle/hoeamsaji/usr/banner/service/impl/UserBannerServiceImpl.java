@@ -30,4 +30,11 @@ public class UserBannerServiceImpl extends EgovAbstractServiceImpl implements Us
 		return data;
 	}
 
+	@Override
+	public List<BannerVO> selectPopupList(BannerVO bannerVO) throws Exception {
+		
+		List<BannerVO> data = userBannerMapper.selectPopupList(bannerVO);
+		
+		return data;
+	}
 }

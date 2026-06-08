@@ -38,6 +38,7 @@
     <script src="/hoeamsaji/assets/site/hoeamsaji/js/jquery-3.7.1.min.js"></script>
     <script src="/hoeamsaji/assets/site/hoeamsaji/js/slick.min.js"></script>
     <script src="/hoeamsaji/assets/site/hoeamsaji/js/ui-script.js"></script>
+  	
 </head>
 <body>
 
@@ -62,7 +63,7 @@
                             <span>royal patronage, and centuries of spiritual legacy.</span>
                         </p>
 
-                        <a href="#" class="fill-btn">
+                        <!-- <a href="#" class="fill-btn">
                             <span>Detail</span>
 
                             <span class="btn-arrow">
@@ -74,7 +75,7 @@
                                     alt=""
                                     class="arrow-black">
                             </span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
@@ -344,46 +345,80 @@
         </section>
         </main>
 		
-		<div class="popup-overlay">
+		 <div class="popup-overlay" style="display:none;">
 
             <div class="popup-wrap">
 
-                <button type="button" class="popup-close">
-                    ✕
-                </button>
-
                 <div class="popup-slider">
-
-                    <div class="popup-slide">
-                        <a href="#">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/popup01.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="popup-slide">
-                        <a href="#">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/popup01.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="popup-slide">
-                        <a href="#">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/popup01.png" alt="">
-                        </a>
-                    </div>
-
+					
+					<c:forEach var="bn" items="${popupList}" varStatus="status">
+						<div class="popup-slide">
+	                         <c:choose>
+				                <c:when test="${not empty bn.bnLink}">
+				                    <a href="${bn.bnLink}"
+				                       style="display:block; width:100%; height:100%; text-decoration:none;"
+				                       <c:if test="${bn.bnNewWin eq '1'}">target="_blank"</c:if>
+				                       title="새창">
+				                        ${bn.bnDescription}
+				                    </a>
+				                </c:when>
+				                <c:otherwise>
+				                    ${bn.bnDescription}
+				                </c:otherwise>
+				            </c:choose>
+                    	</div>
+					</c:forEach>
                 </div>
 
                 <div class="popup-bottom">
-
-                    <label class="popup-check">
-                        <input type="checkbox">
-                        <span>Do not show again today</span>
+                    <label class="popup-switch">
+                        <input type="checkbox" id="chkbox" />
+                        <span class="switch-text">Do not show again today</span>
+                        <span class="switch-slider"></span>
                     </label>
 
+                    <button type="button" class="popup-close" onclick="closePopup();">
+                        Close
+                    </button>
                 </div>
 
             </div>
 
         </div>
+		
 	<c:import url="/usr/layout/footer.do" />
+	
+	<script>
+	// 쿠키 설정
+    function setCookie(name, value, expiredays) {
+        var todayDate = new Date();
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+    }
+
+    // 팝업 닫기
+    function closePopup() {
+        const checkbox = document.getElementById("chkbox");
+        const overlay = document.querySelector(".popup-overlay");
+        
+        if (checkbox && checkbox.checked) {
+            setCookie("main_popup_hidden", "done", 1);
+        }
+        
+        // 팝업 숨기기
+        if (overlay) overlay.style.display = "none";
+    }
+
+    // 쿠키 확인
+    document.addEventListener("DOMContentLoaded", function () {
+        const overlay = document.querySelector(".popup-overlay");
+        
+        if (!overlay) return;
+		
+        if (document.cookie.indexOf("main_popup_hidden=done") < 0) {
+            overlay.style.display = "flex";
+        } else {
+            overlay.style.display = "none";
+        }
+    });
+	</script>
