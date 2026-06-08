@@ -55,4 +55,10 @@ public class UserIntroduceController {
 		
 		return "/usr/introduce/promotion";
 	}
+	
+	@RequestMapping("publication.do")
+	public String publication(ModelMap model) throws Exception {
+		
+		return "/usr/introduce/publication";
+	}
 }

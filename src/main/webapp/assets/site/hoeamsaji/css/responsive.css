@@ -566,10 +566,41 @@
     .sub-history-head h3 {
         font-size: 48px;
     }
+
+        .popup-wrap{
+        width:100%;
+    }
+
+    .popup-slider .slick-list{
+        overflow:hidden;
+    }
+
+    .popup-slide{
+        padding:0;
+        opacity:1;
+        transform:none;
+    }
+
+    .popup-slide.slick-center{
+        transform:none;
+    }
+
+    .popup-slider .slick-prev{
+        left:10px;
+    }
+
+    .popup-slider .slick-next{
+        right:10px;
+    }
+
+    .popup-close{
+        top:-55px;
+    }
 }
 
 
 @media (max-width: 768px) {
+  
 
     .sub-visual {
         height: 620px;

@@ -32,30 +32,21 @@ public class YangjuPaginationRendererUser extends AbstractPaginationRenderer {
 
         StringBuilder sb = new StringBuilder(512);
 
-        sb.append("<div class=\"pagination\">");
+        sb.append("<div class=\"board-pagination\">");
 
-        // ====== prev_group ======
-        sb.append("<span class=\"page_btn prev_group\">");
+        // 1. 처음 페이지로 (arrow first)
+        appendArrowLink(sb, "arrow first", first, fn, isFirstPage);
 
-        // 처음 페이지로 (prev_end)
-        appendLink(sb, "prev_end", "처음 페이지로", first, fn, isFirstPage);
+        // 2. 이전 페이지 블록 또는 이전 한 페이지 (arrow prev)
+        appendArrowLink(sb, "arrow prev", prevOneTarget, fn, isFirstPage);
 
-        // 이전 10페이지 이동 (prev)
-        appendLink(sb, "prev", "이전 " + pageSize + "페이지 이동", prevBlockTarget, fn, isFirstBlock);
-
-        // 이전 페이지 (prev_one)
-        appendLinkWithIcon(sb, "prev_one", "이전 페이지", prevOneTarget, fn, isFirstPage, true);
-
-        sb.append("</span>");
-
-        // ====== page numbers ======
-        sb.append("<span class=\"page\">");
-        sb.append("<span class=\"page_wrap\">");
-
+        // 3. 페이지 번호 목록 (숫자들)
         int end = Math.min(lastOnList, total);
         for (int i = firstOnList; i <= end; i++) {
             if (i == current) {
-                sb.append("<strong title=\"현재 ").append(i).append("페이지\">").append(i).append("</strong>");
+                // 현재 페이지 활성화 클래스: is-active
+                sb.append("<a href=\"#\" class=\"is-active\" onclick=\"return false;\" title=\"current ").append(i).append("page\">")
+                  .append(i).append("</a>");
             } else {
                 sb.append("<a href=\"?pageIndex=").append(i).append("\"")
                   .append(" onclick=\"").append(fn).append("(").append(i).append(");return false;\">")
@@ -63,65 +54,30 @@ public class YangjuPaginationRendererUser extends AbstractPaginationRenderer {
             }
         }
 
-        sb.append("</span>");
-        sb.append("</span>");
+        // 4. 다음 페이지 (arrow next)
+        appendArrowLink(sb, "arrow next", nextOneTarget, fn, isLastPage);
 
-        // ====== next_group ======
-        sb.append("<span class=\"page_btn next_group\">");
-
-        // 다음 페이지 (next_one)
-        appendLinkWithIcon(sb, "next_one", "다음 페이지", nextOneTarget, fn, isLastPage, false);
-
-        // 다음 10페이지 이동 (next)
-        appendLink(sb, "next", "다음 " + pageSize + "페이지 이동", nextBlockTarget, fn, isLastBlock);
-
-        // 끝 페이지로 (next_end)
-        appendLink(sb, "next_end", "끝 페이지로", last, fn, isLastPage);
-
-        sb.append("</span>");
+        // 5. 끝 페이지로 (arrow last)
+        appendArrowLink(sb, "arrow last", last, fn, isLastPage);
 
         sb.append("</div>");
 
         return sb.toString();
     }
 
-    /** 기본 링크 (disabled면 클릭 막고 href #) */
-    private void appendLink(StringBuilder sb, String cssClass, String text,
-                            int target, String fn, boolean disabled) {
-        sb.append("<a href=\"?pageIndex=").append(disabled ? "#" : target).append("\"")
-          .append(" class=\"").append(cssClass).append("\"");
-
-        if (disabled) {
-            sb.append(" onclick=\"return false;\" aria-disabled=\"true\"");
-        } else {
-            sb.append(" onclick=\"").append(fn).append("(").append(target).append(");return false;\"");
-        }
-
-        sb.append(">").append(text).append("</a>");
-    }
-
-    /**
-     * 아이콘 포함 링크 (참고 마크업처럼 <i></i> 위치가 prev_one / next_one에서 다름)
-     * prev_one: <a ...><i></i>이전 페이지</a>
-     * next_one: <a ...>다음 페이지<i></i></a>
+    /** 
+     * 화살표 링크 전용 메서드 
      */
-    private void appendLinkWithIcon(StringBuilder sb, String cssClass, String text,
-                                    int target, String fn, boolean disabled, boolean iconFirst) {
+    private void appendArrowLink(StringBuilder sb, String cssClass, int target, String fn, boolean disabled) {
         sb.append("<a href=\"?pageIndex=").append(disabled ? "#" : target).append("\"")
           .append(" class=\"").append(cssClass).append("\"");
-
+        
         if (disabled) {
             sb.append(" onclick=\"return false;\" aria-disabled=\"true\"");
         } else {
             sb.append(" onclick=\"").append(fn).append("(").append(target).append(");return false;\"");
         }
-
-        sb.append(">");
-
-        if (iconFirst) sb.append("<i></i>");
-        sb.append(text);
-        if (!iconFirst) sb.append("<i></i>");
-
-        sb.append("</a>");
+        
+        sb.append("></a>");
     }
 }

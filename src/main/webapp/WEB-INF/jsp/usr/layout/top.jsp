@@ -29,6 +29,7 @@
     <!-- css -->
     <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/common.css">
     <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/contents.css">
+    <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/borard.css">
     <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/responsive.css">
     <link rel="stylesheet" href="/hoeamsaji/assets/site/hoeamsaji/css/slick.css">
 

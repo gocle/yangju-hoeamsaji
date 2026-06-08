@@ -137,8 +137,9 @@ public class UserBoardController {
 					
 				if(bcId.equals("photo")){
 					boardArticleVO.setPageSize(12);
+				} else if(bcId.equals("festival") || bcId.equals("education")) {
+					boardArticleVO.setPageSize(6);
 				}
-				
 				
 				//해당 타입 리스트
 				List<BoardArticleVO> resultList = boardService.listBoardArticle(boardArticleVO);

@@ -4,118 +4,108 @@
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<script>
-function fn_search(pageIndex) {
-	$("#pageIndex").val(pageIndex);
-	var bcId = $("#bcId").val();
-	var reqUrl = "${contextRoot}/usr/bbs/"+bcId+"/list.do";
-	$("#bbsNttSearch").attr("action", reqUrl);
-	$("#bbsNttSearch").submit();
-}
-</script>
-
 <c:import url="/usr/layout/top.do" />
+<c:import url="/usr/menu/header.do" />
 
-  <c:import url="/usr/menu/header.do" />
-    
-    <div id="container">
-        <div class="wrap clearfix">
-            <main class="colgroup">
-                <article>
-    
-                    <header class="sub_head">
-    
-                        <div class="sub_title">
-                            <!-- 현재 메뉴명의 1차 메뉴명넣어주세요-->
-                            <p class="first_title">알림마당</p>
-                            
-                            <!-- 현재메뉴명 입력해주세요 -->
-                            <h2>${bcName }</h2>
-                        </div>
-                        
-                        <div class="sub_head_wrap">
-                            
-						<c:import url="/usr/menu/sub.do" />
-            
-                            <div class="addons">
-                                <ul class="addons_list">
-                                    <li class="addons_item print">
-                                        <button type="button" onclick="window.print();" class="addons_button">인쇄</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </header>
-                    
-                    
-                    <div id="contents" class="cts4146">
-						<div class="bbs_search">
-					        <form name="bbsNttSearchForm" id="bbsNttSearch" action="${contextRoot}/usr/bbs/${bcId }/list.do" method="get" class="boardSearchForm">
-					            <fieldset>
-					            <legend>Search Posts</legend>
-					            <input type="hidden" name="menuId" Id="menuId" value="${menuId }"/>
-								<input type="hidden" name="pageIndex" id="pageIndex" value="${pageIndex }"/>
-								<input type="hidden" name="bcId" id="bcId" value="${bcId }"/>
-			
-								<label for="ssearchCondition" class="skip">Select Search Category</label>
-					            <select name="searchCondition" id="searchCondition" title="Select Search Category">
-									<option value="BA_TITLE" <c:if test="${boardArticleVO.searchCondition == 'BA_TITLE'}">selected</c:if>>Title</option>
-									<option value="BA_CONTENT_HTML" <c:if test="${boardArticleVO.searchCondition == 'BA_CONTENT_HTML'}">selected</c:if>>Content</option>
-					            </select>
-					            <label for="searchKeyword" class="skip">Enter Search Keyword</label>
-					            <input name="searchKeyword" id="searchKeyword" type="text" class="input_text" title="Enter Search Keyword" placeholder="Enter Search Keyword" value="${boardArticleVO.searchKeyword }" />
-								<input value="Search" type="submit" class="submit" />
-					            </fieldset>
-					        </form>
-    					</div>
+<main class="sub-overview-page">
 
+            <section class="sub-visual section-rise">
+                <div class="sub-visual__bg sub-visual__bg_03"></div>
+                <div class="sub-visual__dim"></div>
 
-					    <div class="bbs_info clearfix">
-					        <div class="bbs_left bbs_count">
-					            <span>Total  <strong>${totalCount }</strong> posts</span>,
-					            <span class="division_line">Page <strong>${pageIndex }</strong> / ${totalPage }</span>
-					        </div>
-					    </div>
+                <div class="sub-visual__content">
+                    <h2>
+                    	<c:choose>
+                    		<c:when test="${bcId eq 'festival' }">
+                    			<span>Hoeamsaji Royal</span>
+                        		<span>Festival</span>
+                    		</c:when>
+                    		<c:when test="${bcId eq 'education' }">
+                    			<span>World heritage</span>
+                        		<span>Education</span>
+                    		</c:when>
+                    		<c:when test="${bcId eq 'photo' }">
+                    			<span>Photos & Videos</span>
+                        		<span>Archive</span>
+                    		</c:when>
+                    		<c:otherwise></c:otherwise>
+                    	</c:choose>
+                    </h2>
 
-
-	<div class="bbs_gallery photo_gallery">
-        <ul class="list clearfix">
-			<c:forEach var="articleList" items="${articleList}" varStatus="status">
-	            <li>
-					<a href="/hoeamsaji/usr/bbs/photo/detail.do?menuId=${menuId }&baId=${articleList.baId}">
-	                    <div class="ico_group">
-						</div>
-	                    <div class="photo_group">
-							<span class="photobox">
-								<span class="inner_photo" style="background-image:url(${contextRoot}/thumbnail/${articleList.baThumbpath});"></span>
-								<span class="photo"><img src="${contextRoot}/thumbnail/${articleList.baThumbpath}" /></span>
-							</span>
-	                        <div class="photo_info">
-								<span class="subject">${articleList.baTitle}</span>
-								<span class="date">
-										${articleList.baRegdate}
-								</span>	                            
-	                        </div>
-	                    </div>
-	                </a>
-	            </li>
-            </c:forEach>
-            <c:if test="${fn:length(articleList) == 0 && fn:length(topNoticeList) == 0}">
-				<tr>
-					<td colspan="6" class="empty">There are no registered posts.</td>
-				</tr>
-			</c:if>
-        </ul>
-    </div>
-	
-    <ui:pagination paginationInfo="${paginationInfo}" type="user" jsFunction="fn_search" />
-
+                    <div class="sub-location"> 
+                        <a href="/hoeamsaji/usr/main.do"><img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_home.png" alt="home"></a>
+                        <c:choose>
+                    		<c:when test="${bcId eq 'festival' }">
+                    			<span>Festivals, Education, and Utilization</span>
+                        		<span>Hoeamsaji Royal Festival</span>
+                    		</c:when>
+                    		<c:when test="${bcId eq 'education' }">
+                    			<span>World heritage</span>
+                        		<span>Education</span>
+                    		</c:when>
+                    		<c:when test="${bcId eq 'photo' }">
+                    			<span>Archives</span>
+                        		<span>Photos and video</span>
+                    		</c:when>
+                    		<c:otherwise></c:otherwise>
+                    	</c:choose>
                     </div>
-                
-                </article>
-            </main>
-        
-        </div>
-    </div>
-    
-    <c:import url="/usr/layout/footer.do" />
+                </div>
+
+                <div class="scroll-down">SCROLL DOWN</div> 
+            </section>
+			
+			<section class="gallery-board-section section-rise">
+                <div class="sub-inner">
+
+                    <div class="board-top">
+                        <div class="board-count">
+                            Total <strong>${totalCount }</strong>
+                        </div>
+
+                        <form class="board-search" name="bbsNttSearchForm" id="bbsNttSearch" action="${contextRoot}/usr/bbs/${bcId }/list.do" method="get">
+                        	<input type="hidden" name="menuId" id="menuId" value="${menuId }"/>
+							<input type="hidden" name="pageIndex" id="pageIndex" value="${pageIndex }"/>
+							<input type="hidden" name="bcId" id="bcId" value="${bcId }"/>
+							
+                            <select name="searchCondition" id="searchCondition">
+                                <option value="BA_TITLE">Title</option>
+                                <option value="BA_CONTENT_HTML">Content</option>
+                            </select>
+                            <input type="text" placeholder="Search" name="searchKeyword" id="searchKeyword" class="input_text" value="${boardArticleVO.searchKeyword }" />
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+
+                    <div class="gallery-board-list">
+						
+						<c:forEach var="articleList" items="${articleList}" varStatus="status">
+							<a href="/hoeamsaji/usr/bbs/${bcId}/detail.do?menuId=${menuId }&baId=${articleList.baId}" class="gallery-board-item">
+	                            <div class="thumb">
+	                                <img src="${contextRoot}/thumbnail/${articleList.baThumbpath}" alt="">
+	                            </div>
+	
+	                            <div class="info">
+	                                <h3>${articleList.baTitle}</h3>
+	
+	                                <div class="meta">
+	                                    <span>${articleList.baRegdate}</span>
+	                                    <span>Views ${articleList.baHit}</span>
+	                                </div>
+	                            </div>
+                        </a>
+						
+						</c:forEach>
+						
+						<c:if test="${fn:length(articleList) == 0 && fn:length(topNoticeList) == 0}">
+							 <span>There are no posts.</span>
+						</c:if>
+                    </div>
+
+                    <ui:pagination paginationInfo="${paginationInfo}" type="user" jsFunction="fn_search" />
+
+                </div>
+            </section>
+</main>
+			
+<c:import url="/usr/layout/footer.do" />

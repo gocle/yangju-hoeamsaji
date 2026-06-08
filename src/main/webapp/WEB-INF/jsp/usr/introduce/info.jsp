@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="sub-intro-content">
-                        <div class="sub-desc">
+                        <div class="sub-desc sub-desc-img">
                             <p>
                                 The Yangju Hoeamsa Temple Site was designated as a National Historic Site in 1964,
                                 and fourteen phases of archaeological excavation were carried out between 1997 and 2024.
@@ -63,105 +63,79 @@
                                 These discoveries attest to the status and character of Hoeamsa Temple as the largest royal Buddhist temple and
                                 a representative Seon monastery of the early Joseon period.
                             </p>
-                        </div>
 
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="sub-intro section-rise">
-                <div class="sub-inner">
-
-                    <div class="sub-title-box">
-                        <span class="sub-title-shape"></span>
-                        <h3>Conservation<br>Project</h3>
-                        <p>
-                            Discover preservation efforts<br>
-                            that protect the heritage value<br>
-                            of Hoeamsaji Temple Site.
-                        </p>
-                    </div>
-
-                    <div class="sub-intro-content">
-                        <div class="sub-desc">
+                            <h4>Conservation Project</h4>
                             <p>
                                 The Comprehensive Conservation Project for the Yangju Hoeamsa Temple Site was carried out over approximately twenty years, from 1997 to 2016, and included land acquisition, archaeological excavations, museum construction, site conservation, and landscape park development.
                             </p>
+
                         </div>
+
                     </div>
 
                 </div>
             </section>
 
             <section class="excavation-section section-rise">
-                <div class="inner">
+                <div class="sub-inner">
 
-                    <div class="excavation-layout">
+                    <div class="excavation-panel">
 
-                        <!-- left cards -->
-                        <div class="excavation-side excavation-side--left">
-                            <article class="excavation-card js-rise delay-2">
-                                <span class="num pink">01</span>
-                                <div>
-                                    <strong>West Abbot’s Quarters</strong>
-                                    <em>1998~1999</em>
-                                </div>
-                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/excavation-thumb01.jpg" alt="">
-                            </article>
+                        <div class="excavation-map">
+                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-map.jpg" alt="Excavation Survey Map">
 
-                            <article class="excavation-card js-rise delay-3">
-                                <span class="num red">02</span>
-                                <div>
-                                    <strong>Bogwangjeon Hall Site</strong>
-                                    <em>2000</em>
-                                </div>
-                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/excavation-thumb02.jpg" alt="">
-                            </article>
+                            <div class="excavation-floating excavation-floating--left">
+                                <article class="excavation-card">
+                                    <span class="num">01</span>
+                                    <div>
+                                        <strong>West Abbot's Quarters</strong>
+                                    </div>
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb01.jpg" alt="">
+                                </article>
 
-                            <article class="excavation-card js-rise delay-4">
-                                <span class="num orange">03</span>
-                                <div>
-                                    <strong>West Stairway &amp; Gate Site</strong>
-                                    <em>2000~2001</em>
-                                </div>
-                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/excavation-thumb03.jpg" alt="">
-                            </article>
-                        </div>
+                                <article class="excavation-card">
+                                    <span class="num">02</span>
+                                    <div>
+                                        <strong>Bogwangjeon Hall Site</strong>
+                                    </div>
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb02.jpg" alt="">
+                                </article>
 
-                        <!-- center map -->
-                        <div class="excavation-map js-rise delay-1">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/excavation-map.jpg" alt="Excavation Survey Map">
-                        </div>
+                                <article class="excavation-card">
+                                    <span class="num">03</span>
+                                    <div>
+                                        <strong>West Stairway &amp; Gate Site</strong>
+                                    </div>
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb03.jpg" alt="">
+                                </article>
+                            </div>
 
-                        <!-- right cards -->
-                        <div class="excavation-side excavation-side--right">
-                            <article class="excavation-card js-rise delay-2">
-                                <span class="num yellow">04</span>
-                                <div>
-                                    <strong>Building Site D</strong>
-                                    <em>2001~2002</em>
-                                </div>
-                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/excavation-thumb04.jpg" alt="">
-                            </article>
+                            <div class="excavation-floating excavation-floating--right">
+                                <article class="excavation-card">
+                                    <span class="num">04</span>
+                                    <div>
+                                        <strong>Building Site D</strong>
+                                    </div>
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb04.jpg" alt="">
+                                </article>
 
-                            <article class="excavation-card js-rise delay-3">
-                                <span class="num green">05</span>
-                                <div>
-                                    <strong>Building Site C</strong>
-                                    <em>2001~2002</em>
-                                </div>
-                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/excavation-thumb05.jpg" alt="">
-                            </article>
+                                <article class="excavation-card">
+                                    <span class="num">05</span>
+                                    <div>
+                                        <em>5th–6th Excavation</em>
+                                        <strong>Building Site A</strong>
+                                    </div>
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb05.jpg" alt="">
+                                </article>
 
-                            <article class="excavation-card js-rise delay-4">
-                                <span class="num mint">06</span>
-                                <div>
-                                    <strong>Building Site B</strong>
-                                    <em>2000~2002</em>
-                                </div>
-                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/contents/excavation-thumb06.jpg" alt="">
-                            </article>
+                                <article class="excavation-card">
+                                    <span class="num">06</span>
+                                    <div>
+                                        <strong>Well Site</strong>
+                                    </div>
+                                    <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb06.jpg" alt="">
+                                </article>
+                            </div>
                         </div>
 
                     </div>

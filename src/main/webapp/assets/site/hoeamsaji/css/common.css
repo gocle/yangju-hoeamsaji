@@ -796,3 +796,261 @@ a {
     font-size: 13px;
     letter-spacing: 0.02em;
 }
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(4px);
+}
+
+.popup-modal {
+    position: relative;
+
+    width: min(1200px, 90vw);
+
+    border-radius: 24px;
+    overflow: hidden;
+
+    background: #fff;
+
+    animation: popupShow .4s ease;
+}
+
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* popup */
+body.popup-open {
+    overflow: hidden;
+}
+
+.popup-overlay {
+    display: none;
+}
+
+.popup-overlay.is-active {
+    display: flex;
+}
+
+.popup-slider {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup-slider.slick-initialized {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-slider {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup-slider.slick-initialized {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .2s ease;
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,.5);
+}
+
+.popup-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    z-index: 100;
+
+    width: 44px;
+    height: 44px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(0,0,0,.65);
+
+    color: #fff;
+    font-size: 24px;
+    line-height: 44px;
+
+    cursor: pointer;
+}
+
+/* 핵심: 밖으로 막 튀어나오지 않게 */
+.popup-slider {
+    position: relative;
+}
+
+.popup-slider .slick-list {
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.popup-slide {
+    padding: 0;
+    opacity: 1;
+    transform: none;
+}
+
+.popup-slide img {
+    display: block;
+    width: 100%;
+    border-radius: 22px;
+}
+
+/* slick 기본 글자 버튼 제거 */
+.popup-slider .slick-prev,
+.popup-slider .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 0;
+    cursor: pointer;
+}
+
+.popup-slider .slick-prev {
+    left: -64px;
+}
+
+.popup-slider .slick-next {
+    right: -64px;
+}
+
+.popup-slider .slick-prev:before,
+.popup-slider .slick-next:before {
+    display: none;
+}
+
+.popup-slider .slick-prev:after,
+.popup-slider .slick-next:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.popup-slider .slick-prev:after {
+    transform: translate(-35%, -50%) rotate(-135deg);
+}
+
+.popup-slider .slick-next:after {
+    transform: translate(-65%, -50%) rotate(45deg);
+}
+
+.popup-slider .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 18px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.popup-slider .slick-dots li {
+    width: 48px;
+    height: 4px;
+
+    margin: 0;
+}
+
+.popup-slider .slick-dots li button {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.25);
+
+    font-size: 0;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.popup-slider .slick-dots li button:before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    background: #fff;
+}
+
+.popup-slider .slick-dots li.slick-active button:before {
+    animation: popupProgress 5s linear forwards;
+}
+
+@keyframes popupProgress {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+.popup-bottom {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.popup-check {
+    color: #fff;
+    font-size: 15px;
+}

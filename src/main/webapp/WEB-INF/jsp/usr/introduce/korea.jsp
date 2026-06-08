@@ -10,7 +10,7 @@
 <main class="sub-overview-page">
 
             <section class="sub-visual section-rise">
-                <div class="sub-visual__bg sub-visual__bg_04"></div>
+                <div class="sub-visual__bg sub-visual__bg_02"></div>
                 <div class="sub-visual__dim"></div>
 
                 <div class="sub-visual__content">

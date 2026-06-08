@@ -118,5 +118,35 @@ $(function () {
       $('#' + tabName).addClass('is-active');
   });
 
+
+});
+
+$(window).on('load', function () {
+
+    if ($('.popup-overlay').length > 0) {
+
+        $('.popup-overlay').addClass('is-active');
+        $('body').addClass('popup-open');
+
+        $('.popup-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            centerMode: false
+        });
+
+    }
+
+    $('.popup-close').on('click', function () {
+        $('.popup-overlay').fadeOut(200, function () {
+            $(this).removeClass('is-active');
+        });
+
+        $('body').removeClass('popup-open');
+    });
+
 });
 
