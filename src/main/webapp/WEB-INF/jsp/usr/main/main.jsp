@@ -141,7 +141,7 @@
                     and monastic life once came together at the foot of Mt. Cheonbo.
                     </p>
 
-                    <a href="#" class="fill-btn black">
+                    <a href="/hoeamsaji/usr/introduce/info.do?menuId=2026MENU0000461" class="fill-btn black">
                     View more
 
                     <span class="btn-arrow">
@@ -257,7 +257,7 @@
                 <p>Excavated remains and artifacts revealing the temple’s scale and status.</p>
             </article>
             </div>
-            <a href="#" class="fill-btn gold">Discover Its Value</a>
+            <a href="/hoeamsaji/usr/introduce/system.do?menuId=2026MENU0000464" class="fill-btn gold">Discover Its Value</a>
             </div>
         </section>
 
