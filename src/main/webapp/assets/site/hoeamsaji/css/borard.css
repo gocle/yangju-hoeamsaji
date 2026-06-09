@@ -478,22 +478,12 @@
         margin-top: 48px;
     }
 
-    .board-pagination a {
-        width: 38px;
-        height: 38px;
-    }
 }
 
 @media screen and (max-width:480px) {
 
     .board-pagination {
         gap: 4px;
-    }
-
-    .board-pagination a {
-        width: 34px;
-        height: 34px;
-        font-size: 14px;
     }
 
     .board-pagination .first,
@@ -688,7 +678,7 @@
     }
 
     .board-detail__head {
-        padding: 28px 20px;
+        padding: 18px 10px;
     }
 
     .board-detail__head h3 {
@@ -703,7 +693,7 @@
 
     .board-detail__file {
         display: block;
-        padding: 20px;
+        padding: 18px 10px
     }
 
     .board-detail__file strong {
@@ -718,8 +708,13 @@
 
     .board-detail__content {
         min-height: 280px;
-        padding: 36px 20px 48px;
+        padding: 26px 10px 38px;
         font-size: 16px;
+    }
+    
+    .board-detail__content img{
+    	width: 100%!important;
+    	height: 100%!important
     }
 
     .board-detail-nav strong {
@@ -955,12 +950,8 @@
         font-size: 14px;
     }
 
-    .board-item .view {
-        margin-left: 12px;
-    }
-
-    .board-item .date {
-        margin-left: 12px;
+    .board-item .view,.board-item .file {
+        display: none
     }
 
     .board-pagination {

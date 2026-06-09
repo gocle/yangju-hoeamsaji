@@ -36,6 +36,9 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
 
+    color: #000;
+    -webkit-text-fill-color: #111;
+
     background-image: url('../img/common/ico_down_b.svg');
     background-repeat: no-repeat;
     background-position: right 15px center;
