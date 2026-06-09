@@ -921,10 +921,20 @@
     padding-left: 0;
 }
 
+.sub-table-area {
+    position: relative;
+}
+
 .sub-table-wrap {
     overflow-x: auto;
     border-top: 2px solid #111;
+    overflow-x: auto;
 }
+
+.sub-table-wrap::after {
+    display: none;
+}
+
 
 .sub-table {
     width: 100%;
@@ -1636,13 +1646,6 @@ ul.heritage-list {
 }
 
 
-.js-rise.delay-1 { transition-delay: 0.01s; }
-
-.excavation-section {
-    margin-top: -80px;
-    padding-bottom: 145px;
-}
-
 .excavation-panel {
     position: relative;
 }
@@ -1804,7 +1807,7 @@ ul.heritage-list {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     align-items: start;
 }
 
@@ -1867,9 +1870,7 @@ ul.heritage-list {
 .unq-title-area .main-heading {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #252220;
-    line-height: 1.4;
-    letter-spacing: -0.04em;
+    color: #000;
     position: relative;
     z-index: 2;
     word-break: keep-all;
@@ -1977,30 +1978,4 @@ ul.heritage-list {
     border-color: #bfa17a;
     color: #bfa17a;
     background: #faf9f6;
-}
-
-@media (max-width: 900px) {
-    .publication-block {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .visual-side {
-        padding: 40px 20px;
-    }
-    .unq-title-area .bg-number {
-        font-size: 5.5rem;
-        top: -30px;
-    }
-    .unq-title-area .main-heading {
-        font-size: 1.45rem;
-    }
-    .index-cell .data-flex {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    .index-cell .writer {
-        text-align: left;
-        font-size: 0.8rem;
-    }
 }

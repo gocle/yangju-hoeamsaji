@@ -44,7 +44,7 @@
 
 .board-count {
     color: #666;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .board-count strong {
@@ -62,7 +62,7 @@
     height: 52px;
     padding: 0 16px;
     border: 1px solid #ddd;
-    background: #fff;
+    background-color: #fff;
     font-size: 15px;
 }
 
@@ -591,6 +591,7 @@
 
 .board-detail__content img {
     width: 100%;
+    height: 100%
 }
 
 /* prev next */
@@ -795,6 +796,85 @@
     .board-head .date,
     .board-item .date {
         width: 120px;
+    }
+}
+
+.table-guide {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .table-guide {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+
+        font-size: 13px;
+        color: #777;
+        font-weight: 500;
+    }
+
+    .table-guide i {
+        position: relative;
+        width: 24px;
+        height: 12px;
+    }
+
+    .table-guide i::before,
+    .table-guide i::after,
+    .table-guide i {
+        background-repeat: no-repeat;
+    }
+
+    .table-guide i::before,
+    .table-guide i::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 7px;
+        height: 7px;
+        border-top: 1.5px solid #777;
+        border-right: 1.5px solid #777;
+        transform: translateY(-50%) rotate(45deg);
+        animation: swipeArrow 1.6s ease-in-out infinite;
+    }
+
+    .table-guide i::before {
+        left: 0;
+        animation-delay: 0s;
+    }
+
+    .table-guide i::after {
+        left: 8px;
+        animation-delay: .2s;
+    }
+
+    .table-guide i span {
+        display: none;
+    }
+
+    .table-guide i {
+        color: transparent;
+    }
+
+    .table-guide i::after {
+        box-shadow: 8px -8px 0 -6.5px #777;
+    }
+
+    @keyframes swipeArrow {
+        0% {
+            opacity: 0;
+            transform: translate(-4px, -50%) rotate(45deg);
+        }
+        35% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translate(6px, -50%) rotate(45deg);
+        }
     }
 }
 

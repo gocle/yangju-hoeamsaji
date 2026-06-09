@@ -31,6 +31,18 @@ a {
   text-decoration: none;
 }
 
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url('../img/common/ico_down_b.svg');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 14px;
+}
+
+
 /* Header */
 .site-header {
   position: absolute;
@@ -886,7 +898,8 @@ a {
 
 .popup-slide img {
     display: block;
-    width: 100%;
+    width: 100%!important;
+    height: 100%!important;
 }
 
 /* =========================

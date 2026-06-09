@@ -117,6 +117,27 @@ $(function () {
       $('.heritage-tab-content').removeClass('is-active');
       $('#' + tabName).addClass('is-active');
   });
+  
+  $('.criteria-table').each(function(){
+
+    const headers = [];
+
+    $(this).find('thead th').each(function(){
+        headers.push($(this).text().trim());
+    });
+
+    $(this).find('tbody tr').each(function(){
+
+        $(this).find('td').each(function(index){
+
+            if(index === 0) return;
+
+            $(this).attr('data-label', headers[index]);
+        });
+
+    });
+
+});
 
 });
 

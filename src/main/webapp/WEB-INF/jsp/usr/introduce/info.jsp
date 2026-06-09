@@ -171,156 +171,164 @@
                             Hoeamsa Temple Site.
                         </p>
                     </div>
+                    
+                    <div class="table-guide">
+					    <span>Swipe to view</span>
+					    <i></i>
+					</div>
+					
+					<div class="sub-table-area">
 
-                    <div class="sub-table-wrap">
-                        <table class="sub-table">
-                            <thead>
-                                <tr>
-                                    <th>Classification</th>
-                                    <th>Year</th>
-                                    <th>Investigation Area</th>
-                                    <th>Research Achievements</th>
-                                </tr>
-                            </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>Trial Trenching</td>
-                                <td>1997</td>
-                                <td>Entire Temple Site</td>
-                                <td>Formulation of Mid- to Long-Term Plan</td>
-                            </tr>
-
-                            <tr>
-                                <td>1st Excavation</td>
-                                <td>1998</td>
-                                <td>Entire Complex 8</td>
-                                <td>
-                                    Excavation of roof tiles with inscriptions from the main hall and surrounding building sites of the East and West corridors, and ornamental ridge-end tiles (Yeongnak)
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>2nd Excavation</td>
-                                <td>1999</td>
-                                <td>Entire Complexes 7 and 6</td>
-                                <td>
-                                    Excavation of a bronze miniature pagoda from Bogwangjeon (Hall of Universal Light)
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>3rd Excavation</td>
-                                <td>2000</td>
-                                <td>West of Complex 5</td>
-                                <td>
-                                    Identification of multiple underfloor heating facilities (Gudeul)
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>4th Excavation</td>
-                                <td>2001</td>
-                                <td>East of Complex 5, Entire Complex 4</td>
-                                <td>
-                                    Identification of Cheonwangmun (Gate of Heavenly Kings) Site (Gate Site of Complex 4)
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>5th Excavation</td>
-                                <td>2002</td>
-                                <td>East of Complex 3</td>
-                                <td>
-                                    Identification of the eastern auxiliary path
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>6th Excavation</td>
-                                <td>2003</td>
-                                <td>West of Complex 3, Entire Complex 2</td>
-                                <td>
-                                    Identification of stable, gate, and well sites
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>7th Excavation</td>
-                                <td>2004</td>
-                                <td>Entire Complex 1, Museum Site (Trial Trenching)</td>
-                                <td>
-                                    Identification of building sites within Complex 1
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>8th Excavation</td>
-                                <td>2005</td>
-                                <td>
-                                    West of Complexes 2 and 3,
-                                    Area 'Na' of the Artifact-bearing Stratum
-                                </td>
-                                <td>
-                                    Identification of the western auxiliary path, toilet site, and pond site
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>9th Excavation</td>
-                                <td>2011</td>
-                                <td>Factory Area</td>
-                                <td>(No archaeological features found)</td>
-                            </tr>
-
-                            <tr>
-                                <td>10th Excavation</td>
-                                <td>2013</td>
-                                <td>East and Outskirts of Complex 4</td>
-                                <td>
-                                    Identification of workshop facilities
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>11th Excavation</td>
-                                <td>2014</td>
-                                <td>Northwestern Outskirts</td>
-                                <td>
-                                    Identification of the presumed Byeowon (detached villa/detached compound) site
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>12th Excavation</td>
-                                <td>2015</td>
-                                <td>Southeastern Outskirts</td>
-                                <td>
-                                    Identification of the presumed storehouse site
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>13th Excavation</td>
-                                <td>2019</td>
-                                <td>Drainage Channel of Complex 1</td>
-                                <td>
-                                    Identification of well and drainage facilities
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>14th Excavation</td>
-                                <td>2024</td>
-                                <td>Complexes 6–8</td>
-                                <td>
-                                    Identification of earlier archaeological features from the Goryeo Dynasty
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
+	                    <div class="sub-table-wrap">
+	                        <table class="sub-table">
+	                            <thead>
+	                                <tr>
+	                                    <th>Classification</th>
+	                                    <th>Year</th>
+	                                    <th>Investigation Area</th>
+	                                    <th>Research Achievements</th>
+	                                </tr>
+	                            </thead>
+	
+	                        <tbody>
+	
+	                            <tr>
+	                                <td>Trial Trenching</td>
+	                                <td>1997</td>
+	                                <td>Entire Temple Site</td>
+	                                <td>Formulation of Mid- to Long-Term Plan</td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>1st Excavation</td>
+	                                <td>1998</td>
+	                                <td>Entire Complex 8</td>
+	                                <td>
+	                                    Excavation of roof tiles with inscriptions from the main hall and surrounding building sites of the East and West corridors, and ornamental ridge-end tiles (Yeongnak)
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>2nd Excavation</td>
+	                                <td>1999</td>
+	                                <td>Entire Complexes 7 and 6</td>
+	                                <td>
+	                                    Excavation of a bronze miniature pagoda from Bogwangjeon (Hall of Universal Light)
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>3rd Excavation</td>
+	                                <td>2000</td>
+	                                <td>West of Complex 5</td>
+	                                <td>
+	                                    Identification of multiple underfloor heating facilities (Gudeul)
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>4th Excavation</td>
+	                                <td>2001</td>
+	                                <td>East of Complex 5, Entire Complex 4</td>
+	                                <td>
+	                                    Identification of Cheonwangmun (Gate of Heavenly Kings) Site (Gate Site of Complex 4)
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>5th Excavation</td>
+	                                <td>2002</td>
+	                                <td>East of Complex 3</td>
+	                                <td>
+	                                    Identification of the eastern auxiliary path
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>6th Excavation</td>
+	                                <td>2003</td>
+	                                <td>West of Complex 3, Entire Complex 2</td>
+	                                <td>
+	                                    Identification of stable, gate, and well sites
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>7th Excavation</td>
+	                                <td>2004</td>
+	                                <td>Entire Complex 1, Museum Site (Trial Trenching)</td>
+	                                <td>
+	                                    Identification of building sites within Complex 1
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>8th Excavation</td>
+	                                <td>2005</td>
+	                                <td>
+	                                    West of Complexes 2 and 3,
+	                                    Area 'Na' of the Artifact-bearing Stratum
+	                                </td>
+	                                <td>
+	                                    Identification of the western auxiliary path, toilet site, and pond site
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>9th Excavation</td>
+	                                <td>2011</td>
+	                                <td>Factory Area</td>
+	                                <td>(No archaeological features found)</td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>10th Excavation</td>
+	                                <td>2013</td>
+	                                <td>East and Outskirts of Complex 4</td>
+	                                <td>
+	                                    Identification of workshop facilities
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>11th Excavation</td>
+	                                <td>2014</td>
+	                                <td>Northwestern Outskirts</td>
+	                                <td>
+	                                    Identification of the presumed Byeowon (detached villa/detached compound) site
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>12th Excavation</td>
+	                                <td>2015</td>
+	                                <td>Southeastern Outskirts</td>
+	                                <td>
+	                                    Identification of the presumed storehouse site
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>13th Excavation</td>
+	                                <td>2019</td>
+	                                <td>Drainage Channel of Complex 1</td>
+	                                <td>
+	                                    Identification of well and drainage facilities
+	                                </td>
+	                            </tr>
+	
+	                            <tr>
+	                                <td>14th Excavation</td>
+	                                <td>2024</td>
+	                                <td>Complexes 6–8</td>
+	                                <td>
+	                                    Identification of earlier archaeological features from the Goryeo Dynasty
+	                                </td>
+	                            </tr>
+	
+	                        </tbody>
+	                    </table>
+	                </div>
                 </div>
 
             </div>
