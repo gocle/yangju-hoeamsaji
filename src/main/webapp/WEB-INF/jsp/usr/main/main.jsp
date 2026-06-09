@@ -382,7 +382,7 @@
                 <div class="popup-bottom">
                     <label class="popup-switch">
                         <input type="checkbox" id="chkbox" />
-                        <span class="switch-text">Do not show again today</span>
+                        <span class="switch-text">Don't show today</span>
                         <span class="switch-slider"></span>
                     </label>
 

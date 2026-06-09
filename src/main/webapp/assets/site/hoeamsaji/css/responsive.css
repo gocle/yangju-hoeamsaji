@@ -875,9 +875,9 @@
 /* 768px end */
 
 @media (max-width: 710px) {
-  .map-box {
-    background-position-x: right -50px
-  }
+    .map-box {
+        background-position: 70% center;
+    }
 }
 
 @media (max-width: 640px) {
@@ -975,9 +975,9 @@
     display: block;
   }
 
-  .map-box {
-    background-position-x: right -150px
-  }
+    .map-box {
+        background-position: 83% center;
+    }
 
   .map-box__content h4 {
       font-size: 28px;
