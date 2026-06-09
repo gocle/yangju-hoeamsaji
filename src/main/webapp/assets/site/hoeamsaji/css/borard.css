@@ -702,9 +702,24 @@
         margin-bottom: 10px;
     }
 
-    .board-detail__file a {
-        line-height: 1.5;
-    }
+	.board-detail__file a {
+	    display: inline-block;
+	    max-width: 100%;
+	
+	    color: #555;
+	    font-size: 15px;
+	    text-decoration: none;
+	
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	
+	    vertical-align: middle;
+	}
+	
+	.board-detail__file img {
+		margin-bottom: -2px
+	}
 
     .board-detail__content {
         min-height: 280px;
