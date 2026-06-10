@@ -138,7 +138,7 @@ public class AdminLoginController {
 			if(!redirect_url.equals("")){
 				 nextUrl = redirect_url;
 			} else {
-				 nextUrl = "/adm/main.do?menuId=2025MENU0000133";
+				 nextUrl = "/adm/bbs/notice/list.do?menuId=2026MENU0000472";
 			}
 		} else {
 			nextUrl = "/adm/loginPage.do";

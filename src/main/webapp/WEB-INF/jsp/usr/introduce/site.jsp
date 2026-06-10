@@ -85,6 +85,7 @@
 
                             <div class="sub-desc-img">
                                 <h4>Estimated layout of Hoeamsa Temple during the late Goryeo period</h4>
+                                <p>This is a drawing prepared by Han Ji-man (Professor, Department of Architecture, Myongji University).</p>
                                 <img src="/hoeamsaji/assets/site/hoeamsaji/img/sub1-2-01.png">
                                 <div class="sub-img-flex">
                                     <img src="/hoeamsaji/assets/site/hoeamsaji/img/sub1-2-02.png">
