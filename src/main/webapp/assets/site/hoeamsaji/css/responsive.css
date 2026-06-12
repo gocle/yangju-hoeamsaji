@@ -175,6 +175,12 @@
   body.is-mobile-open {
     overflow: hidden;
   }
+  
+  .mobile-gnb-head .m_logo {
+  	width: 200px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
 
 @media (max-width: 1300px) {
   .inner,.header-inner,.intro__inner,.value-box {
@@ -192,6 +198,10 @@
 
   .header-inner {
     justify-content: space-between;
+  }
+  
+  .logo img {
+  	padding-left: 10px
   }
 
   .util-box {
@@ -494,10 +504,6 @@
 /* 890px end */
 
 @media (max-width: 768px) {
-
-    .header-inner {
-      height: 70px;
-    }
     
     .visual-content p {
         margin: 30px 0 8px;

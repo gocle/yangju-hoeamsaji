@@ -183,7 +183,7 @@ function openLoginPopup() {
 
                     <button type="button" class="mobile-close">닫기</button>
                 </div>
-                <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_logo_m.png" alt="" >
+                <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_logo.png" alt="" class="m_logo" >
 
             </div>
 
