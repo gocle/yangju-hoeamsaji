@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gocle.hoeamsaji.usr.publication.service.impl.UserPublicationMapper">
+	
+	<select id="selectPublicationList" parameterType="com.gocle.hoeamsaji.usr.publication.vo.PublicationVO" resultType="com.gocle.hoeamsaji.usr.publication.vo.PublicationVO">
+	
+	     SELECT
+          TP.PUB_ID
+        , TP.PUB_TITLE
+        , TP.PUB_SUB_TITLE
+        , TP.PUB_VOLUME
+        , TP.PUB_YEAR
+        , TP.PUB_TYPE
+        , TP.USE_YN
+        , TP.DISPLAY_ORDER
+        , TP.REG_DT
+        , TP.REG_ID
+        , TP.PUB_THUMB_FILE_ID
+        , TP.PUB_PDF_FILE_ID
+        , (
+            SELECT SAVE_FILE_NAME
+            FROM ATCH_FILE AF
+            WHERE AF.DELETE_YN = 'N'
+              AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+            LIMIT 1
+          ) AS THUMB_FILE_NAME
+        , (
+            SELECT ORG_FILE_NAME
+            FROM ATCH_FILE AF
+            WHERE AF.DELETE_YN = 'N'
+              AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+            LIMIT 1
+          ) AS THUMB_ORG_FILE_NAME
+        , (
+            SELECT ORG_FILE_NAME
+            FROM ATCH_FILE AF
+            WHERE AF.DELETE_YN = 'N'
+              AND AF.ATCH_FILE_IDX = TP.PUB_PDF_FILE_ID
+            LIMIT 1
+          ) AS PDF_ORG_FILE_NAME
+
+	    FROM TB_PUBLICATION TP
+	    WHERE TP.DELETE_YN = 'N'
+	    ORDER BY
+	          CAST(TP.PUB_YEAR AS UNSIGNED) DESC
+	        , TP.DISPLAY_ORDER ASC
+	</select>
+	
+	<select id="selectPublicationListCnt" parameterType="com.gocle.hoeamsaji.usr.publication.vo.PublicationVO" resultType="int">
+	    SELECT COUNT(*)
+	    FROM TB_PUBLICATION
+	    WHERE DELETE_YN = 'N'
+	
+	    <if test="searchKeyword != null and searchKeyword != ''">
+	        AND PUB_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+	    </if>
+	
+	</select>
+	
+	<select id="selectPublicationDetail" parameterType="com.gocle.hoeamsaji.usr.publication.vo.PublicationVO" resultType="com.gocle.hoeamsaji.usr.publication.vo.PublicationVO">
+	    SELECT
+	         TP.PUB_ID
+	       , TP.PUB_TITLE
+	       , TP.PUB_SUB_TITLE
+	       , TP.PUB_VOLUME
+	       , TP.PUB_YEAR
+	       , TP.PUB_TYPE
+	       , TP.PUB_THUMB_FILE_ID
+	       , TP.PUB_PDF_FILE_ID
+	       , TP.BUY_URL
+	       , TP.DISPLAY_ORDER
+	       , TP.USE_YN
+	       , TP.REG_ID
+	       , TP.REG_DT
+	
+	       , (
+	           SELECT ORG_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+	           LIMIT 1
+	         ) AS THUMB_ORG_FILE_NAME
+	
+	       , (
+	           SELECT SAVE_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+	           LIMIT 1
+	         ) AS THUMB_SAVE_FILE_NAME
+	
+	       , (
+	           SELECT ORG_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_PDF_FILE_ID
+	           LIMIT 1
+	         ) AS PDF_ORG_FILE_NAME
+	
+	       , (
+	           SELECT SAVE_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_PDF_FILE_ID
+	           LIMIT 1
+	         ) AS PDF_SAVE_FILE_NAME
+	
+	   FROM TB_PUBLICATION TP
+	
+	   WHERE TP.PUB_ID = #{pubId}
+	     AND TP.DELETE_YN = 'N'
+	
+	</select>
+	
+	<select id="selectPublicationContentList" parameterType="com.gocle.hoeamsaji.usr.publication.vo.PublicationVO" resultType="com.gocle.hoeamsaji.usr.publication.vo.PublicationContentVO">
+	  	 SELECT
+			  CONTENT_ID
+			, PUB_ID
+			, CONTENT_ORDER
+			, CONTENT_NO
+			, CONTENT_TITLE
+			, AUTHOR_NAME
+		FROM TB_PUBLICATION_CONTENT
+		WHERE PUB_ID = #{pubId} AND DELETE_YN = 'N'
+		ORDER BY CONTENT_ORDER ASC
+	</select>
+	
+</mapper>
