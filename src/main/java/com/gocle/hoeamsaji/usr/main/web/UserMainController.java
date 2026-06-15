@@ -110,4 +110,14 @@ public class UserMainController{
 		return returnPage;
 	}
 	
+	
+	@RequestMapping(value = "usr/main/directions.do")
+	public String directions(
+			ModelMap model,
+			HttpServletRequest request,
+			HttpSession session) throws Exception {
+		
+		return "usr/main/directions";
+	}
+	
 }
