@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gocle.hoeamsaji.adm.publication.service.impl.AdminPublicationMapper">
+	
+	<select id="selectPublicationList" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO" resultType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO">
+	
+	     SELECT
+          TP.PUB_ID
+        , TP.PUB_TITLE
+        , TP.PUB_SUB_TITLE
+        , TP.PUB_VOLUME
+        , TP.PUB_YEAR
+        , TP.PUB_TYPE
+        , TP.USE_YN
+        , TP.DISPLAY_ORDER
+        , TP.REG_DT
+        , TP.REG_ID
+        , TP.PUB_THUMB_FILE_ID
+        , TP.PUB_PDF_FILE_ID
+        , (
+            SELECT SAVE_FILE_NAME
+            FROM ATCH_FILE AF
+            WHERE AF.DELETE_YN = 'N'
+              AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+            LIMIT 1
+          ) AS THUMB_FILE_NAME
+        , (
+            SELECT ORG_FILE_NAME
+            FROM ATCH_FILE AF
+            WHERE AF.DELETE_YN = 'N'
+              AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+            LIMIT 1
+          ) AS THUMB_ORG_FILE_NAME
+        , (
+            SELECT ORG_FILE_NAME
+            FROM ATCH_FILE AF
+            WHERE AF.DELETE_YN = 'N'
+              AND AF.ATCH_FILE_IDX = TP.PUB_PDF_FILE_ID
+            LIMIT 1
+          ) AS PDF_ORG_FILE_NAME
+
+	    FROM TB_PUBLICATION TP
+	    WHERE TP.DELETE_YN = 'N'
+	    <if test="searchKeyword != null">
+		    AND TP.PUB_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+		</if>
+		
+		<if test="searchYear != null">
+		    AND TP.PUB_YEAR = #{searchYear}
+		</if>
+		
+		<if test="searchType != null">
+		    AND TP.PUB_TYPE = #{searchType}
+		</if>
+	    ORDER BY
+	          CAST(TP.PUB_YEAR AS UNSIGNED) DESC
+	        , TP.DISPLAY_ORDER ASC
+	
+	    LIMIT #{firstIndex}, #{recordCountPerPage}
+	
+	</select>
+	
+	<select id="selectPublicationListCnt" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO" resultType="int">
+	    SELECT COUNT(*)
+	    FROM TB_PUBLICATION
+	    WHERE DELETE_YN = 'N'
+	
+	    <if test="searchKeyword != null and searchKeyword != ''">
+	        AND PUB_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+	    </if>
+	
+	</select>
+	
+	<select id="selectPublicationDetail" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO" resultType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO">
+	    SELECT
+	         TP.PUB_ID
+	       , TP.PUB_TITLE
+	       , TP.PUB_SUB_TITLE
+	       , TP.PUB_VOLUME
+	       , TP.PUB_YEAR
+	       , TP.PUB_TYPE
+	       , TP.PUB_THUMB_FILE_ID
+	       , TP.PUB_PDF_FILE_ID
+	       , TP.BUY_URL
+	       , TP.DISPLAY_ORDER
+	       , TP.USE_YN
+	       , TP.REG_ID
+	       , TP.REG_DT
+	
+	       , (
+	           SELECT ORG_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+	           LIMIT 1
+	         ) AS THUMB_ORG_FILE_NAME
+	
+	       , (
+	           SELECT SAVE_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_THUMB_FILE_ID
+	           LIMIT 1
+	         ) AS THUMB_SAVE_FILE_NAME
+	
+	       , (
+	           SELECT ORG_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_PDF_FILE_ID
+	           LIMIT 1
+	         ) AS PDF_ORG_FILE_NAME
+	
+	       , (
+	           SELECT SAVE_FILE_NAME
+	           FROM ATCH_FILE AF
+	           WHERE AF.DELETE_YN = 'N'
+	             AND AF.ATCH_FILE_IDX = TP.PUB_PDF_FILE_ID
+	           LIMIT 1
+	         ) AS PDF_SAVE_FILE_NAME
+	
+	   FROM TB_PUBLICATION TP
+	
+	   WHERE TP.PUB_ID = #{pubId}
+	     AND TP.DELETE_YN = 'N'
+	
+	</select>
+	
+	<insert id="insertPublication" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO">
+	    INSERT INTO TB_PUBLICATION (
+	          PUB_ID
+	        , PUB_TITLE
+	        , PUB_SUB_TITLE
+	        , PUB_VOLUME
+	        , PUB_YEAR
+	        , PUB_TYPE
+	        , PUB_THUMB_FILE_ID
+	        , PUB_PDF_FILE_ID
+	        , BUY_URL
+	        , DISPLAY_ORDER
+	        , USE_YN
+	        , DELETE_YN
+	        , REG_ID
+	        , REG_DT
+	    )
+	    VALUES (
+	    	  #{pubId}
+	        , #{pubTitle}
+	        , #{pubSubTitle}
+	        , #{pubVolume}
+	        , #{pubYear}
+	        , #{pubType}
+	        , #{pubThumbFileId}
+	        , #{pubPdfFileId}
+	        , #{buyUrl}
+	        , #{displayOrder}
+	        , #{useYn}
+	        , 'N'
+	        , #{sessionMemId}
+	        , NOW()
+	    )
+	</insert>
+	
+	<update id="updatePublication" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO">
+
+	    UPDATE TB_PUBLICATION
+	       SET PUB_TITLE = #{pubTitle}
+	         , PUB_SUB_TITLE = #{pubSubTitle}
+	         , PUB_VOLUME = #{pubVolume}
+	         , PUB_YEAR = #{pubYear}
+	         , PUB_TYPE = #{pubType}
+	         <if test="pubThumbFileId != null and pubThumbFileId != ''">
+	         , PUB_THUMB_FILE_ID = #{pubThumbFileId}
+	         </if>
+	         <if test="pubPdfFileId != null and pubPdfFileId != ''">
+	         , PUB_PDF_FILE_ID = #{pubPdfFileId}
+	         </if>
+	         , BUY_URL = #{buyUrl}
+	         , DISPLAY_ORDER = #{displayOrder}
+	         , USE_YN = #{useYn}
+	         , UPD_ID = #{sessionMemId}
+	         , UPD_DT = NOW()
+	     WHERE PUB_ID = #{pubId}
+	
+	</update>
+	
+	<update id="deletePublication" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO">
+	    UPDATE TB_PUBLICATION
+	       SET DELETE_YN = 'Y'
+	         , UPD_ID = #{sessionMemId}
+	         , UPD_DT = NOW()
+	     WHERE PUB_ID = #{pubId}
+	</update>
+	
+	<select id="selectPublicationContentList" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO" resultType="com.gocle.hoeamsaji.adm.publication.vo.PublicationContentVO">
+	  	 SELECT
+			  CONTENT_ID
+			, PUB_ID
+			, CONTENT_ORDER
+			, CONTENT_NO
+			, CONTENT_TITLE
+			, AUTHOR_NAME
+		FROM TB_PUBLICATION_CONTENT
+		WHERE PUB_ID = #{pubId} AND DELETE_YN = 'N'
+		ORDER BY CONTENT_ORDER ASC
+	</select>
+	
+	<insert id="insertPublicationContent" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationContentVO">
+	    INSERT INTO TB_PUBLICATION_CONTENT (
+	          PUB_ID
+	        , CONTENT_ORDER
+	        , CONTENT_NO
+	        , CONTENT_TITLE
+	        , AUTHOR_NAME
+	        , DELETE_YN
+	        , REG_ID
+	        , REG_DT
+	    )
+	    VALUES (
+	          #{pubId}
+	        , #{contentOrder}
+	        , #{contentNo}
+	        , #{contentTitle}
+	        , #{authorName}
+	        , 'N'
+	        , #{sessionMemId}
+	        , NOW()
+	    )
+	
+	</insert>
+	
+	<update id="deletePublicationContentByPubId" parameterType="com.gocle.hoeamsaji.adm.publication.vo.PublicationVO">
+	    UPDATE TB_PUBLICATION_CONTENT
+	       SET DELETE_YN = 'Y'
+	      	 , UPD_ID = #{sessionMemId}
+	         , UPD_DT = NOW()
+	     WHERE PUB_ID = #{pubId}
+	</update>
+</mapper>
