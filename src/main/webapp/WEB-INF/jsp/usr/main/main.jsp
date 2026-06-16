@@ -16,14 +16,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- 기본 SEO -->
-    <title>Hoeamsaji Museum</title>
-    <meta name="description" content="Official website of Hoeamsaji Museum in Yangju, Korea.">
-    <meta name="keywords" content="Hoeamsaji, Yangju Museum, Korean Buddhist Heritage">
+    <title>회암사지(Hoeamsaji Temple Site) | 세계유산 우선등재목록 | Yangju, Korea</title>
+    <meta name="description" content="회암사지(Hoeamsaji Temple Site)는 고려 말~조선 초 최대 규모의 왕실 사찰 유적으로 세계유산적 가치를 지닌 문화유산입니다. Explore the history, heritage, exhibitions and educational programs of Hoeamsaji in Yangju, Korea.">
+	<meta name="keywords" content="회암사지, 양주 회암사지, Hoeamsaji, Hoeamsaji Temple Site, 세계유산, World Heritage, UNESCO, 양주시립회암사지박물관">
 
     <!-- OG -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hoeamsaji Museum">
-    <meta property="og:description" content="Discover the history and heritage of Hoeamsaji Temple Site.">
+    <meta property="og:title" content="회암사지(Hoeamsaji Temple Site) | 세계유산 우선등재목록">
+	<meta property="og:description" content="고려 말~조선 초 왕실 사찰 유적 회암사지. Royal Buddhist heritage site of Korea.">
 
     <!-- favicon -->
     <link rel="icon" href="/hoeamsaji/assets/site/hoeamsaji/img/common/favicon.ico">
