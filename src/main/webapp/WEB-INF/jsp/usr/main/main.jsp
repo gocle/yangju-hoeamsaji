@@ -353,7 +353,7 @@
             </div>
         </section>
         </main>
-		
+		<c:if test="${not empty popupList}">
 		 <div class="popup-overlay" style="display:none;">
 
             <div class="popup-wrap">
@@ -394,7 +394,7 @@
             </div>
 
         </div>
-		
+		</c:if>
 	<c:import url="/usr/layout/footer.do" />
 	
 	<script>
