@@ -92,16 +92,28 @@ function fn_next( nextNo , menuId ) {
 	                            <strong>Attachments</strong>
 								
 	                            <c:forEach var="fileVO" items="${fileList}" varStatus="status">
-	                            	<a href="javascript:fn_egov_downFile('${fileVO.atchFileIdx}');" title="파일 다운로드" class="file_down">
-		                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_attach.svg" alt="">
-		                                ${fileVO.orgFileName}
-		                            </a>
+	                            	<c:if test="${fn:toLowerCase(fileVO.fileExtn) ne 'mp4'}">
+		                            	<a href="javascript:fn_egov_downFile('${fileVO.atchFileIdx}');" title="파일 다운로드" class="file_down">
+			                                <img src="/hoeamsaji/assets/site/hoeamsaji/img/common/ico_attach.svg" alt="">
+			                                ${fileVO.orgFileName}
+			                            </a>
+		                            </c:if>
 	                            </c:forEach>
 	                        </div>
 						</c:if>
-                        <div class="board-detail__content">
-                            ${result.baContentHtml}
-                        </div>
+					<div class="board-detail__content">
+   						 ${result.baContentHtml}
+						<c:forEach var="fileVO" items="${fileList}">
+						    <c:if test="${fn:toLowerCase(fileVO.fileExtn) eq 'mp4'}">
+						        <div class="video-box" style="margin-top:30px;">
+						            <video controls preload="metadata" style="width:100%; max-width:900px;">
+						                <source src="${contextRoot}/board/getAtchMovie.do?fileSn=${fileVO.atchFileIdx}" type="video/mp4">
+						                Your browser does not support the video tag.
+						            </video>
+						        </div>
+						    </c:if>
+						</c:forEach>
+					</div>
 
                     </article>
 
