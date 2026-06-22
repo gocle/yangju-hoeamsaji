@@ -63,6 +63,7 @@
                     <div class="unq-title-area">
                         <div class="bg-number">${pub.pubVolume}</div>
                         <h3 class="main-heading">${pub.pubTitle}</h3>
+                        <h3>${pub.pubSubTitle}</h3>
                         <div class="sub-meta-line">
                             <div class="meta-tag">Publication Year <span>${pub.pubYear}</span></div>
                             <div class="meta-tag">Type <span>${pub.pubType}</span></div>

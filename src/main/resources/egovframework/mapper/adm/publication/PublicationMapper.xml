@@ -53,8 +53,7 @@
 		    AND TP.PUB_TYPE = #{searchType}
 		</if>
 	    ORDER BY
-	          CAST(TP.PUB_YEAR AS UNSIGNED) DESC
-	        , TP.DISPLAY_ORDER ASC
+	          TP.DISPLAY_ORDER DESC
 	
 	    LIMIT #{firstIndex}, #{recordCountPerPage}
 	

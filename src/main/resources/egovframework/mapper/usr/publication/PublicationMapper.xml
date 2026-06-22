@@ -42,8 +42,7 @@
 	    FROM TB_PUBLICATION TP
 	    WHERE TP.DELETE_YN = 'N'
 	    ORDER BY
-	          CAST(TP.PUB_YEAR AS UNSIGNED) DESC
-	        , TP.DISPLAY_ORDER ASC
+	          TP.DISPLAY_ORDER DESC
 	</select>
 	
 	<select id="selectPublicationListCnt" parameterType="com.gocle.hoeamsaji.usr.publication.vo.PublicationVO" resultType="int">

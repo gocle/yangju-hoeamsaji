@@ -140,7 +140,7 @@ function fn_egov_deleteFile(atchFileIdx,returnUrl){
 	</tr>
 
 	<tr>
-		<th>권수</th>
+		<th>번호</th>
 		<td>
 			<input type="text" id="pubVolume" name="pubVolume" value="${publicationResult.pubVolume}" style="width:100%;">
 		</td>
