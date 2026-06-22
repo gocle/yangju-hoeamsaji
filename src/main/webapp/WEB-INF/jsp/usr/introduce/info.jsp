@@ -16,7 +16,7 @@
                 <div class="sub-visual__content">
                     <h2>
                         <span>Excavation and restoration of the</span>
-                        <span>Hoeamsa Temple Site in Yangju</span>
+                        <span>Hoeamsaji in Yangju</span>
                     </h2>
 
                     <div class="sub-location"> 
@@ -36,37 +36,41 @@
                     <div class="sub-title-box">
                         <span class="sub-title-shape"></span>
                         <h3>Archaeological<br>Excavation</h3>
-                        <p>
+                        <!-- <p>
                             Explore excavation findings<br>
                             that reveal the history and layout<br>
                             of Hoeamsaji Temple Site.
-                        </p>
+                        </p> -->
                     </div>
 
                     <div class="sub-intro-content">
                         <div class="sub-desc sub-desc-img">
                             <p>
-                                The Yangju Hoeamsa Temple Site was designated as a National Historic Site in 1964,
-                                and fourteen phases of archaeological excavation were carried out between 1997 and 2024.
+                                Hoeamsa Temple Site (Hoeamsaji) in Yangju was designated as a Historic Site in 1964,
+                                and 14 archaeological excavation sessions were carried out between 1997 and 2024.
                             </p>
 
                             <p>
-                                The excavations revealed that the site contains architectural elements characteristic of royal palaces,
-                                distinguishing it from ordinary Buddhist temples, as well as features associated with Seon (Zen)
-                                Buddhist monasteries that were widespread throughout East Asia during the 13th and 14th centuries.
+                                The excavations revealed that the site contains architectural elements Indicating the temple's connection
+                                to the royal court that distinguishes it from other Buddhist temples, 
+                                as well as features associated with Seon Buddhist monasteries that were widespread throughout 
+                                East Asia during the 13th and 14th centuries.
                             </p>
 
                             <p>
-                                Hundreds of thousands of artifacts were unearthed, including blue roof tiles used exclusively by the royal court,
-                                decorative ridge-end roof tiles such as dragon-head ornaments, tosu, and japsang figures,
-                                eave-end roof tiles bearing dragon and phoenix motifs, and ceramics produced at royal kilns.
-                                These discoveries attest to the status and character of Hoeamsa Temple as the largest royal Buddhist temple and
-                                a representative Seon monastery of the early Joseon period.
+                                More than 100,000 pieces of artifacts were unearthed, including blue roof tiles used exclusively by the royal court,
+                                decorative ridge-end roof tiles with dragon-head ornaments and figurines, 
+                                eave-end roof tiles bearing dragon and phoenix motifs, as well as ceramics produced at royal kilns.
+                                eave-end roof tiles bearing dragon and phoenix motifs, and ceramics produced at royal kilns. 
+                                These discoveries attest to the status and character of Hoeamsa Temple as the largest royal Buddhist temple
+                                and a representative Seon monastery of the early Joseon period.
                             </p>
 
                             <h4>Conservation Project</h4>
                             <p>
-                                The Comprehensive Conservation Project for the Yangju Hoeamsa Temple Site was carried out over approximately twenty years, from 1997 to 2016, and included land acquisition, archaeological excavations, museum construction, site conservation, and landscape park development.
+                                A comprehensive maintenance plan for Hoeamsaji was implemented from 1997 to 2016, 
+                                and included land acquisition, archaeological excavations, museum construction, site conservation, 
+                                and landscape park development.
                             </p>
 
                         </div>
@@ -89,8 +93,8 @@
                                     <div class="excavation-card-head">
                                         <span class="num num-01">01</span>
                                         <div class="excavation-card-title">
-                                            <strong>West Abbot's Quarters</strong>
-                                            <em>1th Excavation</em>
+                                            <strong>Abbot’s Hall site – West</strong>
+                                            <em>1st Excavation</em>
                                         </div>
                                     </div>
                                     <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb01.jpg" alt="">
@@ -101,7 +105,7 @@
                                         <span class="num num-02">02</span>
                                         <div class="excavation-card-title">
                                             <strong>Bogwangjeon Hall Site</strong>
-                                            <em>2th Excavation</em>
+                                            <em>2nd Excavation</em>
                                         </div>
                                     </div>
                                     <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb02.jpg" alt="">
@@ -111,8 +115,8 @@
                                     <div class="excavation-card-head">
                                         <span class="num num-03">03</span>
                                         <div class="excavation-card-title">
-                                            <strong>West Gate Stairway</strong>
-                                            <em>3th Excavation</em>
+                                            <strong>Steps on the west side identified</strong>
+                                            <em>3rd Excavation</em>
                                         </div>
                                     </div>
                                     <img src="/hoeamsaji/assets/site/hoeamsaji/img/excavation-thumb03.jpg" alt="">
@@ -124,7 +128,7 @@
                                     <div class="excavation-card-head">
                                         <span class="num num-04">04</span>
                                         <div class="excavation-card-title">
-                                            <strong>Building Site D</strong>
+                                            <strong>Site of Sacheonwangmun Gate</strong>
                                             <em>4th Excavation</em>
                                         </div>
                                     </div>
@@ -135,7 +139,7 @@
                                     <div class="excavation-card-head">
                                         <span class="num num-05">05</span>
                                         <div class="excavation-card-title">
-                                            <strong>Building Site A</strong>
+                                            <strong>A secondary pathway and building sites</strong>
                                             <em>5th–6th Excavation</em>
                                         </div>
                                     </div>
@@ -166,10 +170,10 @@
                     <div class="sub-title-box sub-history-head">
                         <span class="sub-title-shape"></span>
                         <h3>Conservation<br>Project</h3>
-                        <p>
+                        <!-- <p>
                             Preserving the legacy of<br>
                             Hoeamsa Temple Site.
-                        </p>
+                        </p> -->
                     </div>
                     
                     <div class="table-guide">
@@ -202,63 +206,63 @@
 	                            <tr>
 	                                <td>1st Excavation</td>
 	                                <td>1998</td>
-	                                <td>Entire Complex 8</td>
+	                                <td>Entire 8th terrace</td>
 	                                <td>
-	                                    Excavation of roof tiles with inscriptions from the main hall and surrounding building sites of the East and West corridors, and ornamental ridge-end tiles (Yeongnak)
+	                                    Blue roof tiles and Yeongrak pattern ornaments excavated at building site of the main hall and of the east and west abbot's hall.
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>2nd Excavation</td>
 	                                <td>1999</td>
-	                                <td>Entire Complexes 7 and 6</td>
+	                                <td>Entire 6 and 7th terrace</td>
 	                                <td>
-	                                    Excavation of a bronze miniature pagoda from Bogwangjeon (Hall of Universal Light)
+	                                    A bronze wind bell excavated at the site of Bogwangjeon Hall
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>3rd Excavation</td>
 	                                <td>2000</td>
-	                                <td>West of Complex 5</td>
+	                                <td>West side of the 5th terrace</td>
 	                                <td>
-	                                    Identification of multiple underfloor heating facilities (Gudeul)
+	                                    Multiple types of underfloor heating system  (gudeul)  identified
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>4th Excavation</td>
 	                                <td>2001</td>
-	                                <td>East of Complex 5, Entire Complex 4</td>
+	                                <td>East side of the 5th terrace, <br>Entire 4th Terrace</td>
 	                                <td>
-	                                    Identification of Cheonwangmun (Gate of Heavenly Kings) Site (Gate Site of Complex 4)
+	                                    Sacheonwangmun Gate site dentified at the 4th terrace
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>5th Excavation</td>
 	                                <td>2002</td>
-	                                <td>East of Complex 3</td>
+	                                <td>East side of the 3rd terrace</td>
 	                                <td>
-	                                    Identification of the eastern auxiliary path
+	                                    A secondary pathway identified at the eastern section of the site
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>6th Excavation</td>
 	                                <td>2003</td>
-	                                <td>West of Complex 3, Entire Complex 2</td>
+	                                <td>West side of the 3th terrace,<br> Entire 2nd terrace</td>
 	                                <td>
-	                                    Identification of stable, gate, and well sites
+	                                    Horse stable, gate and well sites identified
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>7th Excavation</td>
 	                                <td>2004</td>
-	                                <td>Entire Complex 1, Museum Site (Trial Trenching)</td>
+	                                <td>Entire 1st terrace, <br>Site for the new Museum<br> (Trial Trenching)</td>
 	                                <td>
-	                                    Identification of building sites within Complex 1
+	                                    Building sites identified at the 1st terrace
 	                                </td>
 	                            </tr>
 	
@@ -266,63 +270,62 @@
 	                                <td>8th Excavation</td>
 	                                <td>2005</td>
 	                                <td>
-	                                    West of Complexes 2 and 3,
-	                                    Area 'Na' of the Artifact-bearing Stratum
+	                                    West side of the 2nd<br> and 3rd terraces
 	                                </td>
 	                                <td>
-	                                    Identification of the western auxiliary path, toilet site, and pond site
+	                                    A secondary pathway identified at the western section of the site. <br>Toilet and pond sites identified
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>9th Excavation</td>
 	                                <td>2011</td>
-	                                <td>Factory Area</td>
-	                                <td>(No archaeological features found)</td>
+	                                <td>Area that used to be a factory</td>
+	                                <td>(No archaeological remains excavated)</td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>10th Excavation</td>
 	                                <td>2013</td>
-	                                <td>East and Outskirts of Complex 4</td>
+	                                <td>East side and vicinity of the 4th terrace</td>
 	                                <td>
-	                                    Identification of workshop facilities
+	                                    Workshop site identifed
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>11th Excavation</td>
 	                                <td>2014</td>
-	                                <td>Northwestern Outskirts</td>
+	                                <td>North west vicinity of the site</td>
 	                                <td>
-	                                    Identification of the presumed Byeowon (detached villa/detached compound) site
+	                                    A presumed subsidiary temple identified
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>12th Excavation</td>
 	                                <td>2015</td>
-	                                <td>Southeastern Outskirts</td>
+	                                <td>South east vicinity of the site</td>
 	                                <td>
-	                                    Identification of the presumed storehouse site
+	                                    A presumed storehouse site identified
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>13th Excavation</td>
 	                                <td>2019</td>
-	                                <td>Drainage Channel of Complex 1</td>
+	                                <td>Underground culverts identified<br> on the 1st terrace</td>
 	                                <td>
-	                                    Identification of well and drainage facilities
+	                                    Well and drainage system identified
 	                                </td>
 	                            </tr>
 	
 	                            <tr>
 	                                <td>14th Excavation</td>
 	                                <td>2024</td>
-	                                <td>Complexes 6–8</td>
+	                                <td>6th to 8th terraces</td>
 	                                <td>
-	                                    Identification of earlier archaeological features from the Goryeo Dynasty
+	                                    Archaeological remains from pre-14th century Goryeo identified
 	                                </td>
 	                            </tr>
 	

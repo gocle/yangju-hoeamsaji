@@ -16,13 +16,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- 기본 SEO -->
-    <title>회암사지(Hoeamsaji Temple Site) | 세계유산 우선등재목록 | Yangju, Korea</title>
-    <meta name="description" content="회암사지(Hoeamsaji Temple Site)는 고려 말~조선 초 최대 규모의 왕실 사찰 유적으로 세계유산적 가치를 지닌 문화유산입니다. Explore the history, heritage, exhibitions and educational programs of Hoeamsaji in Yangju, Korea.">
+    <title>양주 회암사지 세계유산 | HOEAMSAJI: Archaeological Remains of a Typical Seon Monastery from 14th-century East Asia</title>
+    <meta name="description" content="회암사지(Hoeamsaji)는 고려 말~조선 초 최대 규모의 왕실 사찰 유적으로 세계유산적 가치를 지닌 문화유산입니다. Explore the history, heritage, exhibitions and educational programs of Hoeamsaji in Yangju, Korea.">
 	<meta name="keywords" content="회암사지, 양주 회암사지, Hoeamsaji, Hoeamsaji Temple Site, 세계유산, World Heritage, UNESCO, 양주시립회암사지박물관">
 
     <!-- OG -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="회암사지(Hoeamsaji Temple Site) | 세계유산 우선등재목록">
+    <meta property="og:title" content="회암사지(Hoeamsaji) | 세계유산 우선등재목록">
 	<meta property="og:description" content="고려 말~조선 초 왕실 사찰 유적 회암사지. Royal Buddhist heritage site of Korea.">
 
     <!-- favicon -->
@@ -64,11 +64,11 @@
                     </div>
 
                     <div class="visual-content">
-                        <span>The Royal Seon Heritage of Yangju</span>
-                        <h2>Hoeamsaji Temple Site</h2>
+                        <span>Archaeological Remains of a Typical Seon Monastery from 14th-century East Asia</span>
+                        <h2>Hoeamsaji</h2>
                         <p>
-                            <span>Once the largest royal Buddhist temple of early Joseon,</span>
-                            <span>Hoeamsaji preserves the traces of Korea’s Seon tradition,</span>
+                            <span>Once the largest royal Buddhist monastery of early Joseon,</span>
+                            <span>Hoeamsaji preserves the traces of Korea’s Seon Buddhist tradition,</span>
                             <span>royal patronage, and centuries of spiritual legacy.</span>
                         </p>
 
@@ -94,11 +94,11 @@
                     </div>
 
                     <div class="visual-content">
-                        <span>The Royal Seon Heritage of Yangju</span>
-                        <h2>Hoeamsaji Temple Site</h2>
+                        <span>Archaeological Remains of a Typical Seon Monastery from 14th-century East Asia</span>
+                        <h2>Hoeamsaji</h2>
                         <p>
-                            <span>Once the largest royal Buddhist temple of early Joseon,</span>
-                            <span>Hoeamsaji preserves the traces of Korea’s Seon tradition,</span>
+                            <span>Once the largest royal Buddhist monastery of early Joseon,</span>
+                            <span>Hoeamsaji preserves the traces of Korea’s Seon Buddhist tradition,</span>
                             <span>royal patronage, and centuries of spiritual legacy.</span>
                         </p>
 
@@ -131,14 +131,13 @@
 
                 <div class="intro-text">
                     <p>
-                    Once a vast temple complex supported by kings and royal patrons,
-                    Hoeamsaji now remains as foundations, stone terraces, monuments,
-                    and excavated artifacts.
+                    Once a vast monastic complex supported by kings and royal patrons, 
+                    Hoeamsaji now remains as foundations, stone terraces, monuments, and excavated artifacts.
                     </p>
 
                     <p>
-                    Each trace reveals how royal Buddhist culture, Seon practice,
-                    and monastic life once came together at the foot of Mt. Cheonbo.
+                    Each trace reveals how Seon Buddhist culture and its practice 
+                    in the monastic life once came together at the foot of Cheonbosan Mountain.
                     </p>
 
                     <a href="/hoeamsaji/usr/introduce/info.do?menuId=2026MENU0000461" class="fill-btn black">
@@ -160,13 +159,13 @@
 
                     <div class="intro-info__item">
                         <i class="intro-info__icon icon-sites"></i>
-                        <strong>Approx. 70 Building Sites</strong>
+                        <strong>Approximately 70 Buildings</strong>
                         <p>Revealed through<br>archaeological excavations</p>
                     </div>
 
                     <div class="intro-info__item">
                         <i class="intro-info__icon icon-stupa"></i>
-                        <strong>Royal Seon Monastery</strong>
+                        <strong>Royal Monastery</strong>
                         <p>A rare site showing<br>Korea’s Seon Buddhist tradition</p>
                     </div>
                 </div>
@@ -177,7 +176,7 @@
             <span class="heritage-circle"></span>
             <div class="section-title">
             <h3>Heritage Highlights</h3>
-            <p>A journey through royal legacy, Seon practice, and archaeological discovery.</p>
+            <p>A journey through royal legacy, Seon Buddhist practice, and archaeological discovery.</p>
             </div>
 
             <div class="marquee-wrap">
@@ -226,8 +225,8 @@
 
             <div class="value-box section-rise">
             <h3>World Heritage Value</h3>
-            <p>Hoeamsaji Temple Site reveals the exceptional value of Korea’s royal Buddhist culture,</p>
-            <p>Seon monastic architecture, and archaeological heritage from the late Goryeo to early Joseon period.</p>
+            <!-- <p>Hoeamsaji Temple Site reveals the exceptional value of Korea’s royal Buddhist culture,</p>
+            <p>Seon monastic architecture, and archaeological heritage from the late Goryeo to early Joseon period.</p> -->
 
             <div class="value-list">
             <article>
@@ -267,15 +266,15 @@
                 <div class="section-title dark-title">
                     <h3>Plan Your Visit</h3>
                     <p>
-                        <span>Begin your journey through</span>
-                        <span>Hoeamsaji Temple Site.</span>
+                        <!-- <span>Begin your journey through</span>
+                        <span>Hoeamsaji</span> -->
                     </p>
                 </div>
 
                 <div class="map-box">
 
                     <div class="map-box__content">
-                        <h4>Hoeamsaji Temple Site</h4>
+                        <h4>Hoeamsaji</h4>
 
                         <p>
                             <span>Explore the museum, walk through the ancient temple grounds,</span>

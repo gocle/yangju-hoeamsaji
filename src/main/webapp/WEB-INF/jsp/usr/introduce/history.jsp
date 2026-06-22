@@ -36,10 +36,10 @@
                     <div class="sub-title-box sub-history-head">
                         <span class="sub-title-shape"></span>
                         <h3>History</h3>
-                        <p>
+                        <!-- <p>
                             Current Status of Cultural Heritage<br>
                             at the Yangju Hoeamsa Temple Site
-                        </p>
+                        </p> -->
                     </div>
                     
 					<div class="table-guide">
@@ -64,27 +64,24 @@
 	                            <tbody>
 	                                <tr>
 	                                    <td>1</td>
-	                                    <td>Yangju Hoeamsa Temple Site</td>
-	                                    <td>Private</td>
+	                                    <td>Hoeamsaji (Hoeamsa Temple Site), Yangju</td>
+	                                    <td>State-designated Historic Site</td>
 	                                    <td>June 10, 1964.</td>
-	                                    <td rowspan="2">Central Ministry<br>
-	                                        (Areas of Faith, Practice, and Life)</td>
+	                                    <td rowspan="2">Main Temple Area<br>
+	                                        (Worship practice,</br> Meditation, Service areas)</td>
 	                                </tr>
 	
 	                                <tr>
 	                                    <td>2</td>
-	                                    <td>Saritap at Hoeamsa Temple Site in Yangju</td>
-	                                    <td>Treasure</td>
+	                                    <td>Stupa at Hoeamsaji, Yangju</td>
+	                                    <td>State-designated Treasure</td>
 	                                    <td>June 24, 2021.</td>
 	                                </tr>
 	
 	                                <tr>
 	                                    <td>3</td>
-	                                    <td>Yangju Hoeamsa<br>
-	                                        Temple Site Seonkakwangsa Stele<br>
-	                                        (Turtle-shaped base)
-	                                    </td>
-	                                    <td>Treasure</td>
+	                                    <td>Stele for Royal Preceptor Hyegeun at Hoeamsaji, Yangju</td>
+	                                    <td>State-designated Treasure</td>
 	                                    <td>September 2, 1963.</td>
 	                                    <td rowspan="7">Auxiliary facilities<br>
 	                                        (Monuments to eminent monks)
@@ -93,52 +90,49 @@
 	
 	                                <tr>
 	                                    <td>4</td>
-	                                    <td>Yangju Hoeamsa Temple Site<br>
-	                                        Muhakdaesa Pagoda
+	                                    <td>Stupa for Monk Jacho at Hoeamsaji,<br>
+	                                        Yangju (with turtle-shaped base) 
 	                                    </td>
-	                                    <td>Treasure</td>
+	                                    <td>State-designated Treasure</td>
 	                                    <td>September 2, 1963.</td>
 	                                </tr>
 	
 	                                <tr>
 	                                    <td>5</td>
-	                                    <td>Twin Lion Stone Lantern in front of the<br>
-	                                        Pagoda of Great Master Muhak<br>
-	                                        at Hoeamsa Temple Site in Yangju
+	                                    <td>Two Lion Stone Lanterns in front of the<br>
+	                                        Stupa for Monk Jacho at Hoeamsaji, Yangju
 	                                    </td>
-	                                    <td>Private</td>
+	                                    <td>State-designated Historic Site</td>
 	                                    <td>September 2, 1963.</td>
 	                                </tr>
 	
 	                                <tr>
 	                                    <td>6</td>
-	                                    <td>Stupa of Master Jigong and Stone Lantern</td>
-	                                    <td>Gyeonggi-do Tangible Cultural Heritage</td>
+	                                    <td>Stupa and stone lantern for Monk Jigong</td>
+	                                    <td>Gyeonggi-do Province-designated</br> Tangible Cutural Heritage</td>
 	                                    <td>September 26, 1974.</td>
 	                                </tr>
 	
 	                                <tr>
 	                                    <td>7</td>
-	                                    <td>Stupa of Seon Master Naong and Stone Lantern
-	                                    </td>
-	                                    <td>Gyeonggi-do Tangible Cultural Heritage</td>
+	                                    <td>Stupa and Stone Lantern for Monk Hyegeun</td>
+	                                    <td>Gyeonggi-do Province-designated</br> Tangible Cutural Heritage</td>
 	                                    <td>September 26, 1974.</td>
 	                                </tr>
 	
 	                                <tr>
 	                                    <td>8</td>
-	                                    <td>Monument to Great Master Muhak
-	                                    </td>
-	                                    <td>Gyeonggi-do Tangible Cultural Heritage</td>
+	                                    <td>Stele for Monk Jacho</td>
+	                                    <td>Gyeonggi-do Province-designated</br> Tangible Cutural Heritage</td>
 	                                    <td>September 26, 1974.</td>
 	                                </tr>
 	
 	                                <tr>
 	                                    <td>9</td>
-	                                    <td>Stele of Seon Master Jigong<br>
-	                                        at Hoeamsa Temple in Yangju
+	                                    <td>Stele for Monk Jigong<br>
+	                                        at Hoeamsa Temple
 	                                    </td>
-	                                    <td>Gyeonggi-do Cultural Heritage Data</td>
+	                                    <td>Gyeonggi-do Province Cultural Heritage Data</td>
 	                                    <td>November 29, 2004.</td>
 	                                </tr>
 	                            </tbody>

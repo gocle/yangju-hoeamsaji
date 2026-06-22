@@ -38,8 +38,8 @@
                         <div class="title-divider">
                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/title-divider.svg" alt="">
                         </div>
-                        <p>OUV(Outstanding Universal Value)</p>
-                        <strong>Must satisfy one or more of 10 criteria</strong>
+                        <p>To be inscribed as World Heritage, a property must have Outstanding Universal Value and meet at least one of the 10 criteria. </p>
+                        <strong>Key Requirements for World Heritage Inscription</strong>
                     </div>
 
                     <div class="ouv-card-list js-rise">
@@ -47,41 +47,46 @@
                             <strong>01</strong>
                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_ouv_01.svg" alt="">
                             <h4>Authenticity</h4>
-                            <em>Heritage Value Expression</em>
+                            <em>Credible Expression of Outstanding Universal Value</em>
                             <p>
-                                Form and design, materials and substance, use and function, tradition, techniques,
-                                management systems, location and setting, language, other forms of intangible
-                                heritage, spirit and feeling, and other internal and external elements, must ensure
-                                their cultural values are truthfully and credibly expressed.
+                                A property is considered to have authenticity whe its cultural values are truthfully and credibly expressed through a variety of attributes which may be conveying or expressing the property’s Outstanding Universal Value including 
+								<br>• form and design
+								<br>• materials and substance 
+								<br>• use and function 
+								<br>• tradition, techniques, management systems
+								<br>• location and setting 
+								<br>• language, other forms of intangible heritage
+								<br>• spirit and feeling
+								<br>• and other internal and external elements.
                             </p>
                         </article>
 
                         <article>
                             <strong>02</strong>
                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_ouv_02.svg" alt="">
-                            <h4>Completeness</h4>
-                            <em>Integrity</em>
+                            <h4>Integrity</h4>
+                            <em>Wholeness and Intactness of Outstanding Universal Value</em>
                             <p>
-                                The extent to which all elements necessary to express the Outstanding Universal Value
-                                are included, whether the size is adequate to ensure the complete representation of the
-                                features and processes which convey the property’s significance, and the extent of
-                                negative effects from development or neglect.
+                                Integrity is defined as a measure of the completeness or intactness of the attributes that convey Outstanding Universal Value, through the key words of 
+								<br>• Wholeness: all the necessary attributes are within the property
+								<br>• Intactness: all the necessary attributes are still present – none are lost or have been significantly damaged or have decayed
+								<br>• Absence of threats: none of the attributes are threatened by development, deterioration or neglect.
                             </p>
                         </article>
 
                         <article>
                             <strong>03</strong>
                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_ouv_03.svg" alt="">
-                            <h4>Protection ·<br>Management System</h4>
+                            <h4>Protection · Management System</h4>
+                            <em>Long-term Protection and Management</em>
                             <p>
-                                Legal, administrative protection systems,
-                                Establishment of buffer zones, etc.
+                                Legal, administrative protection systems, establishment of buffer zones, etc.
                             </p>
                         </article>
                     </div>
 
                     <div class="criteria-table-wrap js-rise">
-                        <p class="table-caption">Must satisfy one or more of 10 criteria</p>
+                        <p class="table-caption">10 Criteria for Inscription</p>
 
                         <table class="criteria-table">
                             <caption>World Heritage Listing Criteria</caption>
@@ -91,7 +96,8 @@
                                 <col>
                                 <col style="width:42%;">
                             </colgroup>
-
+							<h4>Cultural Heritage</h4>
+							
                             <thead>
                                 <tr>
                                     <th></th>
@@ -104,36 +110,40 @@
                                 <tr>
                                     <td>ⅰ</td>
                                     <td>
-                                        It will represent a masterpiece crafted by human creativity
+                                       represent a masterpiece of human creative genius
                                     </td>
                                     <td>
-                                        Sydney Opera House, Great Wall of China,
-                                        Seokguram Grotto and Bulguksa Temple
+                                        Sydney Oprea House (Australia), 
+                                        The Great Wall (China), 
+                                        Seokguram Grotto and Bulguksa Temple (Korea)
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>ⅱ</td>
                                     <td>
-                                        Reflecting a significant exchange of human values over a long period of time
-                                        or within a certain cultural sphere of the world in architecture or technological
-                                        development, monument production, urban planning or landscape design
+                                        exhibit an important interchange of human values,
+                                        over a span of time or within a cultural area of the world, 
+                                        on developments in architecture or technology, monumental arts, 
+                                        town-planning or landscape design
                                     </td>
                                     <td>
-                                        Acropolis in Athens, Suwon Hwaseong Fortress,
-                                        Changdeokgung Palace, Namhansanseong Fortress
+                                        Acropolis, Athens (Greece), 
+                                        Hwaseong Fortress (Korea), 
+                                        Changdeokgung Palace Complex (Korea),
+                                        Namhansanseong (Korea)
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>ⅲ</td>
                                     <td>
-                                        It will be unrivaled or at least exceptional evidence of existing or already
-                                        vanished cultural traditions or civilizations.
+                                        bear a unique or at least exceptional testimony to a cultural tradition 
+                                        or to a civilization which is living or which has disappeared.
                                     </td>
                                     <td>
-                                        Stonehenge in the UK, Gochang,
-                                        Hwasun, and Ganghwa dolmens
+                                        Stonehenge, Avebury and Associated Sites (UK),
+                                        Gochang, Hwasun and Ganghwa Dolmen Sites (Korea)
                                     </td>
                                 </tr>
 
@@ -145,38 +155,108 @@
                                         history.
                                     </td>
                                     <td>
-                                        China Dunhuang Mogao Caves,
-                                        Jongmyo Shrine, Namhansanseong Fortress
+                                        Magao Caves (China),
+                                        Jongmyo Shrine (Korea),
+                                        Namhansanseong (Korea) 
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>ⅴ</td>
                                     <td>
-                                        Representative examples illustrating traditional settlements or land and sea
-                                        uses that represent the environment, human interactions, or culture, especially
-                                        when made vulnerable by the impact of irreversible changes.
+                                        be an outstanding example of a traditional human settlement, 
+                                        land-use, or sea-use which is representative of a culture (or cultures), 
+                                        or human interaction with the environment especially when it has become vulnerable 
+                                        under the impact of irreversible change.
                                     </td>
                                     <td>
-                                        Libya's ancient city of Ghadames
+                                        Old Town of Ghadames, (Libya)
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>ⅵ</td>
                                     <td>
-                                        It must be directly or visibly associated with an event, existing tradition, idea or
-                                        creed, or work of art and literature of outstanding universal importance
-                                        (recommended to be applied in conjunction with other criteria)
+                                        be directly or tangibly associated with events or living traditions,
+                                        with ideas, or with beliefs, with artistic and literary works of outstanding universal significance.
+                                        (The Committee considers that this criterion should preferably be used in conjunction with other criteria)
                                     </td>
                                     <td>
-                                        Hiroshima Atomic Bomb Dome, Japan
+                                        Hiroshima Peace Memorial (Genbaku Dome, Japan)
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+					 <div class="criteria-table-wrap js-rise">
+                        <table class="criteria-table">
+                            <caption>Natural Heritage Listing Criteria</caption>
+                            <colgroup>
+                                <col style="width:52px;">
+                                <col>
+                                <col style="width:42%;">
+                            </colgroup>
+                            <h4>Natural Heritage</h4>
+                            
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Listing criteria</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ⅶ</td>
+                                    <td>
+                                        contain superlative natural phenomena or areas of exceptional natural beauty and aesthetic importance
+                                    </td>
+                                    <td>
+                                        Lake Baikal (Russia), 
+                                        Mount Kenya National Park/Natural Forest (Kenya), 
+                                        Jeju Volcanic Island and Lava Tubes (Korea)
+                                    </td>
+                                </tr>
 
+                                <tr>
+                                    <td>ⅷ</td>
+                                    <td>
+                                        be outstanding examples representing major stages of earth's history,
+                                        including the record of life, significant on-going geological processes in the development of landforms,
+                                        or significant geomorphic or physiographic features
+                                    </td>
+                                    <td>
+                                        Grand Canyon National Park (U.S.A), 
+                                        Jeju Volcanic Island and Lava Tubes (Korea)
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>ⅸ</td>
+                                    <td>
+                                        be outstanding examples representing significant on-going ecological and biological processes
+                                        in the evolution and development of terrestrial, fresh water, coastal and marine ecosystems 
+                                        and communities of plants and animals
+                                    </td>
+                                    <td>
+                                        Hawaii Volcanoes National Park (U.S.A), 
+                                        Mount Kenya National Park/Natural Forest (Kenya)
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>ⅹ</td>
+                                    <td>
+                                        contain the most important and significant natural habitats for in-situ conservation of biological diversity, 
+                                        including those containing threatened species of Outstanding Universal Value from the point of view of science or conservation.
+                                    </td>
+                                    <td>
+                                        Sichuan Giant Panda Sanctuaries - Wolong, Mt Siguniang and Jiajin Mountains (China)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="effects-visual js-rise">
                         <img src="/hoeamsaji/assets/site/hoeamsaji/img/thumb-11.jpg" alt="">
                         <h3>Effects of World Heritage listing</h3>
@@ -202,79 +282,6 @@
                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_effect_04.svg" alt="">
                             <p>International Cooperation and<br>Government Interest and Support</p>
                         </article>
-                    </div>
-
-                    <div class="criteria-table-wrap js-rise">
-                        <p class="table-caption">Must satisfy one or more of 10 criteria</p>
-
-                        <table class="criteria-table">
-                            <caption>Natural Heritage Listing Criteria</caption>
-                            <colgroup>
-                                <col style="width:52px;">
-                                <col>
-                                <col style="width:42%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Listing criteria</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>ⅶ</td>
-                                    <td>
-                                        A region possessing supreme natural phenomena, outstanding natural beauty,
-                                        and aesthetic significance
-                                    </td>
-                                    <td>
-                                        Russia's Lake Baikal, Kenya National Park,
-                                        Jeju Lava Caves and Volcanic Islands
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>ⅷ</td>
-                                    <td>
-                                        Representative examples demonstrating major stages of Earth's history,
-                                        including the record of life, major geological processes in topographic
-                                        development, and important features in terms of geomorphology or physical
-                                        geography
-                                    </td>
-                                    <td>
-                                        Grand Canyon in the U.S.,
-                                        Jeju Lava Caves and Volcanic Islands
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>ⅸ</td>
-                                    <td>
-                                        Representative examples demonstrating major ecological and biological
-                                        processes in the evolution or development of terrestrial, freshwater, coastal,
-                                        and marine ecosystems and animal and plant communities
-                                    </td>
-                                    <td>
-                                        Hawaii Volcanoes National Park, USA,
-                                        Kenya National Park
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>ⅹ</td>
-                                    <td>
-                                        Habitats that possess outstanding universal value from the perspective of
-                                        scientific research or conservation, and are the most important and significant
-                                        for the in-situ conservation of biological diversity, including currently
-                                        endangered species.
-                                    </td>
-                                    <td>
-                                        Sichuan Giant Panda Reserve, China
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
 
                 </div>

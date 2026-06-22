@@ -36,41 +36,35 @@
                     <div class="sub-title-box">
                         <span class="sub-title-shape"></span>
                         <h3>UNESCO and<br>Heritage</h3>
-                        <p>
-                            Learn how UNESCO defines<br>heritage and protects cultural<br>values shared by humanity.
-                        </p>
+                        <!-- <p>
+                           Learn how UNESCO defines heritage and protects the cultural values shared by humanity.
+                        </p> -->
                     </div>
 
                     <div class="sub-intro-content">
-                        <div class="heritage-org-wrap">
-
-                        <a href="#" class="heritage-org">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-unesco.png" alt="UNESCO">
-                        </a>
-                        
-                        <span class="heritage-org-line" aria-hidden="true"></span>
-
-                        <a href="#" class="heritage-org">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-world-heritage.png" alt="World Heritage Convention">
-                        </a>
-
-                        <a href="#" class="heritage-org">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-intangible.png" alt="Intangible Cultural Heritage">
-                        </a>
-
-                        <a href="#" class="heritage-org">
-                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-memory.png" alt="Memory of the World">
-                        </a>
-
-                        </div>
-
                         <div class="sub-desc-img">
                             <h4>UNESCO Designation Heritage Classification</h4>
-                            <ul class="unesco-classification__list">
-                                <li>World Heritage</li>
-                                <li>Intangible Cultural Heritage</li>
-                                <li>Memory of the World</li>
-                            </ul>
+	                            <div class="heritage-org-wrap">
+	
+		                      		<a href="#" class="heritage-org">
+			                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-unesco.png" alt="UNESCO">
+			                        </a>
+			                        
+			                        <span class="heritage-org-line" aria-hidden="true"></span>
+			
+			                        <a href="#" class="heritage-org">
+			                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-world-heritage.png" alt="World Heritage Convention">
+			                        </a>
+			
+			                        <a href="#" class="heritage-org">
+			                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-intangible.png" alt="Intangible Cultural Heritage">
+			                        </a>
+			
+			                        <a href="#" class="heritage-org">
+			                            <img src="/hoeamsaji/assets/site/hoeamsaji/img/logo-memory.png" alt="Memory of the World">
+			                        </a>
+		
+		                        </div>
                         </div>
 
                         <div class="sub-desc-img">
@@ -90,25 +84,21 @@
 
                     <div class="sub-title-box">
                         <span class="sub-title-shape"></span>
-                        <h3>Definition of<br>World Heritage</h3>
-                        <p>
-                           What is World Heritage?
-                        </p>
+                        <h3>What is World Heritage?</h3>
                     </div>
 
                     <div class="sub-intro-content">
                         <div class="sub-desc sub-desc-img">
                             <h4 class="first-h4">
-                                “Heritage recognized by UNESCO as having outstanding and universal value that   
-                                 should be protected for the benefit of all humanity”
+                                “Heritage recognized by UNESCO as having Outstanding Universal Value that should be protected for the benefit of all humanity”
                             </h4>
 
                             <p>
-                                In order to protect the ancient Nubian ruins threatened with submersion due to the construction of the Aswan High Dam in Egypt, the 'Nubia Campaign' was launched by the international community in 1959. With the support of UNESCO and 50 countries, the relocation and restoration of the ruins took place over a period of 20 years.
+                                In 1960, the international community launched the International Campaign to Save the Monuments of Nubia, to protect the endangered ancient Nubian monuments and sites threatened by inundation due to the construction of the Aswan High Dam in Egypt. With the support of UNESCO and 50 donor states, the relocation and restoration campaign was carried out over a period of 20 years.
                             </p>
 
                             <p>
-                                Consequently, the 'World Heritage Convention' was adopted at the UNESCO General Assembly in 1972 to ensure the permanent protection of heritage of historical significance to humankind.
+                                The campaign led up to the adoption of the 'World Heritage Convention' at the UNESCO General Assembly in 1972 to ensure the permanent protection of heritage of historical significance to humankind.
                             </p>
 
                             <h4>
@@ -116,7 +106,7 @@
                             </h4>
 
                             <p>
-                                A tentative list submitted to UNESCO for the purpose of applying for World Heritage designation must be submitted to UNESCO at least one year prior to the application for World Heritage designation, and heritage not included in the tentative list cannot be designated as a World Heritage.
+                                A tentative list is submitted to UNESCO by the State Party for the purpose of inscription on the World Heritage list. It must be submitted at least one year prior to the submitting the nomination dossier for World Heritage, and heritage not included in the tentative list cannot be inscribed as a World Heritage.
                             </p>
 
                             <h4>
@@ -124,17 +114,17 @@
                             </h4>
 
                             <p>
-                                A new system introduced by UNESCO to prepare high-quality nominations and increase the likelihood of World Heritage designation through prior consultations with advisory bodies from the initial stages of preparation (operated in a transitional phase from 2022 to 2027, mandatory from 2028).
+                                The preliminary assessment is a new system introduced by UNESCO to prepare high-quality nominations and increase the likelihood of World Heritage inscription through prior consultations with advisory bodies from the initial stages of preparation (operated as a pilot program from 2022 to 2027, mandatory from 2028).
                             </p>
 
                             <div class="sub-desc-img">
-                                <h4>World Heritage Listing Procedure</h4>
+                                <h4>Process for the Inscription on the World Heritage List</h4>
                                 <div class="domestic-process">
 
-                                    <h3 class="domestic-process__title">DOMESTIC PROCEDUCERS</h3>
+                                    <h3 class="domestic-process__title">Domestic Process</h3>
 
                                     <p class="domestic-process__desc">
-                                        Deliberation at the Cultural Heritage Administration Cultural Heritage Committee
+                                        Deliberation at the National Heritage Committee of the Korea Heritage Service
                                     </p>
 
                                     <div class="domestic-process__list">
@@ -148,21 +138,21 @@
 
                                         <div class="domestic-process__item">
                                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_02.svg" alt="">
-                                            <p>Priority<br>Registration<br>List</p>
+                                            <p>Listed on the <br>Priority List</p>
                                         </div>
 
                                         <span class="domestic-process__arrow"></span>
 
                                         <div class="domestic-process__item">
                                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_03.svg" alt="">
-                                            <p>Nomination<br>Application<br>Candidate</p>
+                                            <p>Become a candidate<br>for the nomination<br>process</p>
                                         </div>
 
                                         <span class="domestic-process__arrow"></span>
 
                                         <div class="domestic-process__item">
                                             <img src="/hoeamsaji/assets/site/hoeamsaji/img/ico_list_04.svg" alt="">
-                                            <p>Nomination<br>Application<br>Target</p>
+                                            <p>Prepare a nomination dossier</p>
                                         </div>
 
                                     </div>
@@ -171,7 +161,7 @@
                             </div>
                             <div class="domestic-process domestic-process-02">
 
-                                <h3 class="domestic-process__title">INTERNATIONAL PROCEDURES</h3>
+                                <h3 class="domestic-process__title">International Process</h3>
 
                                 <p class="domestic-process__desc">
                                     Deliberation by the UNESCO World Heritage Committee

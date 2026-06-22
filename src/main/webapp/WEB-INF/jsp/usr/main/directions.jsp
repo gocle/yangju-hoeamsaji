@@ -86,8 +86,8 @@
                 <div class="info-item">
                     <strong>Opening Hours</strong>
                     <p>
-                        09:00 – 18:00 (Mar – Oct)<br>
-                        09:00 – 17:00 (Nov – Feb)<br>
+                        09:00 – 18:00 (March to October)<br>
+                        09:00 – 17:00 (November to February)<br>
                         * Last admission 17:00
                     </p>
                 </div>

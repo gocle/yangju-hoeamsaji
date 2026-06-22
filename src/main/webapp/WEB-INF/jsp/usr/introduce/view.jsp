@@ -16,7 +16,7 @@
                 <div class="sub-visual__content">
                     <h2>
                         <span>Guide to the</span>
-                        <span>Yangju Hoeamsaji Temple Site</span>
+                        <span>Yangju Hoeamsaji</span>
                     </h2>
 
                     <div class="sub-location"> 
@@ -36,11 +36,11 @@
                     <div class="sub-title-box">
                         <span class="sub-title-shape"></span>
                         <h3>Overview</h3>
-                        <p>
+                        <!-- <p>
                             Discover the history, scale,<br>
                             and royal legacy of Yangju<br>
                             Hoeamsa Temple Site.
-                        </p>
+                        </p> -->
                     </div>
 
                     <div class="sub-intro-content">
@@ -55,7 +55,7 @@
                             <article>
                                 <i class="sub-icon sub-icon-02"></i>
                                 <strong>Scale</strong>
-                                <p>Approx. 70 Building Sites</p>
+                                <p>Approximately 70 Buildings</p>
                             </article>
 
                             <article>
@@ -73,33 +73,33 @@
 
                         <div class="sub-desc">
                             <p>
-                                The Hoeamsa Temple Site in Yangju is the site of the largest royal temple and a representative Seon Buddhist temple from the late Goryeo and early Joseon periods.
+                                Yangju Hoeamsaji is the site of the largest royal temple and a representative Seon Buddhist monastery from the late Goryeo and early Joseon periods.
                             </p>
 
                             <p>
-                                It consists of a central temple area where approximately 70 building sites have been identified through excavation, and monuments to eminent monks who led the revival of Hoeamsa Temple.
+                                Approximately 70 building sites have been identified through excavation in the main monastery area, along with monuments to eminent monks who led the revival of Hoeamsa Temple.
                             </p>
 
                             <p>
-                                The designated cultural heritage zone covers 33,391 square meters, while the cultural heritage protection zone, including the monuments to eminent monks, amounts to 323,117 square meters.
+                                The designated zone covers 33,391 square meters, while the protection zone, including the monuments area to eminent monks, amounts to 323,117 square meters.
                             </p>
 
                             <p>
-                                Although the exact founding date of Hoeamsa Temple is unclear, records indicate that it existed since the 12th century.
+                                The exact founding date of Hoeamsa Temple is unknown. However, historical records indicate that it existed since the 12th century.
                             <p>
-                                Following the teachings of the Indian monk Jigong (?–1363), the royal preceptor Naong (1320–1376) rebuilt the temple into 262 rooms in the late 14th century.
+                                Following the teachings of monk Jigong (?–1363) from India, the royal preceptor Naong (1320–1376) rebuilt the temple with 262 rooms in the late 14th century.
                             </p>
 
                             <p>
-                                During the Joseon Dynasty, the royal preceptor Muhak (1327–1405) stayed there, and King Taejo Yi Seong-gye (1335–1408) frequently visited.
+                                King Taejo (1335–1408), the founder of Joseon Dynasty, frequently visited the Hoaemsa Temple, where his royal preceptor Jacho (1327–1405) resided. 
                             </p>
 
                             <p>
-                                After abdicating and becoming the Retired King, he built a palace at Hoeamsa Temple and resided there.
+                                After abdicating and becoming the King Emeritus, King Taejo even built his special residency at Hoeamsa Temple.
                             </p>
 
                             <p>
-                                Subsequently, the temple flourished with extensive patronage from royal figures such as Grand Prince Hyoryeong (1396–1486), Queen Jeonghui (1418–1483), and Queen Munjeong (1501–1565), but it is presumed to have fallen into disrepair by the end of the 16th century.
+                                In the following years, Hoeamsa Temple flourished with extensive patronage from royal figures such as Grand Prince Hyoryeong (1396–1486), Queen Jeonghui (1418–1483), and Queen Munjeong (1501–1565). But the monastery is presumed to have closed down by the end of the 16th century.
                             </p>
                         </div>
 
