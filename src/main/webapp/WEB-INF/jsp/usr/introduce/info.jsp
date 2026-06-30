@@ -61,7 +61,6 @@
                                 More than 100,000 pieces of artifacts were unearthed, including blue roof tiles used exclusively by the royal court,
                                 decorative ridge-end roof tiles with dragon-head ornaments and figurines, 
                                 eave-end roof tiles bearing dragon and phoenix motifs, as well as ceramics produced at royal kilns.
-                                eave-end roof tiles bearing dragon and phoenix motifs, and ceramics produced at royal kilns. 
                                 These discoveries attest to the status and character of Hoeamsa Temple as the largest royal Buddhist temple
                                 and a representative Seon monastery of the early Joseon period.
                             </p>

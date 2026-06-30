@@ -48,7 +48,7 @@
                 <p>
                     • <strong>Where to Purchase</strong> : Museum Gift Shop or Online (Government Publications Sales Center)<br>
                 </p>
-                <a href="#" target="_blank">Government Publications Sales Center ↗</a>
+                <a href="http://gpcbooks.co.kr/newmall/shop/search.php?sfl=wr_subject%7C%7Cwr_content&sop=and&stx=&search_flag=%C5%EB%C7%D5%B0%CB%BB%F6&search_str=%C8%B8%BE%CF%BB%E7%C1%F6%B9%DA%B9%B0%B0%FC&x=0&y=0" target="_blank">Government Publications Sales Center ↗</a>
             </div>
         </div>
 

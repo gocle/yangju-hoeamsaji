@@ -16,7 +16,7 @@
                 <div class="sub-visual__content">
                     <h2>
                         <span>Guide to the</span>
-                        <span>Yangju Hoeamsaji</span>
+                        <span>Hoeamsaji in Yangju</span>
                     </h2>
 
                     <div class="sub-location"> 
@@ -73,7 +73,7 @@
 
                         <div class="sub-desc">
                             <p>
-                                Yangju Hoeamsaji is the site of the largest royal temple and a representative Seon Buddhist monastery from the late Goryeo and early Joseon periods.
+                                Hoeamsaji in Yangju is the site of the largest royal temple and a representative Seon Buddhist monastery from the late Goryeo and early Joseon periods.
                             </p>
 
                             <p>
@@ -87,7 +87,7 @@
                             <p>
                                 The exact founding date of Hoeamsa Temple is unknown. However, historical records indicate that it existed since the 12th century.
                             <p>
-                                Following the teachings of monk Jigong (?–1363) from India, the royal preceptor Naong (1320–1376) rebuilt the temple with 262 rooms in the late 14th century.
+                                Following the teachings of Monk Jigong (?–1363) from India, the royal preceptor Naong (1320–1376) rebuilt the temple with 262 rooms in the late 14th century.
                             </p>
 
                             <p>

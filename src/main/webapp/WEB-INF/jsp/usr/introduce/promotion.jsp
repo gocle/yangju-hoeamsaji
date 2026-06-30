@@ -74,7 +74,7 @@
                                     <ul>
                                         <li>
                                             <span>-</span>
-                                            Plan set up to promote the inscription of the Yangju Hoeamsaji on the UNESCO World Heritage List
+                                            Plan set up to promote the inscription of the Hoeamsaji in Yangju on the UNESCO World Heritage List
                                         </li>
                                     </ul>
                                 </div>
@@ -237,7 +237,7 @@
                                         </li>
                                         <li>
                                             <span>12</span>
-                                            Establishment of the World Heritage Promotion Committee for the Yangju Hoeamsaji
+                                            Establishment of the World Heritage Promotion Committee for the Hoeamsaji in Yangju
                                         </li>
                                     </ul>
                                 </div>

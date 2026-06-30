@@ -41,15 +41,15 @@
 
 	    FROM TB_PUBLICATION TP
 	    WHERE TP.DELETE_YN = 'N'
-	    <if test="searchKeyword != null">
+	    <if test="searchKeyword != null and searchKeyword != ''">
 		    AND TP.PUB_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
 		</if>
 		
-		<if test="searchYear != null">
+		<if test="searchYear != null and searchYear != ''">
 		    AND TP.PUB_YEAR = #{searchYear}
 		</if>
 		
-		<if test="searchType != null">
+		<if test="searchType != null and searchType != ''">
 		    AND TP.PUB_TYPE = #{searchType}
 		</if>
 	    ORDER BY
